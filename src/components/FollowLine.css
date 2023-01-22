@@ -1,0 +1,14 @@
+section {
+    display: grid;
+    margin: 1rem 2rem;
+}
+
+section hr {
+    height: 160px;
+    opacity: 50%;
+}
+
+section img {
+    height: 18px;
+    margin: 6px 0;
+}

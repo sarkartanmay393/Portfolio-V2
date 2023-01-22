@@ -1,0 +1,57 @@
+main #quote-card {
+    display: grid;
+
+    margin-top: 5rem;
+
+    justify-content: center;
+
+}
+
+main #quote-card h3 {
+    border: 1px solid whitesmoke;
+    padding: 16px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main #quote-card h4 {
+    width: fit-content;
+
+    margin-left: 80%;
+
+    border: 1px solid whitesmoke;
+    border-top: none;
+    padding: 12px;
+
+    margin-top: -32px;
+
+    font-weight: 400;
+}
+
+main #quote-card #first {
+    height: 12px;
+
+    position: relative;
+    top: 26px;
+
+    background-color: #282C33;
+
+    margin: 0 12px;
+    padding: 0 6px;
+    width: fit-content;
+}
+
+main #quote-card #second {
+    height: 12px;
+
+    position: relative;
+    top: -26px;
+    left: 80%;
+
+    background-color: #282C33;
+
+    margin: 0 8px;
+    padding: 0 6px;
+    width: fit-content;
+}
