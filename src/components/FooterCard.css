@@ -1,0 +1,29 @@
+footer {
+    padding: 1rem;
+    color: white;
+
+    /* position: absolute;
+    bottom: 0; */
+}
+
+#footer-section {
+    text-align: center;
+    background-color: lightcoral;
+}
+
+
+#footer-section .row {
+    display: flex;
+}
+
+
+/* footer text area */
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h2 {
+    padding: 0;
+    margin: 0;
+}

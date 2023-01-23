@@ -1,0 +1,89 @@
+#project-section {
+}
+
+#project-section p {
+    padding: 0;
+    margin: 0;
+}
+
+#project-section h2 {
+    padding: 0;
+    margin: 0;
+}
+
+#project-section h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+#project-section span {
+    color: rgb(165, 22, 165);
+}
+
+#project-section header {
+    width: 55vw;
+}
+
+#project-section header button {
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-family: 'Fira Code', monospace;
+
+    position: relative;
+    top: -70px;
+    left: -4rem;
+}
+
+#project-section header hr {
+    transform: rotate(90deg);
+
+    position: relative;
+    top: -70px;
+    left: -11rem;
+}
+
+#project-section main {
+    display: flex;
+
+    position: absolute;
+    top: 40em;
+    left: 0;
+}
+
+
+
+.project-card {
+    display: grid;
+
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+
+.project-card .row {
+    display: flex;
+
+    margin: 1.2rem 0;
+
+}
+
+.project-card h3 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.project-card p {
+    font-size: 12px;
+}
+
+.project-card button {
+    background-color: transparent;
+    color: white;
+    font-family: 'Fira Code', monospace;
+}
+
+.project-card img {
+    margin-right: 8px;
+}
