@@ -1,28 +1,29 @@
 #project-section {
-}
+    display: flex;
+    flex-direction: column;
 
-#project-section p {
-    padding: 0;
-    margin: 0;
-}
+    border: 0px solid white;
+    padding: 0 10rem;
 
-#project-section h2 {
-    padding: 0;
-    margin: 0;
+    color: white;
 }
-
-#project-section h3 {
-    padding: 0;
-    margin: 0;
-}
-
 
 #project-section span {
-    color: rgb(165, 22, 165);
+    color: orangered;
 }
 
 #project-section header {
-    width: 55vw;
+    /* width: 55vw; */
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+
+
+    border: 0px solid white;
+
 }
 
 #project-section header button {
@@ -30,10 +31,6 @@
     border: none;
     background-color: transparent;
     font-family: 'Fira Code', monospace;
-
-    position: relative;
-    top: -70px;
-    left: -4rem;
 }
 
 #project-section header hr {
@@ -46,27 +43,72 @@
 
 #project-section main {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
-    position: absolute;
-    top: 40em;
-    left: 0;
+    border: 0px solid white;
+
+    padding: 2rem 1rem;
 }
 
 
 
 .project-card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+
+    width: 280px;
+    height: 380px;
 
     border: 1px solid white;
-    padding: 1rem 2rem;
-    margin: 1rem;
+    padding: 1rem 1rem;
+
+    margin: 0 0rem;
+
+    /* justify-content: space-between; */
+}
+
+.project-card #madeby {
+    font-size: 12px;
+    border: 0px solid white;
+    font-family: monospace;
+
+    height: 20px;
+    margin: 0;
+
+    text-align: start;
+
+    max-width: 100%;
+    white-space: wrap;
+    overflow: clip;
+    text-overflow: ellipsis;
 }
 
 .project-card .row {
     display: flex;
+    flex-direction: column;
+    margin: 0px 0;
 
-    margin: 1.2rem 0;
+    padding: 0px 0;
+    border: 0px solid white;
+    height: 120px;
 
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project-card #desc {
+    font-size: 14px;
+    font-family: monospace;
+    border: 0px solid white;
+
+    height: 120px;
+
+    max-width: 100%;
+    white-space: wrap;
+    overflow: clip;
+    text-overflow: ellipsis;
 }
 
 .project-card h3 {
@@ -74,16 +116,30 @@
     font-size: 22px;
 }
 
-.project-card p {
-    font-size: 12px;
-}
 
 .project-card button {
     background-color: transparent;
     color: white;
     font-family: 'Fira Code', monospace;
+
+    border: 1px solid orange;
+
+    margin: 0.5rem;
+}
+
+.project-card .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    margin: 0rem 0;
+    height: 100px;
+
+    border: 0px solid white;
 }
 
 .project-card img {
-    margin-right: 8px;
+    height: 60px;
+    margin: 2px;
+    border-radius: 12px;
 }

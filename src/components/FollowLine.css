@@ -1,14 +1,23 @@
-section {
+.follow-line {
     display: grid;
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+
+    height: 100%;
+    width: min-content;
+
+    position: sticky;
+
+    border: 2px solid white;
 }
 
-section hr {
+.follow-line hr {
     height: 160px;
     opacity: 50%;
+
+    padding: 0rem;
 }
 
-section img {
+.follow-line img {
     height: 18px;
     margin: 6px 0;
 }

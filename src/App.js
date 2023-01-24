@@ -10,14 +10,18 @@ import FooterCard from './components/FooterCard';
 function App() {
   return (
     <>
+      {/* <FollowLine /> */}
       <header>
-        <FollowLine />
+        <div className='invisible-space'></div>
         <NavBar />
       </header>
       <main>
-        <IntroCard />
-        <QuoteCard />
-        <ProjectSection />
+        <div className='invisible-space-m'></div>
+        <section className='main-components'>
+          <IntroCard />
+          <QuoteCard />
+          <ProjectSection />
+        </section>
         {/* <FooterCard /> */}
       </main>
     </>

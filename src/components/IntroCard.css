@@ -1,57 +1,78 @@
-main section {
-    width: 60%;
+.intro-card {
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
+    border: 0px solid white;
+    padding: 2rem 10rem;
 
-    margin: 0 auto;
     color: white;
 }
 
 /* first part */
-main section #left {
-    margin: auto 0;
+.intro-card #left {
+    margin: 0 0;
 }
 
-main section #left span {
-    color: rgb(184, 35, 184);
+.intro-card span {
+    color: rgb(255, 109, 55);
 }
 
-main section #left button {
+.intro-card #left button {
     padding: 6px 12px;
     color: white;
     font-weight: 600;
 
-    border: 2px solid purple;
     background: none;
+
+    border: 1px solid rgb(255, 109, 55);
 
     box-shadow: 0px 0px 4px 2px rgba(245, 245, 245, 0.1),
         0px 0px 4px 2px transparent inset;
 
-    border-radius: 2px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.intro-card #left button:hover {
+    color: white;
+    background: rgb(255, 109, 55);
+}
+
+.intro-card #right {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 0px solid white;
+
 }
 
 
 /* second part */
-main section #right img {
+.intro-card #right img {
     height: 280px;
 
-    padding: 0;
+    /* padding: 4px 0; */
     margin: 0;
 }
 
-main section #right p {
+.intro-card #right p {
     width: max-content;
     font-size: 12px;
 
-    outline: 1px solid whitesmoke;
+    outline: 0.1px solid whitesmoke;
     outline-offset: 4px;
 
-    margin-block: 0;
-    margin: 0 auto;
+    /* margin-block: 0; */
+    margin: 4.5px 0;
 }
 
-main section #right span {
+.intro-card #right span {
     font-weight: bold;
 }

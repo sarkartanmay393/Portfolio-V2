@@ -1,11 +1,12 @@
 nav {
-    width: 90%;
+    border: 0px solid white;
+
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
 
-    margin: 1rem 5rem;
-
+    padding: 1rem 5rem;
     color: white;
 }
 
@@ -16,9 +17,12 @@ nav h2 {
     font-size: 18x;
 }
 
+nav h2:hover {
+    color: lightgreen;
+}
+
 nav h2 img {
     height: 20px;
-    color: white;
 }
 
 nav ul {
@@ -29,7 +33,11 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0 6px;
+    padding: 0 8px;
+}
+
+nav ul li a:hover {
+    color: lightgreen;
 }
 
 nav ul li a {
@@ -39,5 +47,5 @@ nav ul li a {
 }
 
 nav ul li a span {
-    color: rgb(218, 41, 218);
+    color: orangered;
 }

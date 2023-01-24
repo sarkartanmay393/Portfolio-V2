@@ -13,28 +13,28 @@ function ProjectSection() {
             Database Interaction`,
     },
     {
-        title: "Blogosphere",
-        madeby: "ReactJS, MongoDB, Express and Node",
-        url: `https://github.com/sarkartanmay393/Blogosphere-JS`,
-        image: `https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png`,
-        description: `Contains Javascript code of a blogging website 
-            using ReactJS, MongoDB, Express and Node`,
-
+        title: "URL Shortener",
+        madeby: "Golang, Redis, Docker, Compose",
+        url: `https://github.com/sarkartanmay393/URL-Shortener-Go`,
+        image: `https://img.icons8.com/clouds/100/null/domain.png`,
+        description: `This is a simple URL shortener service that
+         uses Redis as a database. It is built using Golang and Docker.
+          It is also deployed on somewhere.`,
     },
     {
         title: "Blogosphere",
-        madeby: "ReactJS, MongoDB, Express and Node",
+        madeby: "ReactJS, MongoDB, Express, Node",
         url: `https://github.com/sarkartanmay393/Blogosphere-JS`,
         image: `https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png`,
         description: `Contains Javascript code of a blogging website 
             using ReactJS, MongoDB, Express and Node`,
-
-    }];
+    }
+    ];
 
     return (
         <section id='project-section'>
             <header>
-                <h2><span>#</span>Projects</h2><hr />
+                <h2><span>#</span>Projects</h2>
                 <button onClick={() => { alert("View All!"); }}>{viewAll}</button>
             </header>
             <main>
@@ -42,13 +42,13 @@ function ProjectSection() {
                     projects.map((value, index) => {
                         return (
                             <section className='project-card'>
-                                <p>{value.madeby}</p>
+                                <p id='madeby'>{value.madeby}</p>
                                 <div className='row'>
                                     <img src={value.image} alt={`${value.title}-${index}`} />
                                     <h3>{value.title}</h3>
                                 </div>
-                                <p>{value.description}</p>
-                                <div className='row'>
+                                <p id='desc'>{value.description}</p>
+                                <div className='btns'>
                                     <button>Live</button>
                                     <button>Repo</button>
                                 </div>

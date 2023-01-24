@@ -11,7 +11,7 @@ export default function FollowLine() {
     // };
 
     return (
-        <section>
+        <section className='follow-line'>
             <hr />
             <img src={GithubSVG} alt='github-ref' />
             <img src={TwitterSVG} alt='twitter-ref' />

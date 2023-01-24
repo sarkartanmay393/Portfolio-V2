@@ -1,57 +1,70 @@
-main #quote-card {
-    display: grid;
+#quote-card {
+    display: flex;
+    flex-direction: column;
 
-    margin-top: 5rem;
+    padding: 2rem 10rem;
 
-    justify-content: center;
+    align-items: center;
 
+    border: 0px solid whitesmoke;
+
+    color: lightgreen;
 }
 
-main #quote-card h3 {
+#quote-card h3 {
     border: 1px solid whitesmoke;
-    padding: 16px;
+    padding: 15px;
 
+    text-align: center;
+
+    width: 80%;
     font-size: 20px;
     font-weight: 500;
 }
 
-main #quote-card h4 {
-    width: fit-content;
+#quote-card h4 {
+    width: 18%;
+    text-align: center;
 
-    margin-left: 80%;
+    font-size: 14px;
 
     border: 1px solid whitesmoke;
     border-top: none;
-    padding: 12px;
-
-    margin-top: -32px;
+    padding: 12px 0px;
 
     font-weight: 400;
+
+    margin: 0;
+
+    position: relative;
+    top: -10px;
+    left: 28%;
 }
 
-main #quote-card #first {
+#quote-card #first {
     height: 12px;
 
     position: relative;
-    top: 26px;
+    top: 8px;
+    left: -35%;
 
     background-color: #282C33;
 
-    margin: 0 12px;
     padding: 0 6px;
     width: fit-content;
+
 }
 
-main #quote-card #second {
-    height: 12px;
+#quote-card #second {
+    height: 10px;
 
     position: relative;
-    top: -26px;
-    left: 80%;
+    top: -5px;
+    left: 22%;
 
     background-color: #282C33;
 
     margin: 0 8px;
-    padding: 0 6px;
+    padding: 0 4px;
     width: fit-content;
 }
