@@ -13,17 +13,12 @@
 }
 
 #project-section header {
-    /* width: 55vw; */
-
     display: flex;
     flex-direction: row;
 
     justify-content: space-between;
 
-
-
     border: 0px solid white;
-
 }
 
 #project-section header button {
@@ -36,9 +31,6 @@
 #project-section header hr {
     transform: rotate(90deg);
 
-    position: relative;
-    top: -70px;
-    left: -11rem;
 }
 
 #project-section main {
@@ -58,14 +50,12 @@
     flex-direction: column;
 
     width: 280px;
-    height: 380px;
+    height: 320px;
 
     border: 1px solid white;
     padding: 1rem 1rem;
-
     margin: 0 0rem;
 
-    /* justify-content: space-between; */
 }
 
 .project-card #madeby {
@@ -76,12 +66,13 @@
     height: 20px;
     margin: 0;
 
-    text-align: start;
+    text-align: center;
 
     max-width: 100%;
-    white-space: wrap;
     overflow: clip;
     text-overflow: ellipsis;
+
+    border-bottom: 0.1px solid white;
 }
 
 .project-card .row {
@@ -95,7 +86,6 @@
 
     align-items: center;
     justify-content: center;
-
 }
 
 .project-card #desc {
@@ -106,9 +96,10 @@
     height: 120px;
 
     max-width: 100%;
-    white-space: wrap;
     overflow: clip;
     text-overflow: ellipsis;
+
+    text-align: justify-all;
 }
 
 .project-card h3 {
@@ -123,17 +114,18 @@
     font-family: 'Fira Code', monospace;
 
     border: 1px solid orange;
+    height: 25px;
+    width: 50px;
 
-    margin: 0.5rem;
+    margin: 0 0.2rem;
 }
 
 .project-card .btns {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
 
     margin: 0rem 0;
-    height: 100px;
+    height: 40px;
 
     border: 0px solid white;
 }

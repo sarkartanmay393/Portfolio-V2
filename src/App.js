@@ -22,8 +22,13 @@ function App() {
           <QuoteCard />
           <ProjectSection />
         </section>
-        {/* <FooterCard /> */}
       </main>
+      <footer>
+          <div className='invisible-space-m'></div>
+          <FooterCard />
+      </footer>
+
+        <p id='copyright-tag'>© Copyright 2033. Redesigned by Tanmay</p>
     </>
   );
 }

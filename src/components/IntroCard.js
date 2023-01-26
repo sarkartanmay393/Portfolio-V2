@@ -6,7 +6,6 @@ function IntroCard() {
 
     const psLink = `https://github.com/sarkartanmay393/Portofolio-V2`;
     const psButton = () => {
-
         let text = document.getElementById('ps-btn').innerText;
         let permission = window.confirm(`Learn more about ${text}`);
 
@@ -19,7 +18,7 @@ function IntroCard() {
         <section role='banner' className='intro-card'>
             <div id='left'>
                 <h3>Tanmay is a <span>web designer</span> and <span>front-end developer</span></h3>
-                <p>He crafts responsive websites where technologies meet creativity</p>
+                <p>He crafts ts responsive websites where technologie ts responsive websites where technologie ts responsive websites where technologie ts responsive websites where technologie responsive websites where technologies meet creativity</p>
                 <button>Contact Me</button>
             </div>
             <div id='right'>
