@@ -8,7 +8,8 @@ function NavBar() {
             <h2 href='#home'><img src={KakashiSVG} alt='kakashi-face' />Tanmay</h2>
             <ul>
                 <li><a href="#home" tabIndex={0}><span>#</span>home</a></li>
-                <li><a href="#work" tabIndex={1}><span>#</span>work</a></li>
+                <li><a href="#projects" tabIndex={1}><span>#</span>projects</a></li>
+                <li><a href="#skills" tabIndex={1}><span>#</span>skills</a></li>
                 <li><a href="#about" tabIndex={2}><span>#</span>about-me</a></li>
                 <li><a href="#contact" tabIndex={3}><span>#</span>contact</a></li>
             </ul>

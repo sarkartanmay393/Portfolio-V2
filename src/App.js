@@ -1,10 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import FollowLine from './components/FollowLine';
+// import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
 import QuoteCard from './components/QuoteCard';
 import ProjectSection from './components/ProjectSection';
 import FooterCard from './components/FooterCard';
+import SkillSection from './components/SkillSection';
+import AboutSection from './components/AboutMe';
 
 
 function App() {
@@ -21,14 +23,15 @@ function App() {
           <IntroCard />
           <QuoteCard />
           <ProjectSection />
+          <SkillSection />
+          <AboutSection />
         </section>
       </main>
       <footer>
-          <div className='invisible-space-m'></div>
-          <FooterCard />
+        <div className='invisible-space-m'></div>
+        <FooterCard />
       </footer>
-
-        <p id='copyright-tag'>© Copyright 2033. Redesigned by Tanmay</p>
+      <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
     </>
   );
 }
