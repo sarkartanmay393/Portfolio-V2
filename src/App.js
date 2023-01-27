@@ -7,6 +7,7 @@ import ProjectSection from './components/ProjectSection';
 import FooterCard from './components/FooterCard';
 import SkillSection from './components/SkillSection';
 import AboutSection from './components/AboutMe';
+import ContactSection from './components/ContactCard';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <ProjectSection />
           <SkillSection />
           <AboutSection />
+          <ContactSection />
         </section>
       </main>
       <footer>

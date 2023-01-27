@@ -2,11 +2,10 @@ import './AboutMe.css';
 
 function AboutSection() {
 
-
     return (
         <section id='about-section'>
             <header>
-                <h2><span id='hash'>#</span>About-Me</h2>
+                <h2><span id='hash'>#</span>about-me</h2>
             </header>
             <main>
                 <section className='about-description'>
