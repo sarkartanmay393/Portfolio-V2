@@ -8,6 +8,10 @@
     color: white;
 }
 
+#project-section:hover {
+    color: lightgreen;
+}
+
 #project-section span {
     color: orangered;
 }
@@ -55,7 +59,11 @@
     border: 1px solid white;
     padding: 1rem 1rem;
     margin: 0 0rem;
+    color: white;
+}
 
+.project-card:hover {
+    border: 1px solid lightgreen;
 }
 
 .project-card #madeby {
@@ -134,4 +142,8 @@
     height: 60px;
     margin: 2px;
     border-radius: 12px;
+}
+
+#project-section #view-all-btn:hover {
+    color: lightgreen;
 }

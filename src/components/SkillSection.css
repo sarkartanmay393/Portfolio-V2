@@ -8,6 +8,10 @@
     color: white;
 }
 
+#skill-section:hover {
+    color: lightgreen;
+}
+
 #skill-section #hash {
     color: orangered;
 }
@@ -21,20 +25,20 @@
     padding: 2rem 1rem;
 }
 
-#skill-section main #skills-quote {
+/* #skill-section main #skills-quote {
     border: 1px solid white;
     width: 30%;
 }
 
 #skills-section main #skills {
-    /* width: 100%; */
-    border: 1px solid white;
+     width: 100%; 
+    border: 0px solid white;
 
     padding: 12px;
 
     display: flex;
     flex-direction: row;
-}
+} */
 
 .skill-card {
     display: flex;
@@ -48,10 +52,17 @@
     border: 1px solid white;
     padding: 8px 12px;
     margin: 0 0rem;
+
+    color: white;
+}
+
+.skill-card:hover {
+    border: 1px solid lightgreen;
+    color: white;
 }
 
 .skill-card #skill-header {
-    font-size: 12px;
+    font-size: 13px;
     border: 0px solid white;
     font-family: 'Fira Code';
 
@@ -60,7 +71,7 @@
     margin: 0;
 
     text-align: center;
-    color: orange;
+    /* color: white; */
 
     max-width: 100%;
     overflow: clip;
@@ -86,7 +97,20 @@
 }
 
 .skill-card #skill-names a {
-    /* margin: 8px; */
+    border: 0px solid white;
+    border-radius: 0;
+    border: #555;
+
+    padding: 1px 0;
+
+}
+
+.skill-card #skill-names img {
+    border: 0px solid white;
+    border-radius: 0%;
+    image-rendering: optimizeSpeed;
+
+    height: 24px;
 }
 
 .skill-card span {

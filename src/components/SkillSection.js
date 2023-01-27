@@ -6,7 +6,7 @@ function SkillSection() {
         ["React", "Express", "Flutter"],
         ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
         ["Docker", "Kubernetes", "Terraform", "Jenkins", "Git"],
-        ["Azure", "Civo", "Firebase", "Linux"],
+        ["Linode", "Civo", "Firebase", "Linux"],
     ];
 
     const swForHeader = (index) => {
@@ -39,6 +39,9 @@ function SkillSection() {
         switch (skillName) {
             default:
                 return;
+            case "Dart":
+                res = "https://dart.dev/";
+                break;
             case "React":
                 res = "https://reactjs.org/";
                 break;
@@ -115,33 +118,37 @@ function SkillSection() {
             <main>
                 {/* <section id='skills-quote'></section> */}
                 {/* <section id='skills'> */}
-                    {
-                        skills.map((valueArray, indexArray) => {
+                {
+                    skills.map((valueArray, indexArray) => {
 
-                            // Small lengths to Long Lengths
-                            valueArray.sort((a, b) => {
-                                if (a.length > b.length) {
-                                    return 1;
-                                } else if (a.length === b.length) {
-                                    return 0;
-                                }
-                                return -1;
-                            });
+                        // Small lengths to Long Lengths
+                        valueArray.sort((a, b) => {
+                            if (a.length > b.length) {
+                                return 1;
+                            } else if (a.length === b.length) {
+                                return 0;
+                            }
+                            return -1;
+                        });
 
-                            return (
-                                <section className='skill-card' key={`${indexArray}-skills`}>
-                                    <p id='skill-header'>{swForHeader(indexArray)}</p>
-                                    <p id='skill-names'>{
-                                        valueArray.map((value, index) => {
-                                            return (
-                                                <a key={`${index}-skillNames`} href={swForLinks(value)}><img alt={`skill-in-${value}`} src={`https://img.shields.io/badge/${value}-027d9c?style=for-the-badge&logo=${value}&logoColor=white`} /></a>
-                                            );
-                                        })
-                                    }</p>
-                                </section>
-                            );
-                        })
-                    }
+                        return (
+                            <section className='skill-card' key={`${indexArray}-skills`}>
+                                <p id='skill-header'>{swForHeader(indexArray)}</p>
+                                <p id='skill-names'>{
+                                    valueArray.map((value, index) => {
+                                        return (
+                                            <a key={`${index}-skillNames`} href={swForLinks(value)}>
+                                                <img alt={`skill-in-${value}`} src={`https://img.shields.io/badge/
+                                                    ${value}-white?style=for-the-badge&logo=${value}&logoColor=black`
+                                                } />
+                                            </a>
+                                        );
+                                    })
+                                }</p>
+                            </section>
+                        );
+                    })
+                }
                 {/* </section> */}
             </main>
         </section>

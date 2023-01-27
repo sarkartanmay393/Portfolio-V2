@@ -8,6 +8,10 @@
     color: white;
 }
 
+#about-section:hover {
+    color: lightgreen;
+}
+
 #about-section #hash {
     color: orangered;
 }
@@ -31,6 +35,7 @@
 
     text-align: start;
     font-size: 14px;
+    color: white;
 }
 
 #about-section #desc-intro {
@@ -50,7 +55,7 @@
     background: none;
 
     padding: 6px 12px;
-    border: 1px solid orange;
+    border: 1px solid #ffa500;
 
     font-family: monospace;
     color: white;
@@ -69,7 +74,6 @@
     width: 40%;
     border: 0px solid white;
 }
-
 
 
 .about-card span {
