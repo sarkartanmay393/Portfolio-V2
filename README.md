@@ -5,7 +5,7 @@
 <div align="center">
 
   <a href="https://github.com/sarkartanmay393/Portfolio-V2">
-    <img src="https://img.icons8.com/ios/100/000000/walter-white.png" alt="Logo" width="100" height="100">
+    <img src="https://img.icons8.com/ios/100/ffffff/walter-white.png" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Portfolio V2</h3>
@@ -23,7 +23,7 @@
 Portfolio-V2"><strong>Explore Code »</strong></a>
    <br />
    <br />
-   <a href="https://tanmaysarkar.tech/" target="_blank" rel="noopener noreferrer" >View Demo</a>
+   <a href="https://portfolio-v2-aa5c7.web.app/" target="_blank" rel="noopener noreferrer" >View Demo</a>
    ·
    <a href="https://github.com/sarkartanmay393/Portfolio-V2/
 issues">Report Bug</a>
@@ -70,7 +70,8 @@ issues">Request Feature</a>
 
 ### Built With
 
- [![React][React-shield]][React-url]
+[![React][React-shield]][React-url]
+[![Firebase][Firebase-shield]][Firebase-url]
 
 ### Things I Learned
 
@@ -87,9 +88,9 @@ issues">Request Feature</a>
 <details>
    <summary><strong>Show</strong> </summary>
 
-<div style="text-align: center;"> <strong><i>Highland Room Outlook</i></strong></div>
+<div style="text-align: center;"> <strong><i>Homepage</i></strong></div>
 
-![Hinghland Rooms](static/screenshots/highend-room-page.png "Highend Room Page")
+![Homepage](homepage.png "Homepage")
 
 </details>
 
@@ -129,11 +130,11 @@ Running a development environment for this project will be the easiest thing in 
 <!-- ROADMAP -->
 ## Roadmap
 
-* [x] Web Application
-* [x] New Responsive UI
 * [x] Styling
-* [ ] Spotify Integration
 * [ ] Database
+* [x] New Responsive UI
+* [ ] Web Application
+* [ ] Spotify Integration
 * [ ] Email Service
 
 See the [open issues](https://github.com/sarkartanmay393/Portfolio-V2/issues) for a full list of proposed features (and known issues).
@@ -165,4 +166,7 @@ Project Link: [https://github.com/sarkartanmay393/Portfolio-V2](https://github.c
 
 [React-shield]: https://img.shields.io/badge/React-027d9c?style=for-the-badge&logo=React&logoColor=white
 [React-url]: https://reactjs.org
+
+[Firebase-shield]: https://img.shields.io/badge/Firebase-027d9c?style=for-the-badge&logo=Firebase&logoColor=white
+[Firebase-url]: https://firebase.google.com/
 
