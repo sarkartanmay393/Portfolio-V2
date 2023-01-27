@@ -1,4 +1,4 @@
-#project-section {
+#projects {
     display: flex;
     flex-direction: column;
 
@@ -8,15 +8,15 @@
     color: white;
 }
 
-#project-section:hover {
+#projects:hover {
     color: lightgreen;
 }
 
-#project-section span {
+#projects span {
     color: orangered;
 }
 
-#project-section header {
+#projects header {
     display: flex;
     flex-direction: row;
 
@@ -25,19 +25,19 @@
     border: 0px solid white;
 }
 
-#project-section header button {
+#projects header button {
     color: white;
     border: none;
     background-color: transparent;
     font-family: 'Fira Code', monospace;
 }
 
-#project-section header hr {
+#projects header hr {
     transform: rotate(90deg);
 
 }
 
-#project-section main {
+#projects main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -144,6 +144,6 @@
     border-radius: 12px;
 }
 
-#project-section #view-all-btn:hover {
+#projects #view-all-btn:hover {
     color: lightgreen;
 }

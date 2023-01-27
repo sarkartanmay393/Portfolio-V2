@@ -1,4 +1,4 @@
-#skill-section {
+#skills {
     display: flex;
     flex-direction: column;
 
@@ -8,15 +8,15 @@
     color: white;
 }
 
-#skill-section:hover {
+#skills:hover {
     color: lightgreen;
 }
 
-#skill-section #hash {
+#skills #hash {
     color: orangered;
 }
 
-#skill-section main {
+#skills main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -25,7 +25,7 @@
     padding: 2rem 1rem;
 }
 
-/* #skill-section main #skills-quote {
+/* #skills main #skills-quote {
     border: 1px solid white;
     width: 30%;
 }

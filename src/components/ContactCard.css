@@ -1,4 +1,4 @@
-#contact-section {
+#contact {
     display: flex;
     flex-direction: column;
 
@@ -10,15 +10,15 @@
     color: white;
 }
 
-#contact-section:hover {
+#contact:hover {
     color: lightgreen;
 }
 
-#contact-section #hash {
+#contact #hash {
     color: orangered;
 }
 
-#contact-section main {
+#contact main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -28,7 +28,7 @@
 }
 
 /* Main -> First Section */
-#contact-section .contact-description {
+#contact .contact-description {
     width: 80%;
     border: 0px solid white;
 
@@ -41,7 +41,7 @@
 }
 
 
-#contact-section #desc-text {
+#contact #desc-text {
     margin: 6px 0;
 
     font-size: 13px;
@@ -51,13 +51,13 @@
 
 
 /* Main -> Second Section */
-#contact-section .contact-links {
+#contact .contact-links {
     width: 20%;
     border: 0px solid white;
     color: white;
 }
 
-#contact-section #contact-links-board {
+#contact #contact-links-board {
     border: 1px solid white;
 
     display: flex;
@@ -67,11 +67,11 @@
     padding: 12px 0;
 }
 
-#contact-section #contact-links-board:hover {
+#contact #contact-links-board:hover {
     border: 1px solid lightgreen;
 }
 
-#contact-section #contact-links-board p {
+#contact #contact-links-board p {
     padding-bottom: 4px;
     border-bottom: 0.1px solid white;
 
@@ -81,7 +81,7 @@
     font-size: 16px;
 }
 
-#contact-section #contact-links-board .row {
+#contact #contact-links-board .row {
     border: 0px solid white;
     width: 50%;
 
@@ -97,17 +97,17 @@
     font-size: 12px;
 }
 
-#contact-section #contact-links-board .row:hover {
+#contact #contact-links-board .row:hover {
     color: lightgreen;
     font-weight: bold;
 }
 
-#contact-section #contact-links-board .row span {
+#contact #contact-links-board .row span {
     color: white;
     margin-left: 8px;
 }
 
 
-#contact-section img {
+#contact img {
     height: 16px;
 }

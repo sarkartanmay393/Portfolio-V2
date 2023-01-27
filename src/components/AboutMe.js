@@ -3,7 +3,7 @@ import './AboutMe.css';
 function AboutSection() {
 
     return (
-        <section id='about-section'>
+        <section id='about'>
             <header>
                 <h2><span id='hash'>#</span>about-me</h2>
             </header>

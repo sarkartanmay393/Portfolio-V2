@@ -18,7 +18,7 @@ function App() {
         <div className='invisible-space'></div>
         <NavBar />
       </header>
-      <main>
+      <main id='home'>
         <div className='invisible-space-m'></div>
         <section className='main-components'>
           <IntroCard />

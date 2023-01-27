@@ -36,7 +36,7 @@ function ProjectSection() {
     ];
 
     return (
-        <section id='project-section'>
+        <section id='projects'>
             <header>
                 <h2><span>#</span>Projects</h2>
                 <button id='view-all-btn' onClick={() => { alert("View All!"); }}>{viewAll}</button>

@@ -111,7 +111,7 @@ function SkillSection() {
     }
 
     return (
-        <section id='skill-section'>
+        <section id='skills'>
             <header>
                 <h2><span id='hash'>#</span>skills</h2>
             </header>

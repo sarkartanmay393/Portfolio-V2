@@ -5,7 +5,7 @@ function ContactSection() {
     const TwitterSVG = require('../assets/twitter.svg').default;
     const LinkedinSVG = require('../assets/linkedin.svg').default;
     return (
-        <section id='contact-section'>
+        <section id='contact'>
             <header>
                 <h2><span id='hash'>#</span>contacts</h2>
             </header>
