@@ -4,6 +4,9 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+    border: 1px solid white;
 }
 
 header {
@@ -12,6 +15,7 @@ header {
     border: 0px solid white;
 
 }
+
 
 main {
     display: flex;
@@ -36,6 +40,8 @@ footer {
 .main-components {
     border: 0px solid white;
 
+    width: 100%;
+
     display: flex;
     flex-direction: column;
 
@@ -51,6 +57,17 @@ footer {
 
     border: 0px solid white;
 }
+
+@media (max-width: 600px) {
+    .invisible-space {
+        width: 0;
+    }
+
+    .invisible-space-m {
+        width: 0;
+    }
+}
+
 
 .invisible-space-m {
     display: flex;
