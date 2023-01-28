@@ -8,6 +8,7 @@ import FooterCard from './components/FooterCard';
 import SkillSection from './components/SkillSection';
 import AboutSection from './components/AboutMe';
 import ContactSection from './components/ContactCard';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <FooterCard />
       </footer>
       <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
+      <ScrollToTop />
     </>
   );
 }
