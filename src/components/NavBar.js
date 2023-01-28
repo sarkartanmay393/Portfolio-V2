@@ -12,17 +12,13 @@ function NavBar() {
     const [color, setColor] = useState('');
 
     useEffect(() => {
-        console.log(window.screen.width);
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);
-        console.log(isMobile);
         isMenuOpen ?
             setColor('rgb(21, 36, 36)') : setColor('');
-
-    }, [isMobile, isMenuOpen]);
+    }, [isMenuOpen]);
 
     const openMenu = () => { setIsMenuOpen(!isMenuOpen) };
-
 
     return (
         <>
@@ -37,7 +33,7 @@ function NavBar() {
                 </div> :
                 <></>
             }
-            <nav style={{ 'background-color': `${color}` }} >
+            <nav style={{ 'backgroundColor': `${color}` }} >
                 <h2 href='#home'><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2>
                 {isMobile ?
                     <>
@@ -45,11 +41,11 @@ function NavBar() {
                     </>
                     :
                     <ul>
-                        <li><a href="#home" tabIndex={0}><span>#</span>home</a></li>
-                        <li><a href="#projects" tabIndex={1}><span>#</span>projects</a></li>
-                        <li><a href="#skills" tabIndex={1}><span>#</span>skills</a></li>
-                        <li><a href="#about" tabIndex={2}><span>#</span>about-me</a></li>
-                        <li><a href="#contact" tabIndex={3}><span>#</span>contact</a></li>
+                        <li key='home'><a href="#home" tabIndex={0}><span>#</span>home</a></li>
+                        <li key='projects'><a href="#projects" tabIndex={1}><span>#</span>projects</a></li>
+                        <li key='skills'><a href="#skills" tabIndex={1}><span>#</span>skills</a></li>
+                        <li key='about'><a href="#about" tabIndex={2}><span>#</span>about-me</a></li>
+                        <li key='contact'><a href="#contact" tabIndex={3}><span>#</span>contact</a></li>
                     </ul>
                 }
             </nav>
