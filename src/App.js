@@ -23,9 +23,9 @@ function App() {
         <div className='invisible-space-m'></div>
         <section className='main-components'>
           <IntroCard />
-          {/* <QuoteCard />
-            <ProjectSection />
-            <SkillSection />
+          <QuoteCard />
+          {/* <ProjectSection /> */}
+          {/* <SkillSection />
             <AboutSection />
             <ContactSection /> */}
         </section>

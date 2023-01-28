@@ -1,24 +1,22 @@
 #quote-card {
     display: flex;
     flex-direction: column;
-
-    padding: 2rem 10rem;
-
     align-items: center;
 
-    border: 0px solid whitesmoke;
-
+    padding: 2rem 10rem;
+    border: px solid whitesmoke;
     color: lightgreen;
 }
+
+
 
 #quote-card h3 {
     border: 1px solid whitesmoke;
     padding: 15px;
-
     text-align: center;
 
     width: 80%;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 500;
 }
 
@@ -30,7 +28,6 @@
     left: -35%;
 
     background-color: #282C33;
-
     padding: 0 6px;
     width: fit-content;
 
@@ -86,4 +83,30 @@
     border: 0;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 600px) {
+    #quote-card {
+        padding: 1rem 0rem;
+    }
+
+    #quote-card h3 {
+        width: 90%;
+        font-size: 14px;
+
+    }
+
+    #quote-card .row {
+        height: 30px;
+        width: 28%;
+    }
+
+    #quote-card .row p {
+        font-size: 12px;
+        padding: 0 1rem;
+    }
+
+    #quote-card #second {
+        height: 8px;
+    }
 }
