@@ -5,7 +5,7 @@ const KakashiSVG = require('../assets/kakashi.svg').default;
 function NavBar() {
     return (
         <nav>
-            <h2 href='#home'><img src={KakashiSVG} alt='kakashi-face' />Tanmay</h2>
+            <h2 href='#home'><img id ='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2>
             <ul>
                 <li><a href="#home" tabIndex={0}><span>#</span>home</a></li>
                 <li><a href="#projects" tabIndex={1}><span>#</span>projects</a></li>

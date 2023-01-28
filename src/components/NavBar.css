@@ -1,3 +1,14 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#kakashi-face-nav {
+    animation: spin 1s linear 1s 2;
+    /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
+}
+
 nav {
     border: 0px solid white;
 
