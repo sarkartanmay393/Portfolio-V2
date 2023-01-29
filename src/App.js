@@ -30,10 +30,10 @@ function App() {
           <ContactSection />
         </section>
       </main>
-      {/* <footer>
+      <footer>
         <div className='invisible-space-m'></div>
         <FooterCard />
-      </footer> */}
+      </footer>
       <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
       <ScrollToTop />
     </>

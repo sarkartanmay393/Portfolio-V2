@@ -48,7 +48,7 @@ function ProjectSection() {
                             return <></>;
                         }
                         return (
-                            <section className='project-card'>
+                            <section className='project-card' key={`${value}-${index}`}>
                                 <p id='madeby'>{value.madeby}</p>
                                 <div className='row'>
                                     <img src={value.image} alt={`${value.title}-${index}`} />
