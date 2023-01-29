@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react';
 
 const HomeImage = require('../assets/home-img.svg').default;
 
-function IntroCard() {
+function IntroCard({ps_ref, ps_status, description}) {
     const [isMobile, setIsMobile] = useState(false);
-    const psLink = `https://github.com/sarkartanmay393/Portfolio-V2`;
 
     useEffect(() => {
         window.screen.width >= 600 ? setIsMobile(false) : setIsMobile(true);
@@ -15,12 +14,12 @@ function IntroCard() {
         <section role='banner' className='intro-card'>
             <div id='left'>
                 <h3>Tanmay is a <span>web designer</span> and <span>front-end developer</span></h3>
-                <p>He crafts ts responsive websites where technologie ts responsive websites where technologie ts responsive websites where technologie ts responsive websites where technologie responsive websites where technologies meet creativity</p>
+                <p>{description}</p>
                 {isMobile ? <></> : <a href='#contact'><button>Contact Me</button></a>}
             </div>
             <div id='right'>
                 <img src={HomeImage} alt='home' />
-                <p>✅ Currently working on <a href={psLink}><span id="ps-btn">Portfolio</span></a></p>
+                <p>✅ Currently working on <a href={ps_ref}><span id="ps-btn">{ps_status}</span></a></p>
             </div>
         </section>
     );

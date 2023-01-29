@@ -1,9 +1,6 @@
 import './QuoteCard.css';
 
-function QuoteCard() {
-
-    const quote = ` A computer would deserve to be called intelligent if it could deceive a human into believing that it was human`;
-    const author = `Alan Turing`;
+function QuoteCard({ quote, author }) {
 
     return (
         <section id='quote-card'>

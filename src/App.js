@@ -10,37 +10,94 @@ import AboutSection from './components/AboutMe';
 import ContactSection from './components/ContactCard';
 import ScrollToTop from './components/ScrollToTop';
 import { collection, getDocs } from 'firebase/firestore';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+
+
 
 
 function App({ db }) {
   const [websiteData, setWebsiteData] = useState({
-    email: "",
-    intro_desc: "",
-    ps: {
-      ref: "",
-      status: "",
+    "email": "hello@tanmaysarkar.tech",
+    "intro_desc": "DevOps with Go | Full Stack with JS | Articles on  @hashnode  | Bow to Hari Narayan | CGEC 24",
+    "ps": {
+      "ref": "https://github.com/sarkartanmay393/Portfolio-V2",
+      "status": "Portfolio"
     },
-    quote: {
-      author: "",
-      text: "",
+    "quote": {
+      "author": "Albert Einstein",
+      "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
     },
-    skills: {
-      databases: [""],
-      frameworks: [""],
-      languages: [""],
-      cloud: [""],
-      tools: [""],
-      others: [""],
+    "skills": {
+      "tools": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Terraform",
+        "Git"
+      ],
+      "cloud": [
+        "Linode",
+        "Civo",
+        "Firebase"
+      ],
+      "frameworks": [
+        "React",
+        "Express",
+        "Flutter"
+      ],
+      "databases": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ],
+      "languages": [
+        "JavaScript",
+        "Go",
+        "Java",
+        "Dart",
+        "Python"
+      ],
+      "others": [
+        "HTML",
+        "CSS",
+        "Linux"
+      ]
     },
-    projects: [{
-      demo: "",
-      madeBy: "",
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },],
+    "projects": [
+      {
+        "title": "Yatra Sahayak",
+        "madeby": "Go, Docker, Bootstrap, PostgreSQL",
+        "demo": "http://192.46.213.243/",
+        "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
+        "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
+        "description": "Check room availability in desired dates,              make reservation and get your reservation summary in              Email. Technically a Golang based Web Application with              Database Interaction"
+      },
+      {
+        "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
+        "description": "Contains Javascript code of a blogging website              using ReactJS, MongoDB, Express and Node",
+        "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
+        "demo": "http://192.46.213.243:8081",
+        "title": "Blogosphere",
+        "madeby": "ReactJS, MongoDB, Express, Node"
+      },
+      {
+        "image": "https://img.icons8.com/clouds/100/null/landslide.png",
+        "demo": "https://gazeweather.web.app/",
+        "madeby": "ReactJS, HTML, CSS, RestAPI",
+        "description": "Contains Javascript code of a blogging website              using ReactJS, HTML, CSS",
+        "title": "Gaze Weather",
+        "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
+      },
+      {
+        "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
+        "title": "URL Shortener",
+        "description": "This is a simple URL shortener service that          uses Redis as a database. It is built using Golang and Docker.           It is also deployed on somewhere.",
+        "image": "https://img.icons8.com/clouds/100/null/domain.png",
+        "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
+        "madeby": "Golang, Redis, Docker, Compose"
+      },
+    ]
   });
 
 
@@ -66,7 +123,9 @@ function App({ db }) {
     }
 
     syncWebsiteData(db);
-  }, [db]);
+    console.log(websiteData);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -78,8 +137,8 @@ function App({ db }) {
       <main id='home'>
         <div className='invisible-space-m'></div>
         <section className='main-components'>
-          <IntroCard />
-          <QuoteCard />
+          <IntroCard ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
+          <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author}/>
           <ProjectSection />
           <SkillSection />
           <AboutSection />
