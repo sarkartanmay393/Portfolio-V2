@@ -1,7 +1,7 @@
 import "./ContactCard.css";
 import ContactCardInfo from "./ContactCardInfo";
 
-function ContactSection() {
+function ContactSection({ contacts, email }) {
   return (
     <section id="contact">
       <header>
@@ -19,11 +19,7 @@ function ContactSection() {
         <section className="contact-links">
           <section id="contact-links-board">
             <p id='msg-me-p'>Text me</p>
-            <ContactCardInfo
-              twitterId="sarkartanmay393"
-              emailId="hello@tanmaysarkar.tech"
-              linkedInId="tanmaysrkr"
-            />
+            <ContactCardInfo contacts={contacts} email={email} />
           </section>
         </section>
       </main>

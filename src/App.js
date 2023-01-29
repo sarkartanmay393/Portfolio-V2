@@ -27,6 +27,11 @@ function App({ db }) {
       "author": `Albert Einstein`,
       "text": `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.`,
     },
+    "contacts": {
+      "twitter": `sarkartanmay393`,
+      "github": `sarkartanmay393`,
+      "linkedin": "tanmaysrkr",
+    },
     "about_me": {
       "intro": `Hello, i’m Elias!`,
       "p1": `I’m a self-taught front-end developer
@@ -134,6 +139,7 @@ function App({ db }) {
           author: data.get('quote-author'),
           text: data.get('quote-text'),
         },
+        contacts: data.get('contacts'),
         about_me: data.get('about-me'),
         skills: data.get('skills'),
         projects: data.get('projects'),
@@ -160,12 +166,12 @@ function App({ db }) {
           <ProjectSection projects={websiteData.projects} />
           <SkillSection Skills={websiteData.skills} />
           <AboutSection {...websiteData.about_me} />
-          <ContactSection />
+          <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
         </section>
       </main>
       <footer>
         <div className='invisible-space-m'></div>
-        <FooterCard />
+        <FooterCard contacts={websiteData.contacts} description={websiteData.intro_desc} email={websiteData.email}  />
       </footer>
       <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
       <ScrollToTop />
