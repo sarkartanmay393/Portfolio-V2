@@ -24,8 +24,25 @@ function App({ db }) {
       "status": "Portfolio"
     },
     "quote": {
-      "author": "Albert Einstein",
-      "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+      "author": `Albert Einstein`,
+      "text": `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.`,
+    },
+    "about_me": {
+      "intro": `Hello, i’m Elias!`,
+      "p1": `I’m a self-taught front-end developer
+      based in Kyiv, Ukraine. I can develop responsive websites
+      from scratch and raise them into modern user-friendly web
+      experiences.`,
+      "p2": `Transforming my creativity and knowledge into
+      a websites has been my passion for over a year. I have been
+      helping various clients to establish their presence online. I
+      always strive to learn about the newest technologies and
+      frameworks.`,
+      "p3": `Transforming my creativity and knowledge into
+      a websites has been my passion for over a year. I have been
+      helping various clients to establish their presence online. I
+      always strive to learn about the newest technologies and
+      frameworks.`,
     },
     "skills": {
       "tools": [
@@ -117,14 +134,15 @@ function App({ db }) {
           author: data.get('quote-author'),
           text: data.get('quote-text'),
         },
+        about_me: data.get('about-me'),
         skills: data.get('skills'),
         projects: data.get('projects'),
       });
     }
 
     syncWebsiteData(db);
-    console.log(websiteData);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // console.log(websiteData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -138,10 +156,10 @@ function App({ db }) {
         <div className='invisible-space-m'></div>
         <section className='main-components'>
           <IntroCard ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
-          <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author}/>
-          <ProjectSection />
-          <SkillSection />
-          <AboutSection />
+          <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
+          <ProjectSection projects={websiteData.projects} />
+          <SkillSection Skills={websiteData.skills} />
+          <AboutSection {...websiteData.about_me} />
           <ContactSection />
         </section>
       </main>

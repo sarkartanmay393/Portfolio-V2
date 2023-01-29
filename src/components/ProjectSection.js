@@ -1,39 +1,7 @@
 import './ProjectSection.css';
 
-function ProjectSection() {
+function ProjectSection({projects}) {
     const viewAll = `View All ⇢`;
-    const projects = [{
-        title: "Yatra Sahayak",
-        madeby: "Go, Docker, Bootstrap, PostgreSQL",
-        url: `https://github.com/sarkartanmay393/RoomReservation-Go`,
-        image: `https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png`,
-        demo: '',
-        description: `Check room availability in desired dates, 
-            make reservation and get your reservation summary in 
-            Email. Technically a Golang based Web Application with 
-            Database Interaction`,
-    },
-    {
-        title: "URL Shortener",
-        madeby: "Golang, Redis, Docker, Compose",
-        url: `https://github.com/sarkartanmay393/URL-Shortener-Go`,
-        image: `https://img.icons8.com/clouds/100/null/domain.png`,
-        demo: '',
-
-        description: `This is a simple URL shortener service that
-         uses Redis as a database. It is built using Golang and Docker.
-          It is also deployed on somewhere.`,
-    },
-    {
-        title: "Blogosphere",
-        madeby: "ReactJS, MongoDB, Express, Node",
-        url: `https://github.com/sarkartanmay393/Blogosphere-JS`,
-        image: `https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png`,
-        demo: '',
-        description: `Contains Javascript code of a blogging website 
-            using ReactJS, MongoDB, Express and Node`,
-    }
-    ];
 
     return (
         <section id='projects'>
@@ -44,7 +12,7 @@ function ProjectSection() {
             <main>
                 {
                     projects.map((value, index) => {
-                        if (index >= 3) {
+                        if (index >= 4) {
                             return <></>;
                         }
                         return (

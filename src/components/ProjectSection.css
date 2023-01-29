@@ -47,6 +47,7 @@
     border: 0px solid white;
 
     padding: 2rem 1rem;
+    gap: 12px;
 }
 
 .project-card {
@@ -160,7 +161,7 @@
     }
 
     .project-card {
-        margin-bottom: 12px;
+        margin-bottom: 6px;
     }
 
 }
