@@ -24,10 +24,10 @@ function App() {
         <section className='main-components'>
           <IntroCard />
           <QuoteCard />
-          {/* <ProjectSection /> */}
-          {/* <SkillSection />
-            <AboutSection />
-            <ContactSection /> */}
+          <ProjectSection />
+          <SkillSection />
+          {/* <AboutSection /> */}
+          {/* <ContactSection /> */}
         </section>
       </main>
       {/* <footer>

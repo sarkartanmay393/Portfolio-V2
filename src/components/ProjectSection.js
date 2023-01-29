@@ -1,7 +1,7 @@
 import './ProjectSection.css';
 
 function ProjectSection() {
-    const viewAll = `View All~~>`;
+    const viewAll = `View All ⇢`;
     const projects = [{
         title: "Yatra Sahayak",
         madeby: "Go, Docker, Bootstrap, PostgreSQL",
@@ -44,6 +44,9 @@ function ProjectSection() {
             <main>
                 {
                     projects.map((value, index) => {
+                        if (index >= 3) {
+                            return <></>;
+                        }
                         return (
                             <section className='project-card'>
                                 <p id='madeby'>{value.madeby}</p>

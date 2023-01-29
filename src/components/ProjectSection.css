@@ -23,6 +23,8 @@
     justify-content: space-between;
 
     border: 0px solid white;
+
+    width: 100%;
 }
 
 #projects header button {
@@ -47,8 +49,6 @@
     padding: 2rem 1rem;
 }
 
-
-
 .project-card {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@
     width: 280px;
     height: 320px;
 
-    border: 1px solid white;
+    border: 01px solid white;
     padding: 1rem 1rem;
     margin: 0 0rem;
     color: white;
@@ -146,4 +146,21 @@
 
 #projects #view-all-btn:hover {
     color: lightgreen;
+}
+
+@media (max-width: 600px) {
+
+    #projects {
+        padding: 0 1rem;;
+    }
+
+    #projects main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        margin-bottom: 12px;
+    }
+
 }

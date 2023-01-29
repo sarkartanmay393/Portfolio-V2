@@ -4,7 +4,7 @@
     align-items: center;
 
     padding: 2rem 10rem;
-    border: px solid whitesmoke;
+    border: 0px solid whitesmoke;
     color: lightgreen;
 }
 
@@ -103,7 +103,7 @@
 
     #quote-card .row p {
         font-size: 12px;
-        padding: 0 1rem;
+        padding: 0 0rem;
     }
 
     #quote-card #second {

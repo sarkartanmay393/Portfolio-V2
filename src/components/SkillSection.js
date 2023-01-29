@@ -4,9 +4,10 @@ function SkillSection() {
     const skills = [
         ["Go", "JavaScript", "Dart"],
         ["React", "Express", "Flutter"],
+        ["Linode", "Civo", "Firebase"],
+        ["Linux",],
         ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
         ["Docker", "Kubernetes", "Terraform", "Jenkins", "Git"],
-        ["Linode", "Civo", "Firebase", "Linux"],
     ];
 
     const swForHeader = (index) => {
@@ -19,13 +20,16 @@ function SkillSection() {
                 res = "Frameworks";
                 break;
             case 2:
-                res = "Databases";
+                res = "Cloud";
                 break;
             case 3:
-                res = "Tools";
+                res = "Others";
                 break;
             case 4:
-                res = "Others";
+                res = "Databases";
+                break;
+            case 5:
+                res = "Tools";
                 break;
             default:
                 return;
