@@ -1,7 +1,7 @@
 import './ProjectSection.css';
 
 function ProjectSection() {
-    const viewAll = `View All~~>`;
+    const viewAll = `View All ⇢`;
     const projects = [{
         title: "Yatra Sahayak",
         madeby: "Go, Docker, Bootstrap, PostgreSQL",
@@ -38,14 +38,17 @@ function ProjectSection() {
     return (
         <section id='projects'>
             <header>
-                <h2><span>#</span>Projects</h2>
+                <h2><span>#</span>projects</h2>
                 <button id='view-all-btn' onClick={() => { alert("View All!"); }}>{viewAll}</button>
             </header>
             <main>
                 {
                     projects.map((value, index) => {
+                        if (index >= 3) {
+                            return <></>;
+                        }
                         return (
-                            <section className='project-card'>
+                            <section className='project-card' key={`${value}-${index}`}>
                                 <p id='madeby'>{value.madeby}</p>
                                 <div className='row'>
                                     <img src={value.image} alt={`${value.title}-${index}`} />

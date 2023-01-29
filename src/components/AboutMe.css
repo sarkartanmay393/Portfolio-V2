@@ -22,7 +22,7 @@
     justify-content: space-evenly;
 
     border: 0px solid white;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
 }
 
 /* Main -> First Section */
@@ -82,4 +82,30 @@
 
 .about-card img {
     height: 20px;
+}
+
+@media (max-width: 600px) {
+    #about {
+        padding: 0 1rem;
+    }
+
+    #about main {
+        padding: 1rem 1rem;
+    }
+
+    #about .about-description {
+        width: 100%;
+    }
+
+    #about #desc-text {
+        max-width: 100%;
+    }
+
+    #about .white-space {
+        width: 0%;
+    }
+
+    #about button {
+        margin: 6px 0;
+    }
 }

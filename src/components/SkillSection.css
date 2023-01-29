@@ -16,6 +16,10 @@
     color: orangered;
 }
 
+#skills header {
+    border: 0px solid white;
+}
+
 #skills main {
     display: flex;
     flex-direction: row;
@@ -120,4 +124,22 @@
 
 .skill-card img {
     height: 22px;
+}
+
+
+@media (max-width: 600px) {
+    #skills {
+        padding: 0 1rem;
+    }
+
+    #skills main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        align-items: center;
+        margin: auto;
+
+        row-gap: 12px;
+        column-gap: 12px;
+    }
 }

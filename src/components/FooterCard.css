@@ -5,6 +5,7 @@
     justify-content: space-between;
 
     background: none;
+    color: white;
 
     text-align: center;
     font-family: monospace;
@@ -52,6 +53,7 @@
 #footer-email {
     cursor: pointer;
 }
+
 #footer-email:hover {
     color: lightgreen;
     font-size: 14px;
@@ -79,4 +81,51 @@ footer h2 {
     padding: 0;
     margin: 0;
 
+}
+
+@media (max-width: 600px) {
+    #footer-section {
+        padding: 1rem 1rem;
+        justify-content: space-between;
+    }
+
+    #footer-section #first .left h2 {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+    #footer-section #first {
+        margin: 0;
+        width: 78%;
+        padding: 0 12px;
+    }
+
+    #footer-section #first .left {
+        display: grid;
+    }
+
+    #footer-section #first .left a {
+        margin-top: 6px;
+        margin-bottom: -2px;
+    }
+
+    #footer-section #first #footer-desc {
+        font-size: 12px;
+    }
+
+    #footer-section #second {
+        width: 22%;
+        /* border-left: 0.1px solid white; */
+    }
+
+    #footer-section #second h2 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+
+    #footer-section #second .right {
+        display: grid;
+        row-gap: 12px;
+    }
 }

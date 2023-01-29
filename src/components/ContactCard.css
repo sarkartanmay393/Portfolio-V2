@@ -43,7 +43,6 @@
 
 #contact #desc-text {
     margin: 6px 0;
-
     font-size: 13px;
 
     max-width: 60%;
@@ -53,22 +52,22 @@
 /* Main -> Second Section */
 #contact .contact-links {
     width: 20%;
-    border: 0px solid white;
+    border: 1px solid white;
     color: white;
 }
 
+#contact .contact-links:hover {
+    border: 1px solid lightgreen;
+}
+
 #contact #contact-links-board {
-    border: 1px solid white;
+    border: 0px solid white;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding: 12px 0;
-}
-
-#contact #contact-links-board:hover {
-    border: 1px solid lightgreen;
 }
 
 #contact #contact-links-board p {
@@ -83,18 +82,21 @@
 
 #contact #contact-links-board .row {
     border: 0px solid white;
-    width: 50%;
+    width: fit-content;
 
     display: flex;
     flex-direction: row;
 
     justify-content: center;
-    align-items: center;
 
     padding: 4px 0;
     margin-top: 4px;
 
     font-size: 12px;
+}
+
+#contact #contact-links-board .row a {
+    display: flex;
 }
 
 #contact #contact-links-board .row:hover {
@@ -107,7 +109,27 @@
     margin-left: 8px;
 }
 
-
 #contact img {
     height: 16px;
+}
+
+@media (max-width: 600px) {
+    #contact {
+        padding: 0 1rem;
+    }
+
+    #contact .contact-description {
+        width: 68%;
+        justify-content: start;
+    }
+
+    #contact #desc-text {
+        max-width: 90%;
+    }
+
+    #contact .contact-links {
+        width: 32%;
+        padding: 0 0px;
+    }
+
 }

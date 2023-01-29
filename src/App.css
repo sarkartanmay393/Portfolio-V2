@@ -4,6 +4,9 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+    border: 0px solid white;
 }
 
 header {
@@ -13,9 +16,12 @@ header {
 
 }
 
+
 main {
     display: flex;
     flex-direction: row;
+
+    justify-content: space-between;
 
     margin: 0 0rem;
 
@@ -35,6 +41,8 @@ footer {
 
 .main-components {
     border: 0px solid white;
+
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -98,4 +106,20 @@ a {
     text-transform: none;
     text-decoration: none;
     color: white;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .invisible-space {
+        width: 0;
+    }
+
+    .invisible-space-m {
+        width: 0;
+    }
+
+    #copyright-tag {
+        margin-top: 0;
+    }
 }
