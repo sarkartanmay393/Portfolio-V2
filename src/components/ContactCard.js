@@ -18,7 +18,7 @@ function ContactSection() {
         </section>
         <section className="contact-links">
           <section id="contact-links-board">
-            <p>Message me</p>
+            <p id='msg-me-p'>Text me</p>
             <ContactCardInfo
               twitterId="sarkartanmay393"
               emailId="hello@tanmaysarkar.tech"

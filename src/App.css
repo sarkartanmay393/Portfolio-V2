@@ -118,4 +118,8 @@ a {
     .invisible-space-m {
         width: 0;
     }
+
+    #copyright-tag {
+        margin-top: 0;
+    }
 }

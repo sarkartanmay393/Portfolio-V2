@@ -22,7 +22,7 @@
     justify-content: space-evenly;
 
     border: 0px solid white;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
 }
 
 /* Main -> First Section */
@@ -103,5 +103,9 @@
 
     #about .white-space {
         width: 0%;
+    }
+
+    #about button {
+        margin: 6px 0;
     }
 }

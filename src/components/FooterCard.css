@@ -5,6 +5,7 @@
     justify-content: space-between;
 
     background: none;
+    color: white;
 
     text-align: center;
     font-family: monospace;
@@ -84,8 +85,13 @@ footer h2 {
 
 @media (max-width: 600px) {
     #footer-section {
-        padding: 1rem 0rem;
+        padding: 1rem 1rem;
         justify-content: space-between;
+    }
+
+    #footer-section #first .left h2 {
+        font-size: 14px;
+        margin-bottom: 1px;
     }
 
     #footer-section #first {
@@ -99,7 +105,8 @@ footer h2 {
     }
 
     #footer-section #first .left a {
-        margin: 4px 0;
+        margin-top: 6px;
+        margin-bottom: -2px;
     }
 
     #footer-section #first #footer-desc {
@@ -108,9 +115,7 @@ footer h2 {
 
     #footer-section #second {
         width: 22%;
-        padding: 2px 2px;
-
-        border-left: 0.1px solid white;
+        /* border-left: 0.1px solid white; */
     }
 
     #footer-section #second h2 {
@@ -123,5 +128,4 @@ footer h2 {
         display: grid;
         row-gap: 12px;
     }
-
 }
