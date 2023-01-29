@@ -135,10 +135,11 @@
     #skills main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: dense;
-    }
 
-    #skills .skill-card {
-        margin-bottom: 8px;
+        align-items: center;
+        margin: auto;
+
+        row-gap: 12px;
+        column-gap: 12px;
     }
 }

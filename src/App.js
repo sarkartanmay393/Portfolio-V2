@@ -26,7 +26,7 @@ function App() {
           <QuoteCard />
           <ProjectSection />
           <SkillSection />
-          {/* <AboutSection /> */}
+          <AboutSection />
           {/* <ContactSection /> */}
         </section>
       </main>

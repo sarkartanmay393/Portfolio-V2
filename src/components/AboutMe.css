@@ -83,3 +83,25 @@
 .about-card img {
     height: 20px;
 }
+
+@media (max-width: 600px) {
+    #about {
+        padding: 0 1rem;
+    }
+
+    #about main {
+        padding: 1rem 1rem;
+    }
+
+    #about .about-description {
+        width: 100%;
+    }
+
+    #about #desc-text {
+        max-width: 100%;
+    }
+
+    #about .white-space {
+        width: 0%;
+    }
+}

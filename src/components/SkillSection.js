@@ -5,7 +5,7 @@ function SkillSection() {
         ["Go", "JavaScript", "Dart"],
         ["React", "Express", "Flutter"],
         ["Linode", "Civo", "Firebase"],
-        ["Linux",],
+        ["Linux", ],
         ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
         ["Docker", "Kubernetes", "Terraform", "Jenkins", "Git"],
     ];
