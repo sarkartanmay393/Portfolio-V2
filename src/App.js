@@ -27,7 +27,7 @@ function App() {
           <ProjectSection />
           <SkillSection />
           <AboutSection />
-          {/* <ContactSection /> */}
+          <ContactSection />
         </section>
       </main>
       {/* <footer>

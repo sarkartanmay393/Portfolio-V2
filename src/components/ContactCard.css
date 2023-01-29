@@ -53,12 +53,12 @@
 /* Main -> Second Section */
 #contact .contact-links {
     width: 20%;
-    border: 0px solid white;
+    border: 1px solid white;
     color: white;
 }
 
 #contact #contact-links-board {
-    border: 1px solid white;
+    border: 0px solid white;
 
     display: flex;
     flex-direction: column;
@@ -110,4 +110,29 @@
 
 #contact img {
     height: 16px;
+}
+
+@media (max-width: 600px) {
+    #contact {
+        padding: 0 1rem;
+    }
+
+
+
+    #contact .contact-description {
+        width: 70%;
+        justify-content: center;
+    }
+
+    #contact #desc-text {
+        max-width: 80%;
+    }
+
+    #contact .contact-links {
+        width: 30%;
+        padding: 0 2px;
+    }
+
+
+
 }
