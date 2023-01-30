@@ -11,6 +11,7 @@ import ContactSection from './components/ContactCard';
 import ScrollToTop from './components/ScrollToTop';
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import BlogSection from './components/BlogCard';
 
 
 
@@ -173,6 +174,7 @@ function App({ db }) {
         <section className='main-components'>
           <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
           <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
+          <BlogSection />
           <ProjectSection projects={websiteData.projects} />
           <SkillSection Skills={websiteData.skills} />
           <AboutSection {...websiteData.about_me} />

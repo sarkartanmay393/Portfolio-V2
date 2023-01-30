@@ -1,5 +1,8 @@
 import "./ContactCard.css";
-import ContactCardInfo from "./ContactCardInfo";
+
+const LinkedinSVG = require("../assets/linkedin.svg").default;
+const MailSVG = require("../assets/mail.svg").default;
+const TwitterSVG = require("../assets/twitter.svg").default;
 
 function ContactSection({ contacts, email }) {
   return (
@@ -17,13 +20,26 @@ function ContactSection({ contacts, email }) {
           </p>
         </section>
         <section className="contact-links">
-          <section id="contact-links-board">
-            <p id='msg-me-p'>Text me</p>
-            <ContactCardInfo contacts={contacts} email={email} />
-          </section>
+          <p id='msg-me-p'>Text me</p>
+          {SocialRow({ username: email, title: '@hello', src: MailSVG })}
+          {SocialRow({ username: contacts.twitter, title: 'Twitter', src: TwitterSVG })}
+          {SocialRow({ username: contacts.linkedin, title: 'LinkedIn', src: LinkedinSVG })}
         </section>
       </main>
     </section>
+  );
+}
+
+function SocialRow({ username, title, src }) {
+  return (
+    <>
+      <div className="row">
+        <a href={`https://twitter.com/${username}`}>
+          <img src={src} alt="social-handles" />
+          <span>{title}</span>
+        </a>
+      </div>
+    </>
   );
 }
 

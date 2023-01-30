@@ -6,7 +6,6 @@
     padding: 0 10rem;
 
     margin: 1rem 0;
-
     color: white;
 }
 
@@ -54,14 +53,6 @@
     width: 20%;
     border: 1px solid white;
     color: white;
-}
-
-#contact .contact-links:hover {
-    border: 1px solid lightgreen;
-}
-
-#contact #contact-links-board {
-    border: 0px solid white;
 
     display: flex;
     flex-direction: column;
@@ -70,7 +61,7 @@
     padding: 12px 0;
 }
 
-#contact #contact-links-board p {
+.contact-links p {
     padding-bottom: 4px;
     border-bottom: 0.1px solid white;
 
@@ -80,7 +71,7 @@
     font-size: 16px;
 }
 
-#contact #contact-links-board .row {
+.contact-links .row {
     border: 0px solid white;
     width: fit-content;
 
@@ -95,16 +86,16 @@
     font-size: 12px;
 }
 
-#contact #contact-links-board .row a {
+.contact-links .row a {
     display: flex;
 }
 
-#contact #contact-links-board .row:hover {
+.contact-links .row:hover {
     color: lightgreen;
     font-weight: bold;
 }
 
-#contact #contact-links-board .row span {
+.contact-links .row span {
     color: white;
     margin-left: 8px;
 }

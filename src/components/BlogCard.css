@@ -1,0 +1,167 @@
+#blogs {
+    display: flex;
+    flex-direction: column;
+
+    border: 0px solid white;
+    padding: 0 10rem;
+
+    color: white;
+}
+
+#blogs:hover {
+    color: lightgreen;
+}
+
+#blogs span {
+    color: orangered;
+}
+
+#blogs header {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    border: 0px solid white;
+
+    width: 100%;
+}
+
+#blogs header button {
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-family: 'Fira Code', monospace;
+}
+
+#blogs header hr {
+    transform: rotate(90deg);
+}
+
+#blogs main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+
+    border: 0px solid white;
+
+    padding: 2rem 1rem;
+    gap: 12px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    width: 80%;
+    height: 160px;
+
+    border: 0.1px solid white;
+    padding: 1rem 1rem;
+    margin: 0 0rem;
+    color: white;
+}
+
+.blog-card:hover {
+    border: 0.1px solid lightgreen;
+}
+
+
+/* Test Ground */
+
+#blog-card-main {
+    width: 70%;
+    border: 0px solid white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#blog-card-main h2 {
+    text-align: start;
+}
+#blog-card-main h2:hover {
+    color: lightgreen;
+}
+
+#blog-card-main .blog-card-row {
+    display: flex;
+    flex-direction: row;
+
+    gap: 16px;
+    margin: 6px 0;
+
+    font-size: 13px;
+    font-weight: 100;
+    color: lightgreen;
+    font-family: monospace;
+}
+
+#blog-card-main-subtitle {
+    text-align: start;
+    max-height: 48px;
+    max-width: 98%;
+
+    overflow: hidden;
+    text-overflow: clip;
+
+    border: 0px solid white;
+    font-size: 14px;
+}
+
+
+#blog-card-aside {
+    width: 30%;
+    border: 0px solid white;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.blog-card img {
+    height: 60px;
+    margin: 2px;
+    border-radius: 12px;
+}
+
+#blogs #view-all-btn:hover {
+    color: lightgreen;
+}
+
+
+@media (max-width: 600px) {
+
+    #blogs {
+        padding: 0 1rem;
+    }
+
+    #blogs main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    #blog-card-main h2 {
+        font-size: 14px;
+    }
+
+    #blog-card-main .blog-card-row {
+        gap: 8px;
+        font-size: 10px;
+    }
+    
+    #blog-card-main-subtitle {
+        font-size: 12px;
+    }
+
+
+}
