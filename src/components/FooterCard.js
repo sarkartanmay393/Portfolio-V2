@@ -5,7 +5,7 @@ const GithubSVG = require('../assets/github.svg').default;
 const TwitterSVG = require('../assets/twitter.svg').default;
 const LinkedinSVG = require('../assets/linkedin.svg').default;
 
-function FooterCard({contacts, description, email}) {
+function FooterCard({desc, contacts, email}) {
 
     return (
         <>
@@ -15,7 +15,7 @@ function FooterCard({contacts, description, email}) {
                     <h2 href='#home'><img src={KakashiSVG} alt='kakashi-face' />Tanmay</h2>
                     <a href='mailto:hello@tanmaysarkar.tech'><p id='footer-email'>{email}</p></a>
                 </div>
-                <p id='footer-desc'>{description}</p>
+                <p id='footer-desc'>{desc}</p>
             </div>
             <div id='second'>
                 <h2>Socials</h2>

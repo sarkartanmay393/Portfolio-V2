@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const HomeImage = require('../assets/home-img.svg').default;
 
-function IntroCard({ps_ref, ps_status, description}) {
+function IntroCard({term_first, term_second, ps_ref, ps_status, description}) {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ function IntroCard({ps_ref, ps_status, description}) {
     return (
         <section role='banner' className='intro-card'>
             <div id='left'>
-                <h3>Tanmay is a <span>web designer</span> and <span>front-end developer</span></h3>
+                <h3>Tanmay is a <span>{term_first}</span> and <span>{term_second}</span></h3>
                 <p>{description}</p>
                 {isMobile ? <></> : <a href='#contact'><button>Contact Me</button></a>}
             </div>

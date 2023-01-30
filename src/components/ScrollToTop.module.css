@@ -12,3 +12,10 @@
     background-color: #bbb;
     border: 0;
 }
+
+@media (max-width: 600px) {
+    .scrollToTopButton{
+        height: 35px;
+        width: 35px;
+    }
+}

@@ -30,21 +30,6 @@ nav h2 {
     font-size: 18px;
 }
 
-@media (max-width: 600px) {
-    nav h2 {
-        font-size: 12px;
-        border: 0px solid white;
-    }
-
-    nav {
-        justify-content: space-between;
-        padding: 1rem 1.6rem;
-
-        height: 48px;
-    }
-
-}
-
 #menu-btn {
     /* height: 18px; */
     /* width: 8px; */
@@ -89,10 +74,6 @@ nav h2 {
     font-size: 22px;
 }
 
-
-
-
-
 nav h2:hover {
     color: lightgreen;
 }
@@ -124,4 +105,18 @@ nav ul li a {
 
 nav ul li a span {
     color: orangered;
+}
+
+@media (max-width: 600px) {
+    nav h2 {
+        font-size: 12px;
+        border: 0px solid white;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding: 1rem 1.6rem;
+
+        height: 48px;
+    }
 }

@@ -10,23 +10,6 @@
     color: white;
 }
 
-@media (max-width: 600px) {
-    .intro-card {
-        padding: 2rem 2rem;
-        flex-direction: column;
-    }
-
-    .intro-card #left h3 {
-        font-size: 22px;
-    }
-
-    .intro-card #left p {
-        font-size: 14px;
-    }
-
-
-}
-
 /* first part */
 .intro-card #left {
     border: 0px solid white;
@@ -101,4 +84,19 @@
 
 .intro-card #right span {
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .intro-card {
+        padding: 2rem 2rem;
+        flex-direction: column;
+    }
+
+    .intro-card #left h3 {
+        font-size: 22px;
+    }
+
+    .intro-card #left p {
+        font-size: 14px;
+    }
 }

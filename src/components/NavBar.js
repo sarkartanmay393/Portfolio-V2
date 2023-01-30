@@ -45,7 +45,7 @@ function NavBar() {
                         <li key='projects'><a href="#projects" tabIndex={1}><span>#</span>projects</a></li>
                         <li key='skills'><a href="#skills" tabIndex={1}><span>#</span>skills</a></li>
                         <li key='about'><a href="#about" tabIndex={2}><span>#</span>about-me</a></li>
-                        <li key='contact'><a href="#contact" tabIndex={3}><span>#</span>contact</a></li>
+                        <li key='contact'><a href="#contact" tabIndex={3}><span>#</span>contacts</a></li>
                     </ul>
                 }
             </nav>
