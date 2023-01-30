@@ -6,7 +6,8 @@ function BlogSection() {
     // eslint-disable-next-line no-unused-vars
     const blogs = [
         {
-            colorCode: "green",
+            link: `https://blog.tanmaysarkar.tech/build-sudoku-solver-engine-using-go`,
+            colorCode: "lightgreen",
             views: "120",
             title: "Build Sudoku Solver Engine using Go",
             subtitle: `Solve your unsolved Sudoku patterns just in command. It takes a your pattern, solves it and writes in to a file.`,
@@ -15,6 +16,7 @@ function BlogSection() {
             image: `https://blog.tanmaysarkar.tech/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1667654155553%2FH-nukWZ2r.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75`,
         },
         {
+            link: `https://blog.tanmaysarkar.tech/deploy-your-containerized-go-web-application`,
             colorCode: "lightpurple",
             views: "96",
             title: "Deploy your containerized Go Web Application",
@@ -24,6 +26,7 @@ function BlogSection() {
             image: `https://blog.tanmaysarkar.tech/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1666810316079%2F8b-KW6oLp.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75`,
         },
         {
+            link: `https://blog.tanmaysarkar.tech/building-a-imdb-web-scraper-using-go`,
             colorCode: "yellow",
             views: "142",
             title: "Building a IMDB Web Scraper using Go",
@@ -51,10 +54,10 @@ function BlogSection() {
             <main>
                 {blogs.map((value, index) => {
                     return (
-                        <section className='blog-card'>
+                        <section className='blog-card' onClick={() => {window.open(value.link)}}>
                             <section id='blog-card-main'>
-                                <h2>{value.title}</h2>
-                                <div className='row' style={{color: `${value.colorCode}`}}>
+                                <a href={value.link}><h2>{value.title}</h2></a>
+                                <div className='blog-card-row'>
                                     <p id='published-on'>{value.published_on}</p>
                                     <p id='read-time'>{value.time}</p>
                                     <p id='views'>{value.views} views</p>

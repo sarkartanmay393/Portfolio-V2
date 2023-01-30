@@ -53,6 +53,7 @@
 .blog-card {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 
     width: 80%;
     height: 160px;
@@ -64,7 +65,7 @@
 }
 
 .blog-card:hover {
-    border: 1px solid lightgreen;
+    border: 0.1px solid lightgreen;
 }
 
 
@@ -84,8 +85,11 @@
 #blog-card-main h2 {
     text-align: start;
 }
+#blog-card-main h2:hover {
+    color: lightgreen;
+}
 
-#blog-card-main .row {
+#blog-card-main .blog-card-row {
     display: flex;
     flex-direction: row;
 
@@ -94,7 +98,8 @@
 
     font-size: 13px;
     font-weight: 100;
-    color: lightcoral;
+    color: lightgreen;
+    font-family: monospace;
 }
 
 #blog-card-main-subtitle {
