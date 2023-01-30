@@ -91,7 +91,7 @@
 
     gap: 16px;
     margin: 6px 0;
-    
+
     font-size: 13px;
     font-weight: 100;
     color: lightcoral;
@@ -114,15 +114,10 @@
     width: 30%;
     border: 0px solid white;
 
-
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-
-
-/*  */
 
 .blog-card img {
     height: 60px;
@@ -133,6 +128,7 @@
 #blogs #view-all-btn:hover {
     color: lightgreen;
 }
+
 
 @media (max-width: 600px) {
 
