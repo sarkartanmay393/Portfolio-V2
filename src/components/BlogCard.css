@@ -139,7 +139,6 @@
 
     #blogs {
         padding: 0 1rem;
-        ;
     }
 
     #blogs main {
@@ -148,7 +147,21 @@
     }
 
     .blog-card {
-        margin-bottom: 6px;
+        width: 100%;
     }
+
+    #blog-card-main h2 {
+        font-size: 14px;
+    }
+
+    #blog-card-main .blog-card-row {
+        gap: 8px;
+        font-size: 10px;
+    }
+    
+    #blog-card-main-subtitle {
+        font-size: 12px;
+    }
+
 
 }
