@@ -110,7 +110,7 @@
     }
 
     #contact .contact-description {
-        width: 68%;
+        width: 70%;
         justify-content: start;
     }
 
@@ -119,8 +119,8 @@
     }
 
     #contact .contact-links {
-        width: 32%;
-        padding: 0 0px;
+        width: 30%;
+        padding: 8px 0px;
     }
 
 }
