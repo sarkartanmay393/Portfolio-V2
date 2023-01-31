@@ -1,13 +1,14 @@
 .follow-line {
-    display: grid;
+    display: inline-flex;
+    flex-direction: column;
     padding: 1rem 2rem;
 
     height: 100%;
     width: min-content;
 
-    position: sticky;
+    position: fixed;
 
-    border: 2px solid white;
+    border: 0px solid white;
 }
 
 .follow-line hr {
@@ -19,5 +20,5 @@
 
 .follow-line img {
     height: 18px;
-    margin: 6px 0;
+    margin-top: 8px;
 }

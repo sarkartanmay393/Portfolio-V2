@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-// import FollowLine from './components/FollowLine';
+import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
 import QuoteCard from './components/QuoteCard';
 import ProjectSection from './components/ProjectSection';
@@ -124,9 +124,11 @@ function App({ db }) {
       },
     ]
   });
+  const [isMobile, setIsMobile] = useState(true);
 
 
   useEffect(() => {
+    setIsMobile(window.screen.width < 600);
     const syncWebsiteData = async (db) => {
       const snapshot = await getDocs(collection(db, 'body-info'));
       const data = snapshot.docs[0];
@@ -161,7 +163,7 @@ function App({ db }) {
 
   return (
     <>
-      {/* <FollowLine /> */}
+      { isMobile ? <></> : <FollowLine />}
       <header>
         <div className='invisible-space'></div>
         <NavBar />

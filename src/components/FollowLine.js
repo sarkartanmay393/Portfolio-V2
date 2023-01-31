@@ -5,17 +5,33 @@ const TwitterSVG = require('../assets/twitter.svg').default;
 const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 export default function FollowLine() {
-
-    // const redirectTo = (domain, username) => {
-    //     window.open(`https://${domain}.com/${username}`, '_blank');
-    // };
-
+    const socialLinks = (domain, handle) => {
+        let baseUrl = 'https://www.';
+        switch (domain) {
+            default: {
+                return;
+            }
+            case "github": {
+                baseUrl += 'github.com/';
+                break;
+            }
+            case "linkedin": {
+                baseUrl += 'linkedin.com/';
+                break;
+            }
+            case "twitter": {
+                baseUrl += 'twitter.com/';
+                break;
+            }
+        }
+        return baseUrl + handle;
+    }
     return (
         <section className='follow-line'>
             <hr />
-            <img src={GithubSVG} alt='github-ref' />
-            <img src={TwitterSVG} alt='twitter-ref' />
-            <img src={LinkedinSVG} alt='linkedin-ref' />
+            <a href={socialLinks("github", "sarkartanmay393")}><img src={GithubSVG} alt='github-ref' /></a>
+            <a href={socialLinks("twitter", "sarkartanmay393")}><img src={TwitterSVG} alt='twitter-ref' /></a>
+            <a href={socialLinks("linkedin", "in/tanmaysrkr")}><img src={LinkedinSVG} alt='linkedin-ref' /></a>
         </section>
     );
 }

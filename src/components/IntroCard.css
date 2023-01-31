@@ -83,6 +83,10 @@
     margin: 4.5px 0;
 }
 
+#ps-btn {
+    text-decoration: underline;
+}
+
 .intro-card #right span {
     font-weight: bold;
 }
