@@ -68,6 +68,7 @@
 .blog-card:hover {
     color: black;
     background-color: lightgreen;
+    border: 0.1px solid lightgreen;
 }
 
 .blog-card:hover h2 {
@@ -96,10 +97,10 @@
     flex-direction: row;
 
     gap: 16px;
-    margin: 06px 0;
+    margin: 6px 0;
 
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     color: lightgreen;
     font-family: monospace;
 }
@@ -167,6 +168,7 @@
     #blog-card-main .blog-card-row {
         gap: 8px;
         font-size: 10px;
+        font-weight: 700;
     }
 
     #blog-card-main-subtitle {
