@@ -170,7 +170,6 @@ function App({ db }) {
         <NavBar />
       </header>
       <main id='home'>
-        <div className='invisible-space-m'></div>
         <section className='main-components'>
           <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
           <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />

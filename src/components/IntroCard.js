@@ -13,7 +13,7 @@ function IntroCard({term_first, term_second, ps_ref, ps_status, description}) {
     return (
         <section role='banner' className='intro-card'>
             <div id='left'>
-                <h3>Tanmay is a <span>{term_first}</span> and <span>{term_second}</span></h3>
+                <h3>Tanmay is a student of <span>{term_first}</span> and <span>{term_second}</span></h3>
                 <p>{description}</p>
                 {isMobile ? <></> : <a href='#contact'><button>Contact Me</button></a>}
             </div>

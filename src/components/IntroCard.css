@@ -1,8 +1,9 @@
 .intro-card {
-    width: 100%;
-
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: stretch;
 
     border: 0px solid white;
     padding: 2rem 10rem;

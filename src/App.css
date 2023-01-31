@@ -60,7 +60,7 @@ footer {
 
 .invisible-space-m {
     display: flex;
-    border: 0px solid white;
+    border: 1px solid white;
 
     width: 8%;
     height: 100%;
