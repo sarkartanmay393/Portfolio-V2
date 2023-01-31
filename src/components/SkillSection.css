@@ -67,6 +67,7 @@
 
 .skill-card #skill-header {
     font-size: 13px;
+    font-weight: 500;
     border: 0px solid white;
     font-family: 'Fira Code';
 
@@ -75,7 +76,6 @@
     margin: 0;
 
     text-align: center;
-    /* color: white; */
 
     max-width: 100%;
     overflow: clip;
@@ -90,7 +90,7 @@
     border: 0px solid white;
 
     max-width: 100%;
-    overflow: scroll;
+    overflow: clip;
     text-overflow: ellipsis;
 
     margin-top: 8px;

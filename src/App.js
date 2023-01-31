@@ -84,11 +84,8 @@ function App({ db }) {
         "Go",
         "Java",
         "Dart",
-        "Python"
       ],
       "others": [
-        "HTML",
-        "CSS",
         "Linux"
       ]
     },

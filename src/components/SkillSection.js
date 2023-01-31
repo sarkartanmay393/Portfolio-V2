@@ -42,7 +42,12 @@ function SkillSection({ Skills }) {
                                 <p id='skill-names'>{
                                     valueArray.map((value, index) => {
                                         return (
-                                            <a key={`${index}-skillNames`} href={swForLinks(value)}>
+                                            <a key={`${index}-skillNames`} onClick={(e) => {
+                                                e.preventDefault();
+                                                if (window.confirm(`Visit ${swForLinks(value)}`)) {
+                                                    window.open(swForLinks(value), "_blank");
+                                                }
+                                            }} href={swForLinks(value)}>
                                                 <img alt={`skill-in-${value}`} src={`https://img.shields.io/badge/
                                                     ${value}-white?style=for-the-badge&logo=${value}&logoColor=black`
                                                 } />
