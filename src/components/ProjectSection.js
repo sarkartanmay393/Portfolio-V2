@@ -1,13 +1,13 @@
 import './ProjectSection.css';
 
-function ProjectSection({projects}) {
+function ProjectSection({ projects }) {
     const viewAll = `View All ⇢`;
 
     return (
         <section id='projects'>
             <header>
                 <h2><span>#</span>projects</h2>
-                <button id='view-all-btn' onClick={() => { alert("View All!"); }}>{viewAll}</button>
+                <a href='#view-all-projects'><button id='view-all-btn'>{viewAll}</button></a>
             </header>
             <main>
                 {
@@ -17,14 +17,14 @@ function ProjectSection({projects}) {
                         }
                         return (
                             <section className='project-card' key={`${value}-${index}`}>
-                                <p id='madeby'>{value.madeby}</p>
+                                <p id='madeby'>{value.madeby.slice(0, 31)}</p>
                                 <div className='row'>
                                     <img src={value.image} alt={`${value.title}-${index}`} />
                                     <h3>{value.title}</h3>
                                 </div>
-                                <p id='desc'>{value.description}</p>
+                                <p id='desc'>{value.description.slice(0, 120).trim().concat('...')}</p>
                                 <div className='btns'>
-                                    <a href={value.demo}><button>Live</button></a>
+                                    <a href={value.demo}><button>Demo</button></a>
                                     <a href={value.url}><button>Repo</button></a>
                                 </div>
                             </section>

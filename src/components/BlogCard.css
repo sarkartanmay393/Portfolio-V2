@@ -19,11 +19,10 @@
 #blogs header {
     display: flex;
     flex-direction: row;
-
+    align-items: center;
     justify-content: space-between;
 
     border: 0px solid white;
-
     width: 100%;
 }
 

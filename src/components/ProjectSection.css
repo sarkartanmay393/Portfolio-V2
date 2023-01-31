@@ -19,11 +19,10 @@
 #projects header {
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
+    align-items: center;
 
     border: 0px solid white;
-
     width: 100%;
 }
 
@@ -43,22 +42,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: baseline;
 
     border: 0px solid white;
-
     padding: 2rem 1rem;
-    gap: 12px;
+    gap: 6px;
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
 
-    width: 280px;
-    height: 320px;
+    width: 240px;
+    height: 250px;
+    word-spacing: -2px;
 
-    border: 01px solid white;
-    padding: 1rem 1rem;
+    border: 1px solid white;
+    padding: 6px 8px;
     margin: 0 0rem;
     color: white;
 }
@@ -72,43 +72,42 @@
     border: 0px solid white;
     font-family: monospace;
 
-    height: 20px;
-    margin: 0;
-
     text-align: center;
+    max-height: 18px;
 
     max-width: 100%;
-    overflow: clip;
+    overflow: hidden;
     text-overflow: ellipsis;
 
+    padding-bottom: 6px;
     border-bottom: 0.1px solid white;
 }
 
 .project-card .row {
     display: flex;
     flex-direction: column;
-    margin: 0px 0;
 
-    padding: 0px 0;
     border: 0px solid white;
-    height: 120px;
+    margin: 8px 0;
 
     align-items: center;
     justify-content: center;
+
+    font-family: 'Poppins';
 }
 
-.project-card #desc {
-    font-size: 14px;
-    font-family: monospace;
-    border: 0px solid white;
 
-    height: 120px;
+.project-card #desc {
+    font-size: 12px;
+    font-weight: 500;
+    border: 0px solid white;
 
     max-width: 100%;
     overflow: clip;
     text-overflow: ellipsis;
 
-    text-align: justify-all;
+    margin: 0px 0px 16px 0px;
+    text-align: center;
 }
 
 .project-card h3 {
@@ -116,27 +115,33 @@
     font-size: 22px;
 }
 
-
 .project-card button {
-    background-color: transparent;
     color: white;
-    font-family: 'Fira Code', monospace;
+    background-color: transparent;
 
-    border: 1px solid orange;
-    height: 25px;
-    width: 50px;
+    font-weight: 500;
+    font-family: 'Poppins';
 
+    border: 0.1px solid orange;
     margin: 0 0.2rem;
+}
+
+.project-card button:hover {
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    background-color: transparent;
 }
 
 .project-card .btns {
     display: flex;
     flex-direction: row;
 
-    margin: 0rem 0;
-    height: 40px;
-
+    justify-content: center;
     border: 0px solid white;
+
+    margin-top: auto;
+    margin-bottom: 2px;
+    gap: 4px;
 }
 
 .project-card img {
@@ -152,7 +157,8 @@
 @media (max-width: 600px) {
 
     #projects {
-        padding: 0 1rem;;
+        padding: 0 1rem;
+        ;
     }
 
     #projects main {
