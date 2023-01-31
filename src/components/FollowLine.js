@@ -6,6 +6,7 @@ const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 export default function FollowLine() {
     const socialLinks = (domain, handle) => {
+        console.log(GithubSVG)
         let baseUrl = 'https://www.';
         switch (domain) {
             default: {
@@ -29,9 +30,9 @@ export default function FollowLine() {
     return (
         <section className='follow-line'>
             <hr />
-            <a href={socialLinks("github", "sarkartanmay393")}><img src={GithubSVG} alt='github-ref' /></a>
-            <a href={socialLinks("twitter", "sarkartanmay393")}><img src={TwitterSVG} alt='twitter-ref' /></a>
-            <a href={socialLinks("linkedin", "in/tanmaysrkr")}><img src={LinkedinSVG} alt='linkedin-ref' /></a>
+            <a href={socialLinks("github", "sarkartanmay393")} rel='noreferrer' target='_blank'><img src={GithubSVG} alt='github-ref' /></a>
+            <a href={socialLinks("twitter", "sarkartanmay393")} rel='noreferrer' target='_blank'><img src={TwitterSVG} alt='twitter-ref' /></a>
+            <a href={socialLinks("linkedin", "in/tanmaysrkr")} rel='noreferrer' target='_blank'><img src={LinkedinSVG} alt='linkedin-ref' /></a>
         </section>
     );
 }
