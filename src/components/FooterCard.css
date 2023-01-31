@@ -19,7 +19,6 @@
     border: 0px solid white;
 
     text-align: start;
-
     margin: 0 12px;
 }
 
@@ -120,12 +119,12 @@ footer h2 {
 
     #footer-section #second h2 {
         font-size: 14px;
-        margin-bottom: 4px;
+        margin-bottom: 0px;
     }
 
 
     #footer-section #second .right {
         display: grid;
-        row-gap: 12px;
+        row-gap: 4px;
     }
 }

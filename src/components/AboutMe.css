@@ -34,7 +34,7 @@
     flex-direction: column;
 
     text-align: start;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
 }
 
@@ -44,9 +44,6 @@
 
 #about #desc-text {
     margin: 6px 0;
-
-    font-size: 12px;
-
     max-width: 80%;
 }
 
@@ -98,7 +95,7 @@
     }
 
     #about #desc-text {
-        max-width: 100%;
+        max-width: 90%;
     }
 
     #about .white-space {
