@@ -31,10 +31,24 @@ function ContactSection({ contacts, email }) {
 }
 
 function SocialRow({ username, title, src }) {
+  let baseUrl = "https://www.";
+  switch (title) {
+    default:
+      return;
+    case '@hello':
+      baseUrl = `mailto:${username}`
+      break;
+    case 'Twitter':
+      baseUrl += (`twitter.com/${username}`);
+      break;
+    case 'LinkedIn':
+      baseUrl += (`linkedin.com/in/${username}`);
+      break;
+  }
   return (
     <>
       <div className="row">
-        <a href={`https://twitter.com/${username}`}>
+        <a href={baseUrl}>
           <img src={src} alt="social-handles" />
           <span>{title}</span>
         </a>
