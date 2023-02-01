@@ -1,18 +1,19 @@
 import './App.css';
+import ProjectsPage from './pages/ProjectsPage'
 import NavBar from './components/NavBar';
 import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
 import QuoteCard from './components/QuoteCard';
+import BlogSection from './components/BlogCard';
 import ProjectSection from './components/ProjectSection';
-import FooterCard from './components/FooterCard';
 import SkillSection from './components/SkillSection';
 import AboutSection from './components/AboutMe';
 import ContactSection from './components/ContactCard';
+import FooterCard from './components/FooterCard';
 import ScrollToTop from './components/ScrollToTop';
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import BlogSection from './components/BlogCard';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 
@@ -161,22 +162,51 @@ function App({ db }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const TabOne = () => {
+    return (
+      <>
+        <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
+        <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
+        <BlogSection />
+        <ProjectSection projects={websiteData.projects} />
+        <SkillSection Skills={websiteData.skills} />
+        <AboutSection {...websiteData.about_me} />
+        <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
+      </>
+    );
+  }
+
+  const NotFoundPage = () => {
+    return (
+      <>
+        <h1 style={{ textAlign: "center", color: "white", height: "60vh", display: "grid", alignItems: "center" }}>
+          404: Page not found!
+        </h1>
+      </>
+    );
+  }
+
+
   return (
-    <>
-      { isMobile ? <></> : <FollowLine />}
+    <BrowserRouter>
+      {isMobile ? <></> : <FollowLine />}
       <header>
         <div className='invisible-space'></div>
         <NavBar />
       </header>
       <main id='home'>
         <section className='main-components'>
-          <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
-          <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
-          <BlogSection />
-          <ProjectSection projects={websiteData.projects} />
-          <SkillSection Skills={websiteData.skills} />
-          <AboutSection {...websiteData.about_me} />
-          <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
+          <Switch>
+            <Route exact path='/'>
+              {TabOne}
+            </Route>
+            <Route path='/projects'>
+              <ProjectsPage />
+            </Route>
+            <Route path='*'>
+              {NotFoundPage}
+            </Route>
+          </Switch>
         </section>
       </main>
       <footer>
@@ -185,8 +215,11 @@ function App({ db }) {
       </footer>
       <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
       <ScrollToTop />
-    </>
+    </BrowserRouter>
+
   );
 }
+
+
 
 export default App;

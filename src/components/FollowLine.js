@@ -6,7 +6,6 @@ const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 export default function FollowLine() {
     const socialLinks = (domain, handle) => {
-        console.log(GithubSVG)
         let baseUrl = 'https://www.';
         switch (domain) {
             default: {

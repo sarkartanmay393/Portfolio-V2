@@ -1,0 +1,21 @@
+.projects-page {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: stretch;
+
+    border: 0px solid white;
+    padding: 2rem 10rem;
+
+    color: white;
+
+
+    width: 120px;
+    height: 230px;
+}
+
+.projects-page header {
+    display: flex;
+    flex-direction: column;
+}

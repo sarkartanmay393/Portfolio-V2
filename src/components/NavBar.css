@@ -5,7 +5,7 @@
 }
 
 #kakashi-face-nav {
-    animation: spin 1s linear 1s 2;
+    animation: spin 1s linear 100ms 2;
     /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
 }
 

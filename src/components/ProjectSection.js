@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ProjectSection.css';
 
 function ProjectSection({ projects }) {
@@ -7,7 +8,7 @@ function ProjectSection({ projects }) {
         <section id='projects'>
             <header>
                 <h2><span>#</span>projects</h2>
-                <a href='#view-all-projects'><button id='view-all-btn'>{viewAll}</button></a>
+                <Link to='/projects'><button id='view-all-btn'>{viewAll}</button></Link>
             </header>
             <main>
                 {
