@@ -1,6 +1,3 @@
-.projects-page #page-slash-text {
-}
-
 .projects-page button {
     color: white;
     background-color: transparent;
@@ -243,17 +240,25 @@
 
     .projects-page {
         padding: 0 1rem;
-        ;
     }
 
     .projects-page main {
+        display: flex;
         flex-direction: column;
+
         align-items: center;
     }
-
-    .project-card {
-        height: 250px;
-        margin-bottom: 6px;
+    
+    #dow-heading-text {
+        margin-top: 24px;
+        margin-bottom: 12px;
     }
 
+    #weeks-of-works {
+        justify-content: center;
+    }
+
+    #days-of-works {
+        justify-content: center;
+    }
 }
