@@ -1,21 +1,259 @@
+.projects-page #page-slash-text {
+}
+
+.projects-page button {
+    color: white;
+    background-color: transparent;
+
+    font-weight: 500;
+    font-family: 'Poppins';
+
+    border: 0.5px solid orange;
+    margin: 0 0.2rem;
+}
+
+.projects-page button:hover {
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    background-color: transparent;
+}
+
 .projects-page {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    align-items: center;
-    justify-content: stretch;
+    align-items: flex-start;
 
     border: 0px solid white;
     padding: 2rem 10rem;
 
     color: white;
-
-
-    width: 120px;
-    height: 230px;
 }
 
 .projects-page header {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+#projects-header-desc {
+    font-size: 16px;
+}
+
+.projects-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: 0px solid white;
+    padding: 2rem 1rem;
+    gap: 6px;
+}
+
+/* Inside Main */
+#wow-heading-text {
+    margin-bottom: 12px;
+}
+
+#dow-heading-text {
+    margin-top: 64px;
+    margin-bottom: 12px;
+}
+
+#weeks-of-works {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+#days-of-works {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* Days of cards */
+.dow-project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 240px;
+    height: 160px;
+    word-spacing: -2px;
+
+    border: 1px solid white;
+    padding: 6px 8px;
+    margin: 0 0rem;
+    color: white;
+}
+
+.dow-project-card:hover {
+    border: 1px solid lightgreen;
+}
+
+
+.dow-project-card #madeby {
+    font-size: 12px;
+    border: 0px solid white;
+    font-family: monospace;
+
+    text-align: center;
+    max-height: 18px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-bottom: 6px;
+    border-bottom: 0.1px solid white;
+}
+
+.dow-project-card #title-desc {
+    border: 0px solid white;
+    /* justify-content: center;
+    align-self: center; */
+    margin: auto;
+}
+
+.dow-project-card h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dow-project-card #desc {
+    font-size: 12px;
+    font-weight: 500;
+    border: 0px solid white;
+
+    max-width: 100%;
+    overflow: clip;
+    text-overflow: ellipsis;
+
+    /* margin: 0px 0px 16px 0px; */
+    text-align: center;
+}
+
+.dow-project-card .btns {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    border: 0px solid white;
+
+    /* margin-top: auto; */
+    margin-bottom: 4px;
+    gap: 4px;
+}
+
+
+/* Weeks of cards (original) */
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 240px;
+    height: 260px;
+    word-spacing: -2px;
+
+    border: 1px solid white;
+    padding: 6px 8px;
+    margin: 0 0rem;
+    color: white;
+}
+
+.project-card:hover {
+    border: 1px solid lightgreen;
+}
+
+.project-card #madeby {
+    font-size: 12px;
+    border: 0px solid white;
+    font-family: monospace;
+
+    text-align: center;
+    max-height: 18px;
+
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-bottom: 6px;
+    border-bottom: 0.1px solid white;
+}
+
+.project-card .row {
+    display: flex;
+    flex-direction: column;
+
+    border: 0px solid white;
+    margin: 8px 0;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins';
+    word-spacing: 2px;
+}
+
+.project-card h3 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.project-card #desc {
+    font-size: 12px;
+    font-weight: 500;
+    border: 0px solid white;
+
+    max-width: 100%;
+    overflow: clip;
+    text-overflow: ellipsis;
+
+    margin: 0px 0px 16px 0px;
+    text-align: center;
+}
+
+.project-card .btns {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    border: 0px solid white;
+
+    margin-top: auto;
+    margin-bottom: 4px;
+    gap: 4px;
+}
+
+
+.project-card img {
+    height: 60px;
+    margin: 2px;
+    border-radius: 12px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+
+    .projects-page {
+        padding: 0 1rem;
+        ;
+    }
+
+    .projects-page main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        height: 250px;
+        margin-bottom: 6px;
+    }
+
 }
