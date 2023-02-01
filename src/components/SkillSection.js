@@ -98,6 +98,9 @@ const swForLinks = (skillName) => {
     switch (skillName) {
         default:
             return;
+        case "Linode":
+            res = "https://linode.com/";
+            break;
         case "Dart":
             res = "https://dart.dev/";
             break;
