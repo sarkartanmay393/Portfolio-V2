@@ -1,23 +1,76 @@
 import './App.css';
+import ProjectsPage from './pages/ProjectsPage'
 import NavBar from './components/NavBar';
 import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
 import QuoteCard from './components/QuoteCard';
+import BlogSection from './components/BlogCard';
 import ProjectSection from './components/ProjectSection';
-import FooterCard from './components/FooterCard';
 import SkillSection from './components/SkillSection';
 import AboutSection from './components/AboutMe';
 import ContactSection from './components/ContactCard';
+import FooterCard from './components/FooterCard';
 import ScrollToTop from './components/ScrollToTop';
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import BlogSection from './components/BlogCard';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 
 function App({ db }) {
   const [websiteData, setWebsiteData] = useState({
+    "all_projects": {
+      "weeks_of_works": [
+        {
+          "title": "Yatra Sahayak",
+          "madeby": "Go, Docker, Bootstrap, PostgreSQL",
+          "demo": "http://192.46.213.243/",
+          "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
+          "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
+          "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction"
+        },
+        {
+          "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
+          "description": "Contains Javascript code of a blogging website using ReactJS, MongoDB, Express and Node",
+          "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
+          "demo": "http://192.46.213.243:8081",
+          "title": "Blogosphere",
+          "madeby": "ReactJS, MongoDB, Express, Node"
+        },
+        {
+          "image": "https://img.icons8.com/clouds/100/null/landslide.png",
+          "demo": "https://gazeweather.web.app/",
+          "madeby": "ReactJS, HTML, CSS, RestAPI",
+          "description": "Contains Javascript code of a blogging website using ReactJS, HTML, CSS",
+          "title": "Gaze Weather",
+          "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
+        },
+        {
+          "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
+          "title": "URL Shortener",
+          "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
+          "image": "https://img.icons8.com/clouds/100/null/domain.png",
+          "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
+          "madeby": "Golang, Redis, Docker, Compose"
+        },
+      ],
+      "days_of_works": [
+        {
+          "title": "Gaze Weather",
+          "madeby": "React, Firebase",
+          "demo": "gazeweather.web.app/",
+          "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
+          "description": "Contains a weather interface with main stream informations about your location."
+        },
+        {
+          "title": "Text Lead Tracker",
+          "madeby": "HTML, CSS, JS",
+          "demo": "https://textlead-tracker-393.netlify.com",
+          "url": "https://github.com/sarkartanmay393/TextLead-Tracker",
+          "description": "Contains raw HTML, CSS and JS code of a Chrome Extension to save quickies."
+        },
+      ],
+    },
     "email": "hello@tanmaysarkar.tech",
     "intro_terms": {
       "first": "Full Stack Developer",
@@ -134,6 +187,58 @@ function App({ db }) {
       const data = snapshot.docs[0];
 
       setWebsiteData({
+        "all_projects": {
+          "weeks_of_works": [
+            {
+              "title": "Yatra Sahayak",
+              "madeby": "Go, Docker, Bootstrap, PostgreSQL",
+              "demo": "http://192.46.213.243/",
+              "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
+              "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
+              "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction"
+            },
+            {
+              "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
+              "description": "Contains Javascript code of a blogging website using ReactJS, MongoDB, Express and Node",
+              "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
+              "demo": "http://192.46.213.243:8081",
+              "title": "Blogosphere",
+              "madeby": "ReactJS, MongoDB, Express, Node"
+            },
+            {
+              "image": "https://img.icons8.com/clouds/100/null/landslide.png",
+              "demo": "https://gazeweather.web.app/",
+              "madeby": "ReactJS, HTML, CSS, RestAPI",
+              "description": "Contains Javascript code of a blogging website using ReactJS, HTML, CSS",
+              "title": "Gaze Weather",
+              "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
+            },
+            {
+              "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
+              "title": "URL Shortener",
+              "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
+              "image": "https://img.icons8.com/clouds/100/null/domain.png",
+              "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
+              "madeby": "Golang, Redis, Docker, Compose"
+            },
+          ],
+          "days_of_works": [
+            {
+              "title": "Gaze Weather",
+              "madeby": "React, Firebase",
+              "demo": "gazeweather.web.app/",
+              "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
+              "description": "Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main stream informations about your location."
+            },
+            {
+              "title": "Text Lead Tracker",
+              "madeby": "HTML, CSS, JS",
+              "demo": "https://textlead-tracker-393.netlify.com",
+              "url": "https://github.com/sarkartanmay393/TextLead-Tracker",
+              "description": "Contains raw HTML, CSS and JS code of a Chrome Extension to save quickies."
+            },
+          ],
+        },
         email: data.get('email'),
         intro_terms: {
           first: data.get('intro-terms')[0],
@@ -161,22 +266,51 @@ function App({ db }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const TabOne = () => {
+    return (
+      <>
+        <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
+        <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
+        <BlogSection />
+        <ProjectSection projects={websiteData.projects} />
+        <SkillSection Skills={websiteData.skills} />
+        <AboutSection {...websiteData.about_me} />
+        <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
+      </>
+    );
+  }
+
+  const NotFoundPage = () => {
+    return (
+      <>
+        <h1 style={{ textAlign: "center", color: "white", height: "60vh", display: "grid", alignItems: "center" }}>
+          404: Page not found!
+        </h1>
+      </>
+    );
+  }
+
+
   return (
-    <>
-      { isMobile ? <></> : <FollowLine />}
+    <BrowserRouter>
+      {isMobile ? <></> : <FollowLine />}
       <header>
         <div className='invisible-space'></div>
         <NavBar />
       </header>
       <main id='home'>
         <section className='main-components'>
-          <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
-          <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
-          <BlogSection />
-          <ProjectSection projects={websiteData.projects} />
-          <SkillSection Skills={websiteData.skills} />
-          <AboutSection {...websiteData.about_me} />
-          <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
+          <Switch>
+            <Route exact path='/'>
+              {TabOne}
+            </Route>
+            <Route path='/projects'>
+              <ProjectsPage weeksOfWork={websiteData.all_projects.weeks_of_works} daysOfWork={websiteData.all_projects.days_of_works} />
+            </Route>
+            <Route path='*'>
+              {NotFoundPage}
+            </Route>
+          </Switch>
         </section>
       </main>
       <footer>
@@ -185,8 +319,11 @@ function App({ db }) {
       </footer>
       <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
       <ScrollToTop />
-    </>
+    </BrowserRouter>
+
   );
 }
+
+
 
 export default App;
