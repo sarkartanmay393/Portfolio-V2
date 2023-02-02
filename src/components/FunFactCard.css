@@ -48,18 +48,9 @@
 
 /* Mobile Screen */
 @media (max-width: 600px) {
-    #funfact-section {
-        padding: 0 1rem;
-    }
-
-    #funfact-section main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        align-items: center;
-        margin: auto;
-
-        row-gap: 12px;
-        column-gap: 12px;
+    .funfact {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
     }
 }
