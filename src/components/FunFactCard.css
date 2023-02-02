@@ -13,6 +13,7 @@
 
 #funfact-section header {
     border: 0px solid white;
+    font-size: 20px;
 }
 
 #funfact-section main {
@@ -20,12 +21,12 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: stretch;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 
     border: 0px solid white;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
 }
 
 

@@ -3,12 +3,11 @@ import './AboutPage.css';
 
 const aboutImage = require('../assets/tanmay-image.png');
 
-function AboutPage({ intro, p1, p2, p3 }) {
-
+function AboutPage({ intro, p1, p2, p3, funfacts, funfact_highlights }) {
     return (
         <section className='about-page'>
             <header>
-                <h1 id='page-header-text'><span id='page-slash-text'>/</span>about-me</h1>
+                <a href='/about'><h1 id='page-header-text'><span id='page-slash-text'>/</span>about-me</h1></a>
             </header>
             <main>
                 <section className='about-whoami-section'>
@@ -24,7 +23,7 @@ function AboutPage({ intro, p1, p2, p3 }) {
                     </div>
                 </section>
 
-                <FunfactSection />
+                <FunfactSection funfacts={funfacts} funfact_highlights={funfact_highlights} />
             </main>
         </section>
     );
