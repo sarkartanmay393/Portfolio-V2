@@ -13,7 +13,7 @@ function AboutSection({ intro, p1, p2, p3 }) {
                     <p id='desc-text'>{p1}</p>
                     <p id='desc-text'>{p2}</p>
                     <p id='desc-text'>{p3}</p>
-                    <a href='#about-me'><button>Read More</button></a>
+                    <a href='/about'><button>Read More</button></a>
                 </section>
                 <section className='white-space'></section>
             </main>

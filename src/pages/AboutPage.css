@@ -1,0 +1,66 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    border: 0px solid white;
+    padding: 2rem 10rem;
+
+    color: white;
+}
+
+.about-page header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+#projects-header-desc {
+    font-size: 16px;
+}
+
+.about-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: 0px solid white;
+    padding: 2rem 1rem;
+    gap: 6px;
+}
+
+/* Mobile Screen */
+@media (max-width: 600px) {
+
+    .about-page {
+        padding: 0 1rem;
+    }
+
+    .about-page main {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+}
+
+
+/* Special HTML Elements */
+.about-page button {
+    color: white;
+    background-color: transparent;
+
+    font-weight: 500;
+    font-family: 'Poppins';
+
+    border: 0.5px solid orange;
+    margin: 0 0.2rem;
+}
+
+.about-page button:hover {
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    background-color: transparent;
+}

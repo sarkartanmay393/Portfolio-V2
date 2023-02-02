@@ -1,5 +1,6 @@
 import './App.css';
 import ProjectsPage from './pages/ProjectsPage'
+import AboutPage from './pages/AboutPage'
 import NavBar from './components/NavBar';
 import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
@@ -306,6 +307,9 @@ function App({ db }) {
             </Route>
             <Route path='/projects'>
               <ProjectsPage weeksOfWork={websiteData.all_projects.weeks_of_works} daysOfWork={websiteData.all_projects.days_of_works} />
+            </Route>
+            <Route path='/about'>
+              <AboutPage />
             </Route>
             <Route path='*'>
               {NotFoundPage}
