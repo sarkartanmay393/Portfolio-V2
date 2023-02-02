@@ -22,7 +22,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    border: 1px solid white;
+    border: 0px solid white;
     padding: 2rem 1rem;
 }
 
@@ -43,6 +43,11 @@
     text-align: start;
     font-size: 13px;
     color: white;
+}
+
+/* If cursor is no top on whoami section, the whoami heading with change color */
+.about-page .about-description:hover h3 {
+    color: lightgreen;
 }
 
 .about-page #desc-intro {
