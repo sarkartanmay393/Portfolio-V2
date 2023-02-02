@@ -309,7 +309,7 @@ function App({ db }) {
               <ProjectsPage weeksOfWork={websiteData.all_projects.weeks_of_works} daysOfWork={websiteData.all_projects.days_of_works} />
             </Route>
             <Route path='/about'>
-              <AboutPage />
+              <AboutPage {...websiteData.about_me} />
             </Route>
             <Route path='*'>
               {NotFoundPage}
