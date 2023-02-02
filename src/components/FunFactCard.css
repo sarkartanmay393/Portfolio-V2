@@ -1,0 +1,44 @@
+#funfact-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    border: 1px solid white;
+    color: white;
+}
+
+#funfact-section:hover {
+    color: lightgreen;
+}
+
+#funfact-section header {
+    border: 0px solid white;
+}
+
+#funfact-section main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border: 0px solid white;
+    padding: 2rem 1rem;
+}
+
+
+/* Mobile Screen */
+@media (max-width: 600px) {
+    #funfact-section {
+        padding: 0 1rem;
+    }
+
+    #funfact-section main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        align-items: center;
+        margin: auto;
+
+        row-gap: 12px;
+        column-gap: 12px;
+    }
+}

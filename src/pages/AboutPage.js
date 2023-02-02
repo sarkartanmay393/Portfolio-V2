@@ -1,3 +1,4 @@
+import FunfactSection from '../components/FunFactCard';
 import './AboutPage.css';
 
 const aboutImage = require('../assets/tanmay-image.png');
@@ -18,11 +19,12 @@ function AboutPage({ intro, p1, p2, p3 }) {
                         <p id='desc-text'>{p2}</p>
                         <p id='desc-text'>{p3}</p>
                     </section>
-
                     <div id='about-image-div'>
                         <img id='about-image' src={aboutImage} alt='tanmay-profile' />
                     </div>
                 </section>
+
+                <FunfactSection />
             </main>
         </section>
     );
@@ -30,3 +32,8 @@ function AboutPage({ intro, p1, p2, p3 }) {
 }
 
 export default AboutPage;
+
+
+
+
+
