@@ -45,9 +45,9 @@ function BlogSection() {
                 <a id="view-all-a" href='https://blog.tanmaysarkar.tech/' rel="noreferrer" target='_blank'><button id='view-all-btn'>{viewAll}</button></a>
             </header>
             <main>
-                {blogs.map((value, _) => {
+                {blogs.map((value, index) => {
                     return (
-                        <section className='blog-card' onClick={() => { window.open(value.link) }}>
+                        <section className='blog-card' onClick={() => { window.open(value.link) }} key={`0-${index}-blog`}>
                             <section id='blog-card-main'>
                                 <a href={value.link}><h2>{value.title}</h2></a>
                                 <div className='blog-card-row'>

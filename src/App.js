@@ -1,5 +1,6 @@
 import './App.css';
 import ProjectsPage from './pages/ProjectsPage'
+import AboutPage from './pages/AboutPage'
 import NavBar from './components/NavBar';
 import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
@@ -19,6 +20,20 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App({ db }) {
   const [websiteData, setWebsiteData] = useState({
+    "funfacts": [
+      "I like winter more than summer",
+      "I often motorbike with my friends",
+      "I like momos",
+      "My current favourite show is The Witcher",
+      "And current anime is Naruto",
+    ],
+    "funfact_highlights": [
+      "momos",
+      "winter",
+      "summer",
+      "The Witcher",
+      "Naruto",
+    ],
     "all_projects": {
       "weeks_of_works": [
         {
@@ -187,7 +202,9 @@ function App({ db }) {
       const data = snapshot.docs[0];
 
       setWebsiteData({
-        "all_projects": {
+        funfacts: data.get('funfacts'),
+        funfact_highlights: data.get('funfact-highlights'),
+        all_projects: {
           "weeks_of_works": [
             {
               "title": "Yatra Sahayak",
@@ -306,6 +323,9 @@ function App({ db }) {
             </Route>
             <Route path='/projects'>
               <ProjectsPage weeksOfWork={websiteData.all_projects.weeks_of_works} daysOfWork={websiteData.all_projects.days_of_works} />
+            </Route>
+            <Route path='/about'>
+              <AboutPage {...websiteData.about_me} funfacts={websiteData.funfacts} funfact_highlights={websiteData.funfact_highlights} />
             </Route>
             <Route path='*'>
               {NotFoundPage}
