@@ -1,5 +1,8 @@
 import './NavBar.css';
 import { useEffect, useState } from 'react';
+import {
+    useRouteMatch
+} from "react-router-dom";
 
 const KakashiSVG = require('../assets/kakashi.svg');
 // const MenuSVG = require('../assets/menu.svg');
@@ -20,15 +23,31 @@ function NavBar() {
 
     const openMenu = () => { setIsMenuOpen(!isMenuOpen) };
 
+    // imported from react router website
+    const CustomLink = ({ label, to, activeOnlyWhenExact, tabIndex }) => {
+        let match = useRouteMatch({
+            path: to,
+            exact: activeOnlyWhenExact
+        });
+
+        return (
+            <li key='home'>
+                <a className={match ? "activeTab" : ""} href={to} tabIndex={tabIndex} >
+                    <span>/</span>
+                    {label}
+                </a>
+            </li>
+        );
+    }
+
     return (
         <>
             {isMenuOpen ?
                 <div className='menu-board'>
                     <ul>
-                        <li tabIndex={0}><a href='/#projects'>#projects</a></li>
-                        <li tabIndex={1}><a href='/#skills'>#skills</a></li>
-                        <li tabIndex={2}><a href='/#about'>#about-me</a></li>
-                        <li tabIndex={3}><a href='/#contact'>#contacts</a></li>
+                        <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
+                        <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
+                        <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
                     </ul>
                 </div> :
                 <></>
@@ -41,11 +60,9 @@ function NavBar() {
                     </>
                     :
                     <ul>
-                        <li key='home'><a href="/" tabIndex={0}><span>#</span>home</a></li>
-                        <li key='projects'><a href="/#projects" tabIndex={1}><span>#</span>projects</a></li>
-                        <li key='skills'><a href="/#skills" tabIndex={1}><span>#</span>skills</a></li>
-                        <li key='about'><a href="/#about" tabIndex={2}><span>#</span>about-me</a></li>
-                        <li key='contact'><a href="/#contact" tabIndex={3}><span>#</span>contacts</a></li>
+                        <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
+                        <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
+                        <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
                     </ul>
                 }
             </nav>

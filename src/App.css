@@ -15,7 +15,6 @@ header {
     display: flex;
     flex-direction: row;
     border: 0px solid white;
-
 }
 
 main {
@@ -23,10 +22,11 @@ main {
     flex-direction: row;
 
     justify-content: space-between;
-
-    margin: 0 0rem;
-
     border: 0px solid white;
+}
+
+#home {
+    margin: 56px 0 0 0;
 }
 
 footer {
@@ -50,16 +50,6 @@ footer {
     text-align: center;
 }
 
-.invisible-space {
-    display: flex;
-
-    width: 8%;
-    margin: 0;
-    padding: 0;
-
-    border: 0px solid white;
-}
-
 .invisible-space-m {
     display: flex;
     border: 0px solid white;
@@ -73,7 +63,7 @@ footer {
     color: white;
     padding: 0;
     font-size: 12px;
-    
+
     margin-top: -12px;
     margin-bottom: 12px;
 }

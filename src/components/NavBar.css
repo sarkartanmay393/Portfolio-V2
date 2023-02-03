@@ -4,6 +4,10 @@
     }
 }
 
+.activeTab {
+    color: lightgreen;
+}
+
 #kakashi-face-nav {
     animation: spin 1s linear 100ms 2;
     /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
@@ -11,16 +15,16 @@
 
 nav {
     border: 0px solid orangered;
-
-    width: 100%;
-    height: 56px;
-
     display: flex;
     justify-content: space-between;
 
-    padding: 1rem 5rem;
+    padding: 1rem 10rem;
     color: white;
 
+    background-color: #282C33;
+    position: fixed;
+    width: 100%;
+    height: 56px;
 }
 
 nav h2 {
@@ -50,11 +54,10 @@ nav h2 {
     flex-direction: column;
     align-items: center;
 
-    position: absolute;
     top: 48px;
-    /* right: 0%; */
-
-    width: 99.5%;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
 }
 
 .menu-board ul {

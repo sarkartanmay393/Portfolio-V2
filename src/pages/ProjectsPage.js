@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import ScrollToTop from '../components/ScrollToTop';
 import './ProjectsPage.css';
 
 function ProjectsPage({ weeksOfWork, daysOfWork }) {
@@ -51,6 +53,10 @@ function ProjectsPage({ weeksOfWork, daysOfWork }) {
             </>
         );
     }
+
+    useEffect(() => {
+        window.document.documentElement.scrollTop = 0;
+    }, []);
 
     return (
         <section className='projects-page'>
