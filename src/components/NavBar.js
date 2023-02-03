@@ -1,8 +1,8 @@
 import './NavBar.css';
 import { useEffect, useState } from 'react';
 
-const KakashiSVG = require('../assets/kakashi.svg').default;
-// const MenuSVG = require('../assets/menu.svg').default;
+const KakashiSVG = require('../assets/kakashi.svg');
+// const MenuSVG = require('../assets/menu.svg');
 
 
 

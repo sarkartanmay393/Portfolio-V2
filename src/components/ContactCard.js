@@ -1,8 +1,8 @@
 import "./ContactCard.css";
 
-const LinkedinSVG = require("../assets/linkedin.svg").default;
-const MailSVG = require("../assets/mail.svg").default;
-const TwitterSVG = require("../assets/twitter.svg").default;
+const LinkedinSVG = require("../assets/linkedin.svg");
+const MailSVG = require("../assets/mail.svg");
+const TwitterSVG = require("../assets/twitter.svg");
 
 function ContactSection({ contacts, email }) {
   return (

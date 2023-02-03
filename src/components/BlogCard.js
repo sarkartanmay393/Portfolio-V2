@@ -62,6 +62,7 @@ function BlogSection() {
                                 </p>
                             </section>
                             <section id='blog-card-aside' style={{ backgroundImage: `url(${value.image})` }}>
+                                <img src={value.image} alt={value.title} />
                             </section>
                         </section>
                     );
