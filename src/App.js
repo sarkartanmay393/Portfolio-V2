@@ -312,7 +312,6 @@ function App({ db }) {
     <BrowserRouter>
       {isMobile ? <></> : <FollowLine />}
       <header>
-        <div className='invisible-space'></div>
         <NavBar />
       </header>
       <main id='home'>

@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ps": "parcel src/index.html -p 1234",
+    "pb": "parcel build src/index.html"
   },
   "eslintConfig": {
     "extends": [
