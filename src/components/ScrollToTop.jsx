@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./ScrollToTop.module.css";
+import * as styles from "./ScrollToTop.module.css";
 import ChevronDoubleUp from "../assets/chevron-double-up.svg";
 
 const ScrollToTop = () => {

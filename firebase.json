@@ -1,7 +1,8 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "dist",
     "ignore": [
+      ".parcel-cache",
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
