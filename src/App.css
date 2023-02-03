@@ -14,7 +14,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    border:0px solid white;
+    border: 0px solid white;
 }
 
 main {
@@ -22,10 +22,11 @@ main {
     flex-direction: row;
 
     justify-content: space-between;
-
-    margin: 56px 0 0 0;
-
     border: 0px solid white;
+}
+
+#home {
+    margin: 56px 0 0 0;
 }
 
 footer {
