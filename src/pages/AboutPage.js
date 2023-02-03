@@ -1,5 +1,5 @@
-import FunfactSection from '../components/FunFactCard';
 import './AboutPage.css';
+import FunfactSection from '../components/FunFactCard';
 
 const aboutImage = require('../assets/tanmay-image.png');
 

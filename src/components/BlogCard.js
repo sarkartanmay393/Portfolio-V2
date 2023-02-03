@@ -13,7 +13,7 @@ function BlogSection() {
             subtitle: `Solve your unsolved Sudoku patterns just in command. It takes a your pattern, solves it and writes in to a file.`,
             published_on: `Nov 9, 2022`,
             time: `7min read`,
-            image: `https://blog.tanmaysarkar.tech/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1667654155553%2FH-nukWZ2r.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75`,
+            image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1667654155553/H-nukWZ2r.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
         },
         {
             link: `https://blog.tanmaysarkar.tech/deploy-your-containerized-go-web-application`,
@@ -23,7 +23,7 @@ function BlogSection() {
             subtitle: `Today I am back with a new article on Go, but this is slightly in production side. Today we are going to deploy a simple containerized Go web app on Heroku.`,
             published_on: `Oct 27, 2022`,
             time: `6min read`,
-            image: `https://blog.tanmaysarkar.tech/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1666810316079%2F8b-KW6oLp.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75`,
+            image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1666810316079/8b-KW6oLp.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
         },
         {
             link: `https://blog.tanmaysarkar.tech/building-a-imdb-web-scraper-using-go`,
@@ -33,7 +33,7 @@ function BlogSection() {
             subtitle: `I thought about let's build a simple cli tool which will take birthday as input and crawl a tiny part of the website IMDB to look for celebrities who born on that date and stores various data into a file outputs/mm-dd.json inside output directory.`,
             published_on: `Oct 21, 2022`,
             time: `9min read`,
-            image: `https://blog.tanmaysarkar.tech/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1666263676327%2FouczJNN0b.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75`,
+            image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1666263676327/ouczJNN0b.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
         },
     ];
 
@@ -61,7 +61,7 @@ function BlogSection() {
                                         value.subtitle.slice(0, 125).trim().concat('...')}
                                 </p>
                             </section>
-                            <section id='blog-card-aside' style={{ backgroundImage: `url(${value.image})` }}>
+                            <section id='blog-card-aside'>
                                 <img src={value.image} alt={value.title} />
                             </section>
                         </section>

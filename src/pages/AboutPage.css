@@ -112,6 +112,10 @@
         align-items: center;
     }
 
+    .about-page .about-whoami-section {
+        margin-bottom: 12px;
+    }
+
     .about-page .about-description {
         width: 100%;
         border: 0px solid white;

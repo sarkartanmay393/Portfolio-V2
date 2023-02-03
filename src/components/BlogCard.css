@@ -126,15 +126,12 @@
     width: 30%;
     border: 0px solid white;
 
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: flex;
 }
 
-.blog-card img {
-    height: 60px;
-    margin: 2px;
-    border-radius: 12px;
+#blog-card-aside img {
+    width: 100%;
+    margin: auto;
 }
 
 #blogs #view-all-btn:hover {
@@ -174,6 +171,4 @@
     #blog-card-main-subtitle {
         font-size: 12px;
     }
-
-
 }
