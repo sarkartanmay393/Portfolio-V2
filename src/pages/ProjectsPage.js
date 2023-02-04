@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import ScrollToTop from '../components/ScrollToTop';
 import './ProjectsPage.css';
 
 function ProjectsPage({ weeksOfWork, daysOfWork }) {

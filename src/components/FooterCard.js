@@ -1,9 +1,9 @@
 import './FooterCard.css';
 
-const KakashiSVG = require('../assets/kakashi.svg');
-const GithubSVG = require('../assets/github.svg');
-const TwitterSVG = require('../assets/twitter.svg');
-const LinkedinSVG = require('../assets/linkedin.svg');
+const KakashiSVG = require('../assets/kakashi.svg').default;
+const GithubSVG = require('../assets/github.svg').default;
+const TwitterSVG = require('../assets/twitter.svg').default;
+const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 function FooterCard({ desc, contacts, email }) {
 

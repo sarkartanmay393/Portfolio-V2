@@ -1,7 +1,7 @@
 import './IntroCard.css';
 import { useEffect, useState } from 'react';
 
-const HomeImage = require('../assets/home-img.svg');
+const HomeImage = require('../assets/home-img.svg').default;
 
 function IntroCard({ term_first, term_second, ps_ref, ps_status, description }) {
     const [isMobile, setIsMobile] = useState(false);

@@ -4,7 +4,7 @@ import {
     useRouteMatch
 } from "react-router-dom";
 
-const KakashiSVG = require('../assets/kakashi.svg');
+const KakashiSVG = require('../assets/kakashi.svg').default;
 // const MenuSVG = require('../assets/menu.svg');
 
 

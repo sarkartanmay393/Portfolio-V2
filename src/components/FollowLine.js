@@ -1,8 +1,8 @@
 import './FollowLine.css';
 
-const GithubSVG = require('../assets/github.svg');
-const TwitterSVG = require('../assets/twitter.svg');
-const LinkedinSVG = require('../assets/linkedin.svg');
+const GithubSVG = require('../assets/github.svg').default;
+const TwitterSVG = require('../assets/twitter.svg').default;
+const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 export default function FollowLine() {
     const socialLinks = (domain, handle) => {
