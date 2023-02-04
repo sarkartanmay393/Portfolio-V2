@@ -17,7 +17,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <p align="center">
-   It is my first complete portfolio website, made using React.
+   It is the TS zone with JS
    <br />
    <a href="https://github.com/sarkartanmay393/
 Portfolio-V2"><strong>Explore Code »</strong></a>
@@ -51,6 +51,9 @@ issues">Request Feature</a>
       </ul>
       <ul>
         <li><a href=“#screenshots">Screenshots</a></li>
+      </ul>
+      <ul>
+        <li><a href=“#extras">Extras</a></li>
       </ul>
     </li>
     <li>
