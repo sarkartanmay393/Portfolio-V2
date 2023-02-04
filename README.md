@@ -155,10 +155,13 @@ Don't forget to give the project a star! Thanks again!
 ## Roadmap
 
 * [x] Styling
-* [ ] Database
+* [x] Database
 * [x] New Responsive UI
-* [ ] Web Application
+* [x] Web Application
 * [ ] Spotify Integration
+* [ ] Github Heat Map
+* [ ] Hashnode Recent Blogs API
+* [ ] Additional Language Support
 * [ ] Email Service
 
 See the [open issues](https://github.com/sarkartanmay393/Portfolio-V2/issues) for a full list of proposed features (and known issues).
