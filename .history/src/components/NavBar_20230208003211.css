@@ -1,0 +1,126 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.activeTab {
+  color: lightgreen;
+}
+
+#kakashi-face-nav {
+  animation: spin 1s linear 100ms 2;
+  /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
+}
+
+nav {
+  border: 0px solid orangered;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem 10rem;
+  color: var(--clr-font);
+  color: var(--nav-font-clr);
+  background-color: #282c33;
+  position: fixed;
+  width: 100%;
+  height: 56px;
+}
+
+nav h2 {
+  margin: 0 0;
+  font-family: monospace;
+
+  font-size: 18px;
+}
+
+#menu-btn {
+  /* height: 18px; */
+  /* width: 8px; */
+
+  background: none;
+  border: 0px solid var(--clr-font);
+}
+
+.menu-board {
+  color: var(--clr-font);
+  background-color: rgb(21, 36, 36);
+
+  border-bottom: 0px solid var(--clr-font);
+  /* border: 1px solid red; */
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  top: 48px;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+}
+
+.menu-board ul {
+  list-style-type: none;
+  border: 0px solid var(--clr-font);
+  width: fit-content;
+  padding: 0;
+}
+
+.menu-board li {
+  border: 0px solid var(--clr-font);
+  width: 100%;
+  padding: 8px 0;
+
+  font-weight: bold;
+  font-size: 22px;
+}
+
+nav h2:hover {
+  color: lightgreen;
+}
+
+nav h2 img {
+  height: 18px;
+}
+
+nav ul {
+  margin: 0 0;
+  list-style: none;
+
+  display: flex;
+  align-content: center;
+}
+
+nav ul li {
+  padding: 0 8px;
+}
+
+nav ul li a:hover {
+  color: lightgreen;
+}
+
+nav ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--clr-font);
+  color: var(--nav-font-clr);
+}
+
+nav ul li a span {
+  color: orangered;
+}
+
+@media (max-width: 600px) {
+  nav h2 {
+    font-size: 12px;
+    border: 0px solid var(--clr-font);
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 1rem 1.6rem;
+
+    height: 48px;
+  }
+}

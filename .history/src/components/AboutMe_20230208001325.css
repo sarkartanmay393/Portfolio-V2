@@ -1,0 +1,106 @@
+#about {
+  display: flex;
+  flex-direction: column;
+
+  border: 0px solid var(--clr-font);
+  padding: 0 10rem;
+
+  color: var(--clr-font);
+}
+
+#about:hover {
+  color: lightgreen;
+}
+
+#about #hash {
+  color: orangered;
+}
+
+#about main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  border: 0px solid var(--clr-font);
+  padding: 1rem 2rem;
+}
+
+/* Main -> First Section */
+#about .about-description {
+  width: 60%;
+  border: 0px solid var(--clr-font);
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: start;
+  font-size: 13px;
+  color: var(--clr-font);
+}
+
+#about #desc-intro {
+  margin: 6px 0;
+}
+
+#about #desc-text {
+  margin: 6px 0;
+  max-width: 80%;
+}
+
+#about button {
+  width: fit-content;
+  background: none;
+
+  padding: 5px 10px;
+  border: 1px solid #ffa500;
+
+  font-family: monospace;
+  color: var(--clr-font);
+
+  margin: 12px 0;
+}
+
+#about button:hover {
+  color: lightgreen;
+  border: 1px solid lightgreen;
+}
+
+/* Main -> Second Section */
+#about .var(--clr-font)-space {
+  width: 40%;
+  border: 0px solid var(--clr-font);
+}
+
+.about-card span {
+  color: var(--clr-font);
+}
+
+.about-card img {
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  #about {
+    padding: 0 1rem;
+  }
+
+  #about main {
+    padding: 1rem 1rem;
+  }
+
+  #about .about-description {
+    width: 100%;
+  }
+
+  #about #desc-text {
+    max-width: 90%;
+  }
+
+  #about .var(--clr-font)-space {
+    width: 0%;
+  }
+
+  #about button {
+    margin: 6px 0;
+  }
+}
