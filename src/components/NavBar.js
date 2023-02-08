@@ -12,6 +12,12 @@ function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [color, setColor] = useState('');
 
+    window.onload = () => {
+      document.getElementById("kakashi-face-nav").animate([
+          {transform: 'rotate(360deg)'},
+      ], 1000)
+    };
+
     useEffect(() => {
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);

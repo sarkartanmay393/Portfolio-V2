@@ -193,14 +193,13 @@ function App({ db }) {
     ]
   });
   const [isMobile, setIsMobile] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
 
-  // useEffect for setting current screen scroll position in global css variable
-  window.onscroll = () => {
-    setScrollPosition(window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  // For setting current screen scroll position in global css variable
+  window.onscroll= () => {
+    let scrollPosition = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     document.body.style.setProperty('--scroll', scrollPosition);
-    console.log(scrollPosition)
+    // console.log(scrollPosition)
   };
 
   useEffect(() => {

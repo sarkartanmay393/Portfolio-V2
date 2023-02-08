@@ -28,12 +28,35 @@
     height: 1px;
     width: 0%;
     background-color: white;
+    box-shadow: 10px 5px 5px red;
     animation: scroll 1s linear;
 }
+
 @keyframes scroll {
-    to {
+    0% {
+        width: 0%;
+        height: 1px;
+        background-color: white;
+    }
+    25% {
+        width: 25%;
+        height: 1.1px;
+        background-color: lightsalmon;
+    }
+    50% {
+        width: 50%;
+        height: 1.2px;
+        background-color: orange;
+    }
+    75% {
+        width: 75%;
+        height: 1.3px;
+        background-color: darkorange;
+    }
+    100% {
         width: 100%;
-        background-color: lightgreen;
+        height: 1.4px;
+        background-color: orangered;
     }
 }
 
@@ -146,6 +169,8 @@ nav ul li a span {
     }
 }
 
+
+/* For scroll animation */
 .full-navbar * {
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
