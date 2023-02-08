@@ -17,6 +17,8 @@ header {
     border: 0px solid white;
 }
 
+
+
 main {
     display: flex;
     flex-direction: row;

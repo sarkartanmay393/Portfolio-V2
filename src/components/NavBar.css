@@ -1,7 +1,13 @@
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+.full-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #282C33;
 }
 
 .activeTab {
@@ -9,9 +15,28 @@
 }
 
 #kakashi-face-nav {
-    animation: spin 1s linear 100ms 2;
+    animation: spin 1s linear;
     /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
 }
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progress-bar {
+    height: 1px;
+    width: 0%;
+    background-color: white;
+    animation: scroll 1s linear;
+}
+@keyframes scroll {
+    to {
+        width: 100%;
+        background-color: lightgreen;
+    }
+}
+
 
 nav {
     border: 0px solid orangered;
@@ -20,11 +45,6 @@ nav {
 
     padding: 1rem 10rem;
     color: white;
-
-    background-color: #282C33;
-    position: fixed;
-    width: 100%;
-    height: 56px;
 }
 
 nav h2 {
@@ -110,6 +130,8 @@ nav ul li a span {
     color: orangered;
 }
 
+
+
 @media (max-width: 600px) {
     nav h2 {
         font-size: 12px;
@@ -122,4 +144,18 @@ nav ul li a span {
 
         height: 48px;
     }
+}
+
+.full-navbar * {
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+#kakashi-face-nav {
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
