@@ -15,10 +15,20 @@ import ScrollToTop from './components/ScrollToTop';
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import getQoD from './utils/getQoD';
 
 
 function App({ db }) {
+
+  const [quote, setQuote] = useState({
+    quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    author: "Albert Einstein"
+  })
+
+  useEffect(() => {
+    getQoD().then(quote => setQuote(quote))
+  }, [])
+
   const [websiteData, setWebsiteData] = useState({
     "funfacts": [
       "I like winter more than summer",
@@ -100,10 +110,10 @@ function App({ db }) {
       "ref": "https://github.com/sarkartanmay393/Portfolio-V2",
       "status": "Portfolio"
     },
-    "quote": {
-      "author": `Albert Einstein`,
-      "text": `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.`,
-    },
+    // "quote": {
+    //   "author": `Albert Einstein`,
+    //   "text": `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.`,
+    // },
     "contacts": {
       "twitter": `sarkartanmay393`,
       "github": `sarkartanmay393`,
@@ -196,7 +206,7 @@ function App({ db }) {
 
 
   // For setting current screen scroll position in global css variable
-  window.onscroll= () => {
+  window.onscroll = () => {
     let scrollPosition = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     document.body.style.setProperty('--scroll', scrollPosition);
     // console.log(scrollPosition)
@@ -294,7 +304,7 @@ function App({ db }) {
     return (
       <>
         <IntroCard term_first={websiteData.intro_terms.first} term_second={websiteData.intro_terms.second} ps_ref={websiteData.ps.ref} ps_status={websiteData.ps.status} description={websiteData.intro_desc} />
-        <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
+        <QuoteCard quote={quote.quote} author={quote.author} />
         <BlogSection />
         <ProjectSection projects={websiteData.projects} />
         <SkillSection Skills={websiteData.skills} />
