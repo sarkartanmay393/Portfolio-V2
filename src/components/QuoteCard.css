@@ -6,6 +6,8 @@
     padding: 2rem 10rem;
     border: 0px solid whitesmoke;
     color: lightgreen;
+
+    font-family: 'Kalam';
 }
 
 #quote-card h3 {
@@ -15,7 +17,7 @@
 
     width: 80%;
     /* font-size: 20px; */
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #quote-card #first {
