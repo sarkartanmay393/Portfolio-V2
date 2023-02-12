@@ -177,4 +177,8 @@
     #blog-card-main-subtitle {
         font-size: 12px;
     }
+
+    #blog-card-main h2  {
+        line-height: 18px;
+    }
 }
