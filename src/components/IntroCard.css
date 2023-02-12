@@ -19,10 +19,15 @@
 }
 
 .intro-card #left h3 {
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 26px;
     padding: 0 0;
 }
 
 .intro-card #left p {
+    font-weight: 500;
     padding: 12px 0;
 }
 
@@ -75,6 +80,7 @@
 .intro-card #right p {
     width: max-content;
     font-size: 12px;
+    font-weight: 600;
 
     outline: 0.1px solid whitesmoke;
     outline-offset: 4px;
@@ -84,11 +90,13 @@
 }
 
 #ps-btn {
-    text-decoration: underline;
+    border-bottom: 0.1px solid;
+    font-family: 'Poppins';
 }
 
-.intro-card #right span {
-    font-weight: bold;
+#ps-btn:hover {
+    border-bottom: 1px solid lightgreen;
+    font-family: 'Poppins';
 }
 
 @media (max-width: 600px) {
@@ -103,5 +111,9 @@
 
     .intro-card #left p {
         font-size: 14px;
+    }
+
+    .intro-card #right p {
+        font-size: 15px;
     }
 }

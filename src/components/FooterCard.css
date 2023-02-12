@@ -28,11 +28,13 @@
 
     align-items: center;
     justify-content: space-between;
+    font-weight: 600;
 }
 
 #footer-desc {
     margin: 12px 0;
     font-size: 14px;
+    font-weight: 600;
 }
 
 #footer-section #second {
@@ -104,17 +106,22 @@ footer h2 {
     }
 
     #footer-section #first .left a {
-        margin-top: 6px;
-        margin-bottom: -2px;
+        margin-top: 10px;
+        margin-bottom: -4px;
+        font-weight: 600;
+
     }
 
     #footer-section #first #footer-desc {
         font-size: 12px;
+        font-weight: 700;
     }
 
     #footer-section #second {
         width: 22%;
         /* border-left: 0.1px solid white; */
+        /* border: 1px solid white; */
+
     }
 
     #footer-section #second h2 {

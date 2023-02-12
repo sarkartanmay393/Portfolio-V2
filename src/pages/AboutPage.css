@@ -14,10 +14,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
     font-size: 20px;
     border: 0px solid white;
-} 
+}
 
 .about-page main {
     display: flex;
@@ -59,11 +59,15 @@
 
 .about-page #desc-intro {
     margin: 22px 0 0 0;
+    font-weight: 600;
+
 }
 
 .about-page #desc-text {
     margin: 6px 0;
     max-width: 80%;
+    font-weight: 500;
+
 }
 
 

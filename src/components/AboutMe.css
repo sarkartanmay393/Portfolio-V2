@@ -34,20 +34,24 @@
     flex-direction: column;
 
     text-align: start;
-    font-size: 13px;
+    font-size: 14px;
     color: white;
 }
 
 #about #desc-intro {
     margin: 6px 0;
+    font-weight: 600;
 }
 
 #about #desc-text {
     margin: 6px 0;
     max-width: 80%;
+    font-weight: 500;
 }
 
 #about button {
+    font-weight: 700;
+
     width: fit-content;
     background: none;
 
@@ -92,6 +96,7 @@
 
     #about .about-description {
         width: 100%;
+        font-size: 13px;
     }
 
     #about #desc-text {
@@ -100,6 +105,10 @@
 
     #about .white-space {
         width: 0%;
+    }
+
+    #about #read-more-button {
+        width: fit-content;
     }
 
     #about button {

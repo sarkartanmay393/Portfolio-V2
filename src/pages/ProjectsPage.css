@@ -82,7 +82,7 @@
     justify-content: space-evenly;
 
     width: 240px;
-    height: 160px;
+    height: 170px;
     word-spacing: -2px;
 
     border: 1px solid white;
@@ -121,6 +121,7 @@
 .dow-project-card h3 {
     font-weight: bold;
     font-size: 20px;
+    margin: 4px 0;
 }
 
 .dow-project-card #desc {
@@ -248,7 +249,7 @@
 
         align-items: center;
     }
-    
+
     #dow-heading-text {
         margin-top: 24px;
         margin-bottom: 12px;
@@ -260,5 +261,9 @@
 
     #days-of-works {
         justify-content: center;
+    }
+
+    .dow-project-card h3 {
+        margin: 2px 0;
     }
 }
