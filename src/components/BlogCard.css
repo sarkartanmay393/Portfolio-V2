@@ -92,6 +92,12 @@
     word-spacing: -2px;
 }
 
+#blog-card-main h2 {
+    font-family: "Kalam";
+    font-weight: bold;
+    word-spacing: 0px;
+}
+
 #blog-card-main .blog-card-row {
     display: flex;
     flex-direction: row;
@@ -159,7 +165,7 @@
     }
 
     #blog-card-main h2 {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     #blog-card-main .blog-card-row {

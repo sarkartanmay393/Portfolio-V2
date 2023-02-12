@@ -18,8 +18,8 @@ function ProjectsPage({ weeksOfWork, daysOfWork }) {
                                 </div>
                                 <p id='desc'>{value.description.slice(0, 120).trim().concat('...')}</p>
                                 <div className='btns'>
-                                    <a href={value.demo}><button>Demo</button></a>
-                                    <a href={value.url}><button>Repo</button></a>
+                                    <a href={value.demo}><button>DEMO</button></a>
+                                    <a href={value.url}><button>CODE</button></a>
                                 </div>
                             </section>
                         );

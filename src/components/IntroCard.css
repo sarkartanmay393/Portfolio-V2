@@ -21,7 +21,7 @@
 .intro-card #left h3 {
     font-family: 'Kalam';
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 26px;
     padding: 0 0;
 }
@@ -111,5 +111,9 @@
 
     .intro-card #left p {
         font-size: 14px;
+    }
+
+    .intro-card #right p {
+        font-size: 15px;
     }
 }
