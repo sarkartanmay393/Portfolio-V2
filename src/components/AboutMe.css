@@ -102,6 +102,10 @@
         width: 0%;
     }
 
+    #about #read-more-button {
+        width: fit-content;
+    }
+
     #about button {
         margin: 6px 0;
     }

@@ -127,4 +127,8 @@ footer h2 {
         display: grid;
         row-gap: 4px;
     }
+
+    #footer-section .right a {
+        width: fit-content;
+    }
 }

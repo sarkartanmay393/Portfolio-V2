@@ -6,7 +6,6 @@ const TwitterSVG = require('../assets/twitter.svg').default;
 const LinkedinSVG = require('../assets/linkedin.svg').default;
 
 function FooterCard({ desc, contacts, email }) {
-
     return (
         <>
             <section id='footer-section'>
@@ -28,7 +27,6 @@ function FooterCard({ desc, contacts, email }) {
             </section>
         </>
     );
-
 }
 
 export default FooterCard;
