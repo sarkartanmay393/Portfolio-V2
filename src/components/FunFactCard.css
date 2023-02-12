@@ -46,6 +46,10 @@
     cursor: grab;
 }
 
+.funfact p {
+    font-weight: 600;
+}
+
 /* Mobile Screen */
 @media (max-width: 600px) {
     .funfact {

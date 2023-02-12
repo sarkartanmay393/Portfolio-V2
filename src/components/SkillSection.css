@@ -87,7 +87,7 @@
 .skill-card #skill-names {
     font-size: 14px;
     font-family: monospace;
-    border: 0px solid white;
+    /* border: 0px solid white; */
 
     max-width: 100%;
     overflow: clip;
@@ -101,16 +101,15 @@
 }
 
 .skill-card #skill-names a {
-    border: 0px solid white;
+    /* border: 0px solid white; */
     border-radius: 0;
     border: #555;
-
     padding: 1px 0;
 
 }
 
 .skill-card #skill-names img {
-    border: 0px solid white;
+    /* border: 1px solid red; */
     border-radius: 0%;
     image-rendering: optimizeSpeed;
 
@@ -141,5 +140,10 @@
 
         row-gap: 12px;
         column-gap: 12px;
+    }
+
+    .skill-card #skill-names a {
+        width: fit-content;
+        margin: auto;
     }
 }
