@@ -29,6 +29,11 @@ function NavBar() {
     };
 
     // document.body.onclick = () => openMenu();
+    // window.addEventListener("click", () => {
+    //     if (isMenuOpen) {
+    //         openMenu();
+    //     }
+    // });
 
     return (
         <>
