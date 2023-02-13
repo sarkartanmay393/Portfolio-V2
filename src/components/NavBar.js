@@ -1,6 +1,7 @@
-import './NavBar.css';
+import '../styles/NavBar.css';
+import Hamburger from "./Hamburger";
 import { useEffect, useState } from 'react';
-import { useRouteMatch } from "react-router-dom";
+import { MenuBoardChild, NavBarItems } from "./Menuboard";
 
 const KakashiSVG = require('../assets/kakashi.svg').default;
 
@@ -27,52 +28,20 @@ function NavBar() {
         document.getElementsByClassName('hamburger').item(0).classList.toggle("open");
     };
 
-    // imported from react router website
-    const CustomLink = ({ label, to, activeOnlyWhenExact, tabIndex }) => {
-        let match = useRouteMatch({
-            path: to,
-            exact: activeOnlyWhenExact
-        });
-
-        return (
-            <li key='home'>
-                <a className={match ? "activeTab" : ""} href={to} tabIndex={tabIndex} >
-                    /
-                    {label}
-                </a>
-            </li>
-        );
-    }
+    // document.body.onclick = () => openMenu();
 
     return (
         <>
             {isMenuOpen ?
-                <div className='menu-board'>
-                    <ul>
-                        <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
-                        <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
-                        <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
-                    </ul>
-                </div> :
-                <></>
+                <MenuBoardChild />
+                : <></>
             }
             <section className='full-navbar'>
                 <nav style={{ 'backgroundColor': `${color}` }} >
                     <a href='/'><h2><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2></a>
                     {isMobile ?
-                        <>
-                            <div className='hamburger' onClick={openMenu}>
-                                <span className='hamburger-topbun'></span>
-                                <span className='hamburger-bottombun'></span>
-                            </div>
-                            {/* <p id='menu-btn' onClick={openMenu}>{isMenuOpen ? '❎' : '='}</p> */}
-                        </>
-                        :
-                        <ul>
-                            <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
-                            <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
-                            <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
-                        </ul>
+                        <Hamburger openMenu={openMenu} />
+                        : <NavBarItems />
                     }
                 </nav>
                 <div className='progress-bar'></div>

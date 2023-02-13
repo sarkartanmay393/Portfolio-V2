@@ -53,8 +53,9 @@
 }
 
 .intro-card #left button:hover {
-    color: white;
-    background: rgb(255, 109, 55);
+    color: lightgreen;
+    border: 1px solid lightgreen;
+    box-shadow: 0px 0px 5px 1px lightgreen;
 }
 
 .intro-card #right {
@@ -111,9 +112,12 @@
 
     .intro-card #left p {
         font-size: 14px;
+        font-style: italic;
+
     }
 
     .intro-card #right p {
         font-size: 15px;
+        font-style: italic;
     }
 }

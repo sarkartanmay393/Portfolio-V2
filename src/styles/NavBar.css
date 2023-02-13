@@ -10,10 +10,6 @@
     background-color: #282C33;
 }
 
-.activeTab {
-    color: lightgreen;
-}
-
 #kakashi-face-nav {
     animation: spin 1s linear;
     /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
@@ -83,78 +79,6 @@ nav h2 {
     font-size: 18px;
 }
 
-.hamburger {
-    cursor: pointer;
-    /* bottom: 10px;s */
-
-    height: fit-content;
-    width: fit-content;
-    transition: all 0.25s;
-}
-
-.hamburger-topbun,
-.hamburger-bottombun {
-    content: "";
-    display: block;
-
-    width: 18px;
-    height: 1px;
-    background: #fff;
-
-    transform: rotate(0);
-    transition: all 0.25s;
-}
-
-.hamburger-bottombun {
-    transform: translateY(5px);
-}
-
-.open {
-    transform: rotate(90deg);
-}
-
-.open .hamburger-topbun {
-    transform: rotate(45deg);
-}
-
-.open .hamburger-bottombun {
-    transform: rotate(-45deg) translateY(0px);
-}
-
-.menu-board {
-    color: white;
-    background-color: rgb(21, 36, 36);
-
-    border-bottom: 0px solid white;
-    /* border: 1px solid red; */
-    padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    top: 48px;
-    position: fixed;
-    width: 100%;
-    height: fit-content;
-}
-
-.menu-board ul {
-    list-style-type: none;
-    border: 0px solid white;
-
-    width: fit-content;
-    padding: 0;
-}
-
-.menu-board li {
-    border: 0px solid white;
-    width: 100%;
-    padding: 8px 0;
-
-    font-weight: bold;
-    font-size: 22px;
-}
 
 nav h2:hover {
     color: lightgreen;
@@ -162,31 +86,6 @@ nav h2:hover {
 
 nav h2 img {
     height: 18px;
-}
-
-nav ul {
-    margin: 0 0;
-    list-style: none;
-
-    display: flex;
-}
-
-nav ul li {
-    padding: 0 8px;
-}
-
-nav ul li a:hover {
-    color: lightgreen;
-}
-
-nav ul li a {
-    font-size: 14px;
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a span {
-    color: orangered;
 }
 
 

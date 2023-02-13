@@ -314,6 +314,7 @@ function App({ db }) {
     );
   }
 
+
   return (
     <BrowserRouter>
       {isMobile ? <></> : <FollowLine />}

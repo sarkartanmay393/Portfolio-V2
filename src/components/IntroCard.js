@@ -1,4 +1,4 @@
-import './IntroCard.css';
+import '../styles/IntroCard.css';
 import { useEffect, useState } from 'react';
 
 const HomeImage = require('../assets/home-img.svg').default;

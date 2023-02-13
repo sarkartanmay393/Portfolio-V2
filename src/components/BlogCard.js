@@ -1,4 +1,4 @@
-import './BlogCard.css';
+import '../styles/BlogCard.css';
 
 function BlogSection() {
     const viewAll = `View All ⇢`;

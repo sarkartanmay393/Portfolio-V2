@@ -1,4 +1,4 @@
-import './FooterCard.css';
+import '../styles/FooterCard.css';
 
 const KakashiSVG = require('../assets/kakashi.svg').default;
 const GithubSVG = require('../assets/github.svg').default;
