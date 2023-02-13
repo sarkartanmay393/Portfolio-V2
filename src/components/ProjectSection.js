@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './ProjectSection.css';
+import '../styles/ProjectSection.css';
 
 function ProjectSection({ projects }) {
     const viewAll = `View All ⇢`;

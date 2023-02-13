@@ -1,4 +1,4 @@
-import "./ContactCard.css";
+import "../styles/ContactCard.css";
 
 const LinkedinSVG = require("../assets/linkedin.svg").default;
 const MailSVG = require("../assets/mail.svg").default;

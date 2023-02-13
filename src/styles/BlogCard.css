@@ -13,7 +13,7 @@
 }
 
 #blogs span {
-    color: orangered;
+    color: rgb(255, 109, 55);
 }
 
 #blogs header {
@@ -112,7 +112,7 @@
 }
 
 .blog-card:hover #blog-card-main .blog-card-row {
-    color: orangered;
+    color: rgb(255, 109, 55);
 }
 
 #blog-card-main-subtitle {
@@ -178,7 +178,7 @@
         font-size: 12px;
     }
 
-    #blog-card-main h2  {
+    #blog-card-main h2 {
         line-height: 18px;
     }
 }

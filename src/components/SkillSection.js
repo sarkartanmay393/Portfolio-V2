@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './SkillSection.css';
+import '../styles/SkillSection.css';
 
 function SkillSection({ Skills }) {
     const [skills, setSkills] = useState([]);

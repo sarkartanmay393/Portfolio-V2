@@ -196,7 +196,7 @@ function App({ db }) {
 
 
   // For setting current screen scroll position in global css variable
-  window.onscroll= () => {
+  window.onscroll = () => {
     let scrollPosition = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     document.body.style.setProperty('--scroll', scrollPosition);
     // console.log(scrollPosition)
@@ -285,8 +285,8 @@ function App({ db }) {
       });
     }
 
+    document.body.style.setProperty("--screenWidth", window.screen.width);
     syncWebsiteData(db);
-    // console.log(websiteData);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -313,6 +313,7 @@ function App({ db }) {
       </>
     );
   }
+
 
   return (
     <BrowserRouter>

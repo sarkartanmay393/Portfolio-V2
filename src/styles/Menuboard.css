@@ -1,0 +1,64 @@
+.activeTab {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.menu-board {
+    color: white;
+    background-color: rgb(21, 36, 36);
+
+    border-bottom: 0px solid white;
+    /* border: 1px solid red; */
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    top: 48px;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+}
+
+.menu-board ul {
+    list-style-type: none;
+    border: 0px solid white;
+
+    width: fit-content;
+    padding: 0;
+}
+
+.menu-board li {
+    border: 0px solid white;
+    width: 100%;
+    padding: 8px 0;
+
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.NavBarItems {
+    margin: 0 0;
+    list-style: none;
+
+    display: flex;
+}
+
+.NavBarItems li {
+    padding: 0 8px;
+}
+
+.NavBarItems li a:hover {
+    color: lightgreen;
+}
+
+.NavBarItems li a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.NavBarItems li a span {
+    color: rgb(255, 109, 55);
+}
