@@ -63,7 +63,7 @@
 
 
 nav {
-    border: 0px solid orangered;
+    border: 0px solid rgb(255, 109, 55);
     display: flex;
     justify-content: space-between;
     align-items: center;
