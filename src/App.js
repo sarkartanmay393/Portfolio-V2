@@ -1,6 +1,7 @@
 import './App.css';
-import ProjectsPage from './pages/ProjectsPage'
-import AboutPage from './pages/AboutPage'
+import ProjectsPage from './pages/ProjectsPage';
+import AboutPage from './pages/AboutPage';
+import NotFoundPage from './pages/NotFoundPage';
 import NavBar from './components/NavBar';
 import FollowLine from './components/FollowLine';
 import IntroCard from './components/IntroCard';
@@ -300,16 +301,6 @@ function App({ db }) {
         <SkillSection Skills={websiteData.skills} />
         <AboutSection {...websiteData.about_me} />
         <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
-      </>
-    );
-  }
-
-  const NotFoundPage = () => {
-    return (
-      <>
-        <h1 style={{ textAlign: "center", color: "white", height: "60vh", display: "grid", alignItems: "center" }}>
-          404: Page not found!
-        </h1>
       </>
     );
   }
