@@ -3,9 +3,6 @@ import { useEffect, useState } from 'react';
 import { useRouteMatch } from "react-router-dom";
 
 const KakashiSVG = require('../assets/kakashi.svg').default;
-// const MenuSVG = require('../assets/menu.svg');
-
-
 
 function NavBar() {
     const [isMobile, setIsMobile] = useState(false);
@@ -13,9 +10,9 @@ function NavBar() {
     const [color, setColor] = useState('');
 
     window.onload = () => {
-      document.getElementById("kakashi-face-nav").animate([
-          {transform: 'rotate(360deg)'},
-      ], 1000)
+        document.getElementById("kakashi-face-nav").animate([
+            { transform: 'rotate(360deg)' },
+        ], 1000)
     };
 
     useEffect(() => {
@@ -25,7 +22,10 @@ function NavBar() {
             setColor('rgb(21, 36, 36)') : setColor('');
     }, [isMenuOpen]);
 
-    const openMenu = () => { setIsMenuOpen(!isMenuOpen) };
+    const openMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        document.getElementsByClassName('hamburger').item(0).classList.toggle("open");
+    };
 
     // imported from react router website
     const CustomLink = ({ label, to, activeOnlyWhenExact, tabIndex }) => {
@@ -37,7 +37,7 @@ function NavBar() {
         return (
             <li key='home'>
                 <a className={match ? "activeTab" : ""} href={to} tabIndex={tabIndex} >
-                    <span>/</span>
+                    /
                     {label}
                 </a>
             </li>
@@ -61,7 +61,11 @@ function NavBar() {
                     <a href='/'><h2><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2></a>
                     {isMobile ?
                         <>
-                            <p id='menu-btn' onClick={openMenu}>{isMenuOpen ? '❎' : '='}</p>
+                            <div className='hamburger' onClick={openMenu}>
+                                <span className='hamburger-topbun'></span>
+                                <span className='hamburger-bottombun'></span>
+                            </div>
+                            {/* <p id='menu-btn' onClick={openMenu}>{isMenuOpen ? '❎' : '='}</p> */}
                         </>
                         :
                         <ul>
