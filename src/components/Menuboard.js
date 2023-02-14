@@ -1,5 +1,5 @@
 import "../styles/Menuboard.css";
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { useRouteMatch } from "react-router-dom";
 import ClickAwayListener from 'react-click-away-listener';
 
@@ -21,7 +21,7 @@ const CustomLink = ({ k, label, to, activeOnlyWhenExact, tabIndex }) => {
     );
 }
 
-const MenuBoardChild = () => {
+const MenuBoardChild = ({ isOpen }) => {
     return (
         <ClickAwayListener onClickAway={() => { }}>
             <div className="over-menu-board">

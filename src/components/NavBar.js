@@ -20,8 +20,13 @@ function NavBar() {
     useEffect(() => {
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);
-        isMenuOpen ?
-            setColor('rgb(21, 36, 36)') : setColor('');
+        if (isMenuOpen) {
+            setColor('rgb(21, 36, 36)');
+            document.body.style.overflow = "hidden";
+        } else {
+            setColor('');
+            document.body.style.overflow = "visible";
+        }
     }, [isMenuOpen]);
 
     const openMenu = () => {
@@ -32,7 +37,7 @@ function NavBar() {
     return (
         <>
             {isMenuOpen ?
-                <MenuBoardChild />
+                <MenuBoardChild isOpen={isMenuOpen} />
                 : <></>
             }
             <section style={{ 'backgroundColor': `${color}` }} className='full-navbar'>
