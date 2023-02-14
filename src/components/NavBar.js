@@ -3,6 +3,7 @@ import Hamburger from "./Hamburger";
 import { useEffect, useState } from 'react';
 import { MenuBoardChild, NavBarItems } from "./Menuboard";
 
+
 const KakashiSVG = require('../assets/kakashi.svg').default;
 
 function NavBar() {
@@ -19,8 +20,13 @@ function NavBar() {
     useEffect(() => {
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);
-        isMenuOpen ?
-            setColor('rgb(21, 36, 36)') : setColor('');
+        if (isMenuOpen) {
+            setColor('rgb(21, 36, 36)');
+            document.body.style.overflow = "hidden";
+        } else {
+            setColor('');
+            document.body.style.overflow = "visible";
+        }
     }, [isMenuOpen]);
 
     const openMenu = () => {
@@ -28,16 +34,14 @@ function NavBar() {
         document.getElementsByClassName('hamburger').item(0).classList.toggle("open");
     };
 
-    // document.body.onclick = () => openMenu();
-
     return (
         <>
             {isMenuOpen ?
-                <MenuBoardChild />
+                <MenuBoardChild isOpen={isMenuOpen} />
                 : <></>
             }
-            <section className='full-navbar'>
-                <nav style={{ 'backgroundColor': `${color}` }} >
+            <section style={{ 'backgroundColor': `${color}` }} className='full-navbar'>
+                <nav>
                     <a href='/'><h2><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2></a>
                     {isMobile ?
                         <Hamburger openMenu={openMenu} />

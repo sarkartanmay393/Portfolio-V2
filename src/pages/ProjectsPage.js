@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './ProjectsPage.css';
+import '../styles/ProjectsPage.css';
 
 function ProjectsPage({ weeksOfWork, daysOfWork }) {
 
