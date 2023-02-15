@@ -45,7 +45,7 @@
 
     border: 0px solid white;
 
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
     gap: 12px;
 }
 
@@ -55,31 +55,28 @@
     justify-content: space-between;
     cursor: pointer;
 
-    width: 80%;
+    width: 95%;
     height: 160px;
 
     border: 0.1px solid white;
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     margin: 0 0rem;
     color: white;
-    background-color: transparent;
+    background-color: lightgreen;
+
 }
 
 .blog-card:hover {
     color: black;
-    background-color: lightgreen;
+    background-color: transparent;
     border: 0.1px solid lightgreen;
-}
-
-.blog-card:hover h2 {
-    color: black;
 }
 
 
 /* Test Ground */
 
 #blog-card-main {
-    width: 68%;
+    width: 70%;
     border: 0px solid white;
 
     display: flex;
@@ -96,6 +93,12 @@
     font-family: "Kalam";
     font-weight: bold;
     word-spacing: 0px;
+    font-size: 2rem;
+    color: black;
+}
+
+.blog-card:hover h2 {
+    color: white;
 }
 
 #blog-card-main .blog-card-row {
@@ -103,11 +106,11 @@
     flex-direction: row;
 
     gap: 16px;
-    margin: 6px 0;
+    margin: 0 0 2px 0;
 
     font-size: 13px;
     font-weight: 600;
-    color: lightgreen;
+    color: rgb(255, 109, 55);
     font-family: monospace;
 }
 
@@ -160,8 +163,8 @@
 
     .blog-card {
         width: 100%;
-        height: 135px;
-        padding: 0 8px;
+        height: 125px;
+        /* padding: 0 8px; */
     }
 
     #blog-card-main h2 {
