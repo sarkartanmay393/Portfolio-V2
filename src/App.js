@@ -77,11 +77,14 @@ function App({ db }) {
   });
   const [isMobile, setIsMobile] = useState(true);
 
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const ScrollPositionCtx = createContext(scrollPosition);
 
   // For setting current screen scroll position in global css variable
   window.onscroll = () => {
     let scrollPosition = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     document.body.style.setProperty('--scroll', scrollPosition);
+    // setScrollPosition(scrollPosition);
   };
 
   useEffect(() => {
@@ -143,38 +146,40 @@ function App({ db }) {
   }
 
 
-  return (
-    <BrowserRouter>
-      {isMobile ? <></> : <FollowLine />}
-      <header>
-        <NavBar />
-      </header>
-      <main id='home'>
-        <section className='main-components'>
-          <Switch>
-            <Route exact path='/'>
-              {TabOne}
-            </Route>
-            <Route path='/projects'>
-              <ProjectsPage weeksOfWork={websiteData.projects.filter(value => value.workType === "big")} daysOfWork={websiteData.projects.filter(value => value.workType === "small")} />
-            </Route>
-            <Route path='/about'>
-              <AboutPage {...websiteData.about_me} funfacts={websiteData.funfacts} funfact_highlights={websiteData.funfact_highlights} />
-            </Route>
-            <Route path='*'>
-              {NotFoundPage}
-            </Route>
-          </Switch>
-        </section>
-      </main>
-      <footer>
-        <div className='invisible-space-m'></div>
-        <FooterCard desc={websiteData.footer_desc} contacts={websiteData.contacts} email={websiteData.email} />
-      </footer>
-      <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
-      <ScrollToTop />
-    </BrowserRouter>
 
+  return (
+    // <ScrollPositionCtx.Provider value={scrollPosition}>
+      <BrowserRouter>
+        {isMobile ? <></> : <FollowLine />}
+        <header>
+          <NavBar />
+        </header>
+        <main id='home'>
+          <section className='main-components'>
+            <Switch>
+              <Route exact path='/'>
+                {TabOne}
+              </Route>
+              <Route path='/projects'>
+                <ProjectsPage weeksOfWork={websiteData.projects.filter(value => value.workType === "big")} daysOfWork={websiteData.projects.filter(value => value.workType === "small")} />
+              </Route>
+              <Route path='/about'>
+                <AboutPage {...websiteData.about_me} funfacts={websiteData.funfacts} funfact_highlights={websiteData.funfact_highlights} />
+              </Route>
+              <Route path='*'>
+                {NotFoundPage}
+              </Route>
+            </Switch>
+          </section>
+        </main>
+        <footer>
+          <div className='invisible-space-m'></div>
+          <FooterCard desc={websiteData.footer_desc} contacts={websiteData.contacts} email={websiteData.email} />
+        </footer>
+        <p id='copyright-tag'>© Copyright 2023. Redesigned by Tanmay</p>
+        <ScrollToTop />
+      </BrowserRouter>
+    // </ScrollPositionCtx.Provider>
   );
 }
 
