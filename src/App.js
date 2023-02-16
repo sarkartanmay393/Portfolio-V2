@@ -36,58 +36,6 @@ function App({ db }) {
       "The Witcher",
       "Naruto",
     ],
-    "all_projects": {
-      "weeks_of_works": [
-        {
-          "title": "Yatra Sahayak",
-          "madeby": "Go, Docker, Bootstrap, PostgreSQL",
-          "demo": "http://192.46.213.243/",
-          "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
-          "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
-          "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction"
-        },
-        {
-          "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
-          "description": "Contains Javascript code of a blogging website using ReactJS, MongoDB, Express and Node",
-          "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
-          "demo": "http://192.46.213.243:8081",
-          "title": "Blogosphere",
-          "madeby": "ReactJS, MongoDB, Express, Node"
-        },
-        {
-          "image": "https://img.icons8.com/clouds/100/null/landslide.png",
-          "demo": "https://gazeweather.web.app/",
-          "madeby": "ReactJS, HTML, CSS, RestAPI",
-          "description": "Contains Javascript code of a blogging website using ReactJS, HTML, CSS",
-          "title": "Gaze Weather",
-          "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
-        },
-        {
-          "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
-          "title": "URL Shortener",
-          "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
-          "image": "https://img.icons8.com/clouds/100/null/domain.png",
-          "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
-          "madeby": "Golang, Redis, Docker, Compose"
-        },
-      ],
-      "days_of_works": [
-        {
-          "title": "Gaze Weather",
-          "madeby": "React, Firebase",
-          "demo": "gazeweather.web.app/",
-          "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
-          "description": "Contains a weather interface with main stream informations about your location."
-        },
-        {
-          "title": "Text Lead Tracker",
-          "madeby": "HTML, CSS, JS",
-          "demo": "https://textlead-tracker-393.netlify.com",
-          "url": "https://github.com/sarkartanmay393/TextLead-Tracker",
-          "description": "Contains raw HTML, CSS and JS code of a Chrome Extension to save quickies."
-        },
-      ],
-    },
     "email": "hello@tanmaysarkar.tech",
     "intro_terms": {
       "first": "Full Stack Developer",
@@ -166,7 +114,8 @@ function App({ db }) {
         "demo": "http://192.46.213.243/",
         "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
         "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
-        "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction"
+        "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction",
+        "workType": "big"
       },
       {
         "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
@@ -174,7 +123,8 @@ function App({ db }) {
         "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
         "demo": "http://192.46.213.243:8081",
         "title": "Blogosphere",
-        "madeby": "ReactJS, MongoDB, Express, Node"
+        "madeby": "ReactJS, MongoDB, Express, Node",
+        "workType": "big"
       },
       {
         "image": "https://img.icons8.com/clouds/100/null/landslide.png",
@@ -182,7 +132,8 @@ function App({ db }) {
         "madeby": "ReactJS, HTML, CSS, RestAPI",
         "description": "Contains Javascript code of a blogging website using ReactJS, HTML, CSS",
         "title": "Gaze Weather",
-        "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
+        "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
+        "workType": "big"
       },
       {
         "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
@@ -190,7 +141,8 @@ function App({ db }) {
         "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
         "image": "https://img.icons8.com/clouds/100/null/domain.png",
         "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
-        "madeby": "Golang, Redis, Docker, Compose"
+        "madeby": "Golang, Redis, Docker, Compose",
+        "workType": "big"
       },
     ]
   });
@@ -213,58 +165,6 @@ function App({ db }) {
       setWebsiteData({
         funfacts: data.get('funfacts'),
         funfact_highlights: data.get('funfact-highlights'),
-        all_projects: {
-          "weeks_of_works": [
-            {
-              "title": "Yatra Sahayak",
-              "madeby": "Go, Docker, Bootstrap, PostgreSQL",
-              "demo": "http://192.46.213.243/",
-              "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
-              "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
-              "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction"
-            },
-            {
-              "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
-              "description": "Contains Javascript code of a blogging website using ReactJS, MongoDB, Express and Node",
-              "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
-              "demo": "http://192.46.213.243:8081",
-              "title": "Blogosphere",
-              "madeby": "ReactJS, MongoDB, Express, Node"
-            },
-            {
-              "image": "https://img.icons8.com/clouds/100/null/landslide.png",
-              "demo": "https://gazeweather.web.app/",
-              "madeby": "ReactJS, HTML, CSS, RestAPI",
-              "description": "Contains Javascript code of a blogging website using ReactJS, HTML, CSS",
-              "title": "Gaze Weather",
-              "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS"
-            },
-            {
-              "url": "https://github.com/sarkartanmay393/URL-Shortener-Go",
-              "title": "URL Shortener",
-              "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
-              "image": "https://img.icons8.com/clouds/100/null/domain.png",
-              "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
-              "madeby": "Golang, Redis, Docker, Compose"
-            },
-          ],
-          "days_of_works": [
-            {
-              "title": "Gaze Weather",
-              "madeby": "React, Firebase",
-              "demo": "gazeweather.web.app/",
-              "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
-              "description": "Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main Contains a weather interface with main stream informations about your location."
-            },
-            {
-              "title": "Text Lead Tracker",
-              "madeby": "HTML, CSS, JS",
-              "demo": "https://textlead-tracker-393.netlify.com",
-              "url": "https://github.com/sarkartanmay393/TextLead-Tracker",
-              "description": "Contains raw HTML, CSS and JS code of a Chrome Extension to save quickies."
-            },
-          ],
-        },
         email: data.get('email'),
         intro_terms: {
           first: data.get('intro-terms')[0],
@@ -320,7 +220,7 @@ function App({ db }) {
               {TabOne}
             </Route>
             <Route path='/projects'>
-              <ProjectsPage weeksOfWork={websiteData.all_projects.weeks_of_works} daysOfWork={websiteData.all_projects.days_of_works} />
+              <ProjectsPage weeksOfWork={websiteData.projects.filter(value => value.workType === "big")} daysOfWork={websiteData.projects.filter(value => value.workType === "small")} />
             </Route>
             <Route path='/about'>
               <AboutPage {...websiteData.about_me} funfacts={websiteData.funfacts} funfact_highlights={websiteData.funfact_highlights} />
