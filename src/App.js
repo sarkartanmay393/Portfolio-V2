@@ -56,12 +56,12 @@ function App({ db }) {
     },
     "footer_desc": "",
     "skills": {
-      "tools": [],
-      "cloud": [],
-      "frameworks": [],
-      "databases": [],
-      "languages": [],
-      "others": []
+      "tools": [""],
+      "cloud": [""],
+      "frameworks": [""],
+      "databases": [""],
+      "languages": [""],
+      "others": [""]
     },
     "projects": [
       {
@@ -82,7 +82,6 @@ function App({ db }) {
   window.onscroll = () => {
     let scrollPosition = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
     document.body.style.setProperty('--scroll', scrollPosition);
-    // console.log(scrollPosition)
   };
 
   useEffect(() => {
@@ -129,7 +128,14 @@ function App({ db }) {
         <QuoteCard quote={websiteData.quote.text} author={websiteData.quote.author} />
         <BlogSection />
         <ProjectSection projects={websiteData.projects} />
-        <SkillSection Skills={websiteData.skills} />
+        <SkillSection
+          languages={websiteData.skills.languages}
+          frameworks={websiteData.skills.frameworks}
+          cloud={websiteData.skills.cloud}
+          others={websiteData.skills.others}
+          tools={websiteData.skills.tools}
+          databases={websiteData.skills.databases}
+        />
         <AboutSection {...websiteData.about_me} />
         <ContactSection contacts={websiteData.contacts} email={websiteData.email} />
       </>
