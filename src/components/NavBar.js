@@ -25,6 +25,7 @@ function NavBar() {
         } else {
             document.body.style.overflow = "visible";
         }
+
     }, [isMenuOpen]);
 
     const openMenu = () => {

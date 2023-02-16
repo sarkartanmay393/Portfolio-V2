@@ -30,7 +30,7 @@ main {
     justify-content: space-between;
     border: 0px solid white;
 
-    }
+}
 
 #home {
     margin: 56px 0 0 0;
@@ -38,31 +38,18 @@ main {
 
 footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    justify-content: center;
+    align-content: center;
 
     text-align: center;
     border: 0px solid white;
 
     border-top: 0.1px solid white;
-}
 
-.main-components {
-    border: 0px solid white;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-}
-
-.invisible-space-m {
-    display: flex;
-    border: 0px solid white;
-
-    width: 8%;
-    height: 100%;
+    padding: 1.4rem 10rem 0 10rem;
+    background-color: rgb(40, 44, 51, 0.4);
 }
 
 #copyright-tag {
@@ -112,12 +99,8 @@ a {
 
 /* Media Queries */
 @media (max-width: 600px) {
-    .invisible-space {
-        width: 0;
-    }
-
-    .invisible-space-m {
-        width: 0;
+    footer {
+        padding: 0 0;
     }
 
     #copyright-tag {

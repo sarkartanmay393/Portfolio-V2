@@ -23,7 +23,6 @@ const MenuBoardChild = () => {
     const LinkedinSVG = require('../assets/linkedin.svg').default;
     const SVGWIDTH = 32;
 
-
     return (
         <div className="over-menu-board">
             <div className='menu-board'>
