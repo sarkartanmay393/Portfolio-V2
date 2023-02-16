@@ -9,7 +9,6 @@ const KakashiSVG = require('../assets/kakashi.svg').default;
 function NavBar() {
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [color, setColor] = useState('');
 
     window.onload = () => {
         document.getElementById("kakashi-face-nav").animate([
@@ -20,13 +19,13 @@ function NavBar() {
     useEffect(() => {
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);
+
         if (isMenuOpen) {
-            setColor('rgb(21, 36, 36)');
             document.body.style.overflow = "hidden";
         } else {
-            setColor('');
             document.body.style.overflow = "visible";
         }
+
     }, [isMenuOpen]);
 
     const openMenu = () => {
@@ -40,7 +39,7 @@ function NavBar() {
                 <MenuBoardChild isOpen={isMenuOpen} />
                 : <></>
             }
-            <section style={{ 'backgroundColor': `${color}` }} className='full-navbar'>
+            <section style={isMenuOpen ? { backgroundColor: "#152424f5" } : {}} className='full-navbar'>
                 <nav>
                     <a href='/'><h2><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2></a>
                     {isMobile ?

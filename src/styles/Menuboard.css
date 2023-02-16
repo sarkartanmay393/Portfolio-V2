@@ -1,11 +1,11 @@
 .activeTab {
     color: lightgreen;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 
 .over-menu-board {
-    z-index: 999;
+    z-index: 1000;
     height: 100vh;
     width: 100vw;
 
@@ -13,7 +13,7 @@
     right: 0;
     position: fixed;
 
-    background-color: rgba(21, 36, 36, 0.96);
+    background-color: #152424f5;
 }
 
 .menu-board {
@@ -45,10 +45,22 @@
     width: 100%;
     padding: 8px 0;
 
-    font-weight: bold;
+    font-weight: 500;
     font-size: 32px;
 }
 
+.social-menuboard {
+    width: 30%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 15%;
+}
 
 .NavBarItems {
     margin: 0 0;

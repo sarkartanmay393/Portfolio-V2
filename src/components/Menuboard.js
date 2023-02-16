@@ -1,12 +1,8 @@
 import "../styles/Menuboard.css";
-// import ReactDOM from 'react-dom';
 import { useRouteMatch } from "react-router-dom";
-import ClickAwayListener from 'react-click-away-listener';
-
-
 
 // imported from react router website
-const CustomLink = ({ k, label, to, activeOnlyWhenExact, tabIndex }) => {
+const CustomLink = ({ label, to, activeOnlyWhenExact, tabIndex }) => {
     let match = useRouteMatch({
         path: to,
         exact: activeOnlyWhenExact
@@ -15,25 +11,33 @@ const CustomLink = ({ k, label, to, activeOnlyWhenExact, tabIndex }) => {
     return (
         <li>
             <a className={match ? 'activeTab' : ''} href={to} tabIndex={tabIndex} >
-                /{label}
+                <span>/</span>{label}
             </a>
         </li>
     );
 }
 
-const MenuBoardChild = ({ isOpen }) => {
+const MenuBoardChild = () => {
+    const GithubSVG = require('../assets/github.svg').default;
+    const TwitterSVG = require('../assets/twitter.svg').default;
+    const LinkedinSVG = require('../assets/linkedin.svg').default;
+    const SVGWIDTH = 32;
+
     return (
-        <ClickAwayListener onClickAway={() => { }}>
-            <div className="over-menu-board">
-                <div className='menu-board'>
-                    <ul>
-                        <CustomLink k={'ul-0'} activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
-                        <CustomLink k={'ul-1'} to='/projects' label="projects" tabIndex={1}></CustomLink>
-                        <CustomLink k={'ul-2'} to='/about' label="about-me" tabIndex={2}></CustomLink>
-                    </ul>
+        <div className="over-menu-board">
+            <div className='menu-board'>
+                <ul>
+                    <CustomLink k={'ul-0'} activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
+                    <CustomLink k={'ul-1'} to='/projects' label="projects" tabIndex={1}></CustomLink>
+                    <CustomLink k={'ul-2'} to='/about' label="about-me" tabIndex={2}></CustomLink>
+                </ul>
+                <div className="social-menuboard">
+                    <a href='https://twitter.com/sarkartanmay393'><img width={SVGWIDTH + 1} src={TwitterSVG} alt='twitter-ref' /></a>
+                    <a href='https://github.com/sarkartanmay393'><img width={SVGWIDTH} src={GithubSVG} alt='github-ref' /></a>
+                    <a href='https://linkedin.com/in/tanmaysrkr'><img width={SVGWIDTH} src={LinkedinSVG} alt='linkedin-ref' /></a>
                 </div>
             </div>
-        </ClickAwayListener>
+        </div>
     );
 };
 
@@ -46,12 +50,5 @@ const NavBarItems = () => {
         </ul>
     );
 }
-
-// const MenuBoard = ({ child = MenuBoardChild }) => {
-//     return ReactDOM.createPortal(
-//         child,
-//         document.getElementById('menuboard')
-//     );
-// }
 
 export { CustomLink, MenuBoardChild, NavBarItems };
