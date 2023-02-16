@@ -116,23 +116,6 @@
     font-size: 22px;
 }
 
-.project-card button {
-    color: white;
-    background-color: transparent;
-
-    font-weight: 500;
-    font-family: 'Poppins';
-
-    border: 0.5px solid orange;
-    margin: 0 0.2rem;
-}
-
-.project-card button:hover {
-    border: 1px solid lightgreen;
-    color: lightgreen;
-    background-color: transparent;
-}
-
 .project-card .btns {
     display: flex;
     flex-direction: row;
