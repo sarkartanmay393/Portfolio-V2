@@ -15,6 +15,7 @@ function SkillSection({ languages, frameworks, tools, cloud, others, databases }
         ]);
     }, [languages, frameworks, cloud, others, databases, tools]);
 
+
     return (
         <section id='skills'>
             <header>
@@ -93,7 +94,6 @@ const swForHeader = (index) => {
 }
 const swForLinks = (skillName) => {
     let res = "";
-
     switch (skillName) {
         default:
             return;
