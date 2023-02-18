@@ -5,22 +5,26 @@
         "twitter": "sarkartanmay393",
         "linkedin": "tanmaysrkr"
     },
-    "ps-status": "Portfolio",
-    "ps-ref": "https://github.com/sarkartanmay393/Portfolio-V2",
+    "ps": {
+        "ref": "https://github.com/sarkartanmay393/Portfolio-V2",
+        "status": "Portfolio"
+    },
     "about-me": {
         "intro": "Hello, I’m Tanmay!",
         "p1": "I’m a self-taught full stack developer based in Dhupguri, India. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences",
         "p2": "Transforming my thoughts and knowledge into websites has been my passion for over a year. And I always believe in quality rather than quantity. I always strive to learn about the newest technologies and frameworks",
         "p3": "Other than web development, I really am intrigued about the operations part of app lifecycle. In modern terms, DevOps is my goal and web dev is part of it."
     },
-    "intro-description": "Welcome to my tech portfolio, here I showcase my skills, experiences,   and projects in the field of technology. I am a dedicated full stack    developer and a DevOps Enthusiast, with a passion for developing innovative solutions and    solving complex problems.",
+    "intro-description": "Welcome to my tech portfolio, here I showcase my skills, experiences, and projects in the field of technology. I am a dedicated full stack developer and a DevOps Enthusiast, with a passion for developing innovative solutions and solving complex problems.",
     "intro-text": "Tanmay is a student of",
-    "intro-terms": [
-        "Full Stack Development",
-        "DevOps"
-    ],
-    "quote-text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
-    "quote-author": "Albert Einstein",
+    "intro-terms": {
+        "first": "Full Stack Development",
+        "second": "DevOps"
+    },
+    "quote": {
+        "author": "Albert Einstein",
+        "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+    },
     "footer-description": "I am a dedicated full stack developer and a DevOps Enthusiast, with a passion for developing innovative solutions solving complex problems. Full Stack with JavaScript and DevOps with Go, is my life in this vast tech industry.",
     "funfacts": [
         "I like winter more than summer",
