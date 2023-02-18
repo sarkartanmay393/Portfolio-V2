@@ -93,6 +93,8 @@ function App({ db }) {
       const snapshot = await getDocs(collection(db, 'body-info'));
       const data = snapshot.docs[0];
 
+      console.log(data);
+
       setWebsiteData({
         funfacts: data.get('funfacts'),
         funfact_highlights: data.get('funfact-highlights'),
