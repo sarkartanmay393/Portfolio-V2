@@ -1,4 +1,5 @@
 import './App.css';
+import Data from "./data/websiteData.json";
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -15,27 +16,24 @@ import FooterCard from './components/FooterCard';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import data from "./data/WebsiteData.json";
-
-
-
 
 function App() {
   const [websiteData, setWebsiteData] = useState({
-    "funfacts": data['funfacts'],
-    "funfact_highlights": data['funfact-highlights'],
-    "email": data['email'],
-    "intro_text": data['intro-text'],
-    "intro_terms": data['intro-terms'],
-    "intro_desc": data['intro-description'],
-    "ps": data['ps'],
-    "quote": data['quote'],
-    "contacts": data['contacts'],
-    "about_me": data['about-me'],
-    "footer_desc": data['footer-description'],
-    "skills": data['skills'],
-    "projects": data['projects']
+    "funfacts": Data['funfacts'],
+    "funfact_highlights": Data['funfact-highlights'],
+    "email": Data['email'],
+    "intro_text": Data['intro-text'],
+    "intro_terms": Data['intro-terms'],
+    "intro_desc": Data['intro-description'],
+    "ps": Data['ps'],
+    "quote": Data['quote'],
+    "contacts": Data['contacts'],
+    "about_me": Data['about-me'],
+    "footer_desc": Data['footer-description'],
+    "skills": Data['skills'],
+    "projects": Data['projects']
   });
+
   const [isMobile, setIsMobile] = useState(true);
 
   // For setting current screen scroll position in global css variable
@@ -45,6 +43,7 @@ function App() {
   };
 
   useEffect(() => {
+    if (false) { setWebsiteData() }
     setIsMobile(window.screen.width < 600);
     document.body.style.setProperty("--screenWidth", window.screen.width);
   }, []);
