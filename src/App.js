@@ -1,5 +1,5 @@
 import './App.css';
-import Data from "./data/websiteData.json";
+import Data from "./data/WebsiteData.json";
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
