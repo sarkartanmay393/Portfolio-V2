@@ -60,7 +60,11 @@ function BlogSection() {
                                 <p id='blog-card-main-subtitle'>{
                                     value.subtitle.length <= 130 ?
                                         value.subtitle :
-                                        value.subtitle.slice(0, 150).trim().concat('...')}
+                                        (window.screen.width < 600 ?
+                                            value.subtitle.slice(0, 150).trim().concat('...')
+                                            : value.subtitle.slice(0, 160).trim().concat('...')
+                                        )
+                                }
                                 </p>
                             </section>
                             <section id='blog-card-aside'>
