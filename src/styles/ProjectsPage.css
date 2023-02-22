@@ -113,9 +113,9 @@
 
 .dow-project-card #title-desc {
     border: 0px solid white;
-    /* justify-content: center;
-    align-self: center; */
     margin: auto;
+    text-align: center;
+
 }
 
 .dow-project-card h3 {
