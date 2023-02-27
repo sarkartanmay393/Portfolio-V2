@@ -16,8 +16,20 @@ import FooterCard from './components/FooterCard';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import getQoD from './utils/getQoD';
+
 
 function App() {
+
+  const [quote, setQuote] = useState({
+    quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    author: "Albert Einstein"
+  })
+
+  useEffect(() => {
+    getQoD().then(quote => setQuote(quote))
+  }, [])
+
   const [websiteData, setWebsiteData] = useState({
     "funfacts": Data['funfacts'],
     "funfact_highlights": Data['funfact-highlights'],
@@ -26,7 +38,7 @@ function App() {
     "intro_terms": Data['intro-terms'],
     "intro_desc": Data['intro-description'],
     "ps": Data['ps'],
-    "quote": Data['quote'],
+    // "quote": Data['quote'],
     "contacts": Data['contacts'],
     "about_me": Data['about-me'],
     "footer_desc": Data['footer-description'],
@@ -59,8 +71,8 @@ function App() {
           ps_status={websiteData.ps.status}
           description={websiteData.intro_desc} />
         <QuoteCard
-          quote={websiteData.quote.text}
-          author={websiteData.quote.author} />
+          quote={quote.quote}
+          author={quote.author} />
         <BlogSection />
         <ProjectSection
           projects={websiteData.projects} />
