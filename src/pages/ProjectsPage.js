@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import './ProjectsPage.css';
+import '../styles/ProjectsPage.css';
+import { DemoButton, CodeButton } from '../components/Buttons';
+
 
 function ProjectsPage({ weeksOfWork, daysOfWork }) {
 
@@ -18,8 +20,8 @@ function ProjectsPage({ weeksOfWork, daysOfWork }) {
                                 </div>
                                 <p id='desc'>{value.description.slice(0, 120).trim().concat('...')}</p>
                                 <div className='btns'>
-                                    <a href={value.demo}><button>DEMO</button></a>
-                                    <a href={value.url}><button>CODE</button></a>
+                                    <DemoButton url={value.demo} />
+                                    <CodeButton url={value.url} />
                                 </div>
                             </section>
                         );
@@ -42,8 +44,8 @@ function ProjectsPage({ weeksOfWork, daysOfWork }) {
                                     <p id='desc'>{value.description.slice(0, 100).trim().concat('...')}</p>
                                 </div>
                                 <div className='btns'>
-                                    {value.demo ? <a href={value.demo}><button>Demo</button></a> : <></>}
-                                    <a href={value.url}><button>Repo</button></a>
+                                    {value.demo ? <DemoButton url={value.demo} /> : <></>}
+                                    <CodeButton url={value.url} />
                                 </div>
                             </section>
                         );

@@ -1,4 +1,4 @@
-import './AboutMe.css';
+import '../styles/AboutMe.css';
 
 function AboutSection({ intro, p1, p2, p3 }) {
 

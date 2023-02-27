@@ -4,11 +4,10 @@
     padding: 1rem 2rem;
 
     height: fit-content;
-    width: min-content;
+    width: fit-content;
 
     position: fixed;
     top: 8%;
-
     border: 0px solid white;
 }
 
@@ -22,4 +21,8 @@
 .follow-line img {
     height: 18px;
     margin-top: 8px;
+}
+
+.follow-line img:hover {
+    padding: 1px;
 }

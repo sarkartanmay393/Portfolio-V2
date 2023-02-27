@@ -1,4 +1,4 @@
-import './BlogCard.css';
+import '../styles/BlogCard.css';
 
 function BlogSection() {
     const viewAll = `View All ⇢`;
@@ -42,7 +42,9 @@ function BlogSection() {
         <section id='blogs'>
             <header>
                 <h2><span>#</span>blogs</h2>
-                <a id="view-all-a" href='https://blog.tanmaysarkar.tech/' rel="noreferrer" target='_blank'><button id='view-all-btn'>{viewAll}</button></a>
+                <a id="view-all-a" href='https://blog.tanmaysarkar.tech/' rel="noreferrer" target='_blank'>
+                    <button id='view-all-btn'>{viewAll}</button>
+                </a>
             </header>
             <main>
                 {blogs.map((value, index) => {
@@ -58,7 +60,11 @@ function BlogSection() {
                                 <p id='blog-card-main-subtitle'>{
                                     value.subtitle.length <= 130 ?
                                         value.subtitle :
-                                        value.subtitle.slice(0, 125).trim().concat('...')}
+                                        (window.screen.width < 600 ?
+                                            value.subtitle.slice(0, 150).trim().concat('...')
+                                            : value.subtitle.slice(0, 160).trim().concat('...')
+                                        )
+                                }
                                 </p>
                             </section>
                             <section id='blog-card-aside'>

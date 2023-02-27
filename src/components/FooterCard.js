@@ -1,11 +1,11 @@
-import './FooterCard.css';
+import '../styles/FooterCard.css';
 
 const KakashiSVG = require('../assets/kakashi.svg').default;
 const GithubSVG = require('../assets/github.svg').default;
 const TwitterSVG = require('../assets/twitter.svg').default;
 const LinkedinSVG = require('../assets/linkedin.svg').default;
 
-function FooterCard({ desc, contacts, email }) {
+function FooterCard({ desc, email }) {
     return (
         <>
             <section id='footer-section'>

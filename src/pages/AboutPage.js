@@ -1,4 +1,4 @@
-import './AboutPage.css';
+import '../styles/AboutPage.css';
 import FunfactSection from '../components/FunFactCard';
 
 const aboutImage = require('../assets/tanmay-image.png');

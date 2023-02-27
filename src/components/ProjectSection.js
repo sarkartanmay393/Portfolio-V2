@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import './ProjectSection.css';
+import '../styles/ProjectSection.css';
+import { DemoButton, CodeButton } from './Buttons';
 
 function ProjectSection({ projects }) {
     const viewAll = `View All ⇢`;
@@ -13,7 +14,7 @@ function ProjectSection({ projects }) {
             <main>
                 {
                     projects.map((value, index) => {
-                        if (index >= 4) {
+                        if (index >= 3) {
                             return <></>;
                         }
                         return (
@@ -25,8 +26,8 @@ function ProjectSection({ projects }) {
                                 </div>
                                 <p id='desc'>{value.description.slice(0, 120).trim().concat('...')}</p>
                                 <div className='btns'>
-                                    <a href={value.demo}><button>DEMO</button></a>
-                                    <a href={value.url}><button>CODE</button></a>
+                                    <DemoButton url={value.demo} />
+                                    <CodeButton url={value.url} />
                                 </div>
                             </section>
                         );

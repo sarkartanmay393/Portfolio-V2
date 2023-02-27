@@ -1,4 +1,6 @@
 .full-navbar {
+    z-index: 999;
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -7,17 +9,14 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #282C33;
-}
-
-.activeTab {
-    color: lightgreen;
+    background-color: rgba(40, 44, 51, 0.8);
 }
 
 #kakashi-face-nav {
     animation: spin 1s linear;
     /* animation: spin duration timing-function delay iteration-count direction fill-mode; */
 }
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -38,33 +37,38 @@
         height: 1px;
         background-color: white;
     }
+
     25% {
         width: 25%;
         height: 1.05px;
         background-color: white;
     }
+
     50% {
         width: 50%;
         height: 1.1px;
         background-color: orange;
     }
+
     75% {
         width: 75%;
         height: 1.15px;
         background-color: orange;
     }
+
     100% {
         width: 100%;
         height: 1.2px;
-        background-color: darkorange;
+        background-color: #ff6d37;
     }
 }
 
 
 nav {
-    border: 0px solid orangered;
+    border: 0px solid rgb(255, 109, 55);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding: 1rem 10rem;
     color: white;
@@ -77,48 +81,6 @@ nav h2 {
     font-size: 18px;
 }
 
-#menu-btn {
-    /* height: 18px; */
-    /* width: 8px; */
-
-    background: none;
-    border: 0px solid white;
-}
-
-.menu-board {
-    color: white;
-    background-color: rgb(21, 36, 36);
-
-    border-bottom: 0px solid white;
-    /* border: 1px solid red; */
-    padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    top: 48px;
-    position: fixed;
-    width: 100%;
-    height: fit-content;
-}
-
-.menu-board ul {
-    list-style-type: none;
-    border: 0px solid white;
-
-    width: fit-content;
-    padding: 0;
-}
-
-.menu-board li {
-    border: 0px solid white;
-    width: 100%;
-    padding: 8px 0;
-
-    font-weight: bold;
-    font-size: 22px;
-}
 
 nav h2:hover {
     color: lightgreen;
@@ -126,31 +88,6 @@ nav h2:hover {
 
 nav h2 img {
     height: 18px;
-}
-
-nav ul {
-    margin: 0 0;
-    list-style: none;
-
-    display: flex;
-}
-
-nav ul li {
-    padding: 0 8px;
-}
-
-nav ul li a:hover {
-    color: lightgreen;
-}
-
-nav ul li a {
-    font-size: 14px;
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a span {
-    color: orangered;
 }
 
 

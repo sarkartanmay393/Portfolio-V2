@@ -13,7 +13,7 @@
 }
 
 #skills #hash {
-    color: orangered;
+    color: rgb(255, 109, 55);
 }
 
 #skills header {
@@ -98,6 +98,7 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .skill-card #skill-names a {

@@ -1,74 +1,50 @@
-import './NavBar.css';
+import '../styles/NavBar.css';
+import Hamburger from "./Hamburger";
 import { useEffect, useState } from 'react';
-import { useRouteMatch } from "react-router-dom";
+import { MenuBoardChild, NavBarItems } from "./Menuboard";
+
 
 const KakashiSVG = require('../assets/kakashi.svg').default;
-// const MenuSVG = require('../assets/menu.svg');
-
-
 
 function NavBar() {
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [color, setColor] = useState('');
 
     window.onload = () => {
-      document.getElementById("kakashi-face-nav").animate([
-          {transform: 'rotate(360deg)'},
-      ], 1000)
+        document.getElementById("kakashi-face-nav").animate([
+            { transform: 'rotate(360deg)' },
+        ], 1000)
     };
 
     useEffect(() => {
         window.screen.width >= 600 ?
             setIsMobile(false) : setIsMobile(true);
-        isMenuOpen ?
-            setColor('rgb(21, 36, 36)') : setColor('');
+
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "visible";
+        }
+
     }, [isMenuOpen]);
 
-    const openMenu = () => { setIsMenuOpen(!isMenuOpen) };
-
-    // imported from react router website
-    const CustomLink = ({ label, to, activeOnlyWhenExact, tabIndex }) => {
-        let match = useRouteMatch({
-            path: to,
-            exact: activeOnlyWhenExact
-        });
-
-        return (
-            <li key='home'>
-                <a className={match ? "activeTab" : ""} href={to} tabIndex={tabIndex} >
-                    <span>/</span>
-                    {label}
-                </a>
-            </li>
-        );
-    }
+    const openMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        document.getElementsByClassName('hamburger').item(0).classList.toggle("open");
+    };
 
     return (
         <>
             {isMenuOpen ?
-                <div className='menu-board'>
-                    <ul>
-                        <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
-                        <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
-                        <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
-                    </ul>
-                </div> :
-                <></>
+                <MenuBoardChild isOpen={isMenuOpen} />
+                : <></>
             }
-            <section className='full-navbar'>
-                <nav style={{ 'backgroundColor': `${color}` }} >
+            <section style={isMenuOpen ? { backgroundColor: "#152424f5" } : {}} className='full-navbar'>
+                <nav>
                     <a href='/'><h2><img id='kakashi-face-nav' src={KakashiSVG} alt='kakashi-face' />Tanmay</h2></a>
                     {isMobile ?
-                        <>
-                            <p id='menu-btn' onClick={openMenu}>{isMenuOpen ? '❎' : '='}</p>
-                        </>
-                        :
-                        <ul>
-                            <CustomLink activeOnlyWhenExact={true} to='/' label="home" tabIndex={0}></CustomLink>
-                            <CustomLink to='/projects' label="projects" tabIndex={1}></CustomLink>
-                            <CustomLink to='/about' label="about-me" tabIndex={2}></CustomLink>
-                        </ul>
+                        <Hamburger openMenu={openMenu} />
+                        : <NavBarItems />
                     }
                 </nav>
                 <div className='progress-bar'></div>

@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
-import './SkillSection.css';
+import '../styles/SkillSection.css';
 
-function SkillSection({ Skills }) {
+function SkillSection({ languages, frameworks, tools, cloud, others, databases }) {
     const [skills, setSkills] = useState([]);
 
     useEffect(() => {
         setSkills([
-            Skills['languages'],
-            Skills['frameworks'],
-            Skills['cloud'],
-            Skills['others'],
-            Skills['databases'],
-            Skills['tools'],
+            languages,
+            frameworks,
+            cloud,
+            others,
+            databases,
+            tools,
         ]);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [languages, frameworks, cloud, others, databases, tools]);
+
 
     return (
         <section id='skills'>
@@ -94,7 +94,6 @@ const swForHeader = (index) => {
 }
 const swForLinks = (skillName) => {
     let res = "";
-
     switch (skillName) {
         default:
             return;

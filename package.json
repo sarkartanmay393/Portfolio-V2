@@ -1,6 +1,6 @@
 {
   "name": "portfolio-web-v2",
-  "version": "0.2.0",
+  "version": "0.2.5",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,9 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "ps": "parcel src/index.html -p 1234",
-    "pb": "parcel build src/index.html"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

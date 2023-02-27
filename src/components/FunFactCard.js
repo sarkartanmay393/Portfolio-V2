@@ -1,4 +1,4 @@
-import './FunFactCard.css';
+import '../styles/FunFactCard.css';
 
 function FunfactSection({ funfacts, funfact_highlights }) {
     return (

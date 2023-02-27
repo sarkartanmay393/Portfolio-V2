@@ -1,0 +1,149 @@
+{
+    "email": "hello@tanmaysarkar.tech",
+    "contacts": {
+        "github": "sarkartanmay393",
+        "twitter": "sarkartanmay393",
+        "linkedin": "tanmaysrkr"
+    },
+    "ps": {
+        "ref": "https://github.com/sarkartanmay393/Portfolio-V2",
+        "status": "Portfolio"
+    },
+    "about-me": {
+        "intro": "Hello, I’m Tanmay!",
+        "p1": "I’m a self-taught full stack developer based in Dhupguri, India. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences",
+        "p2": "Transforming my thoughts and knowledge into websites has been my passion for over a year. And I always believe in quality rather than quantity. I always strive to learn about the newest technologies and frameworks",
+        "p3": "Other than web development, I really am intrigued about the operations part of app lifecycle. In modern terms, DevOps is my goal and web dev is part of it."
+    },
+    "intro-description": "Welcome to my tech portfolio, here I showcase my skills, experiences, and projects in the field of technology. I am a dedicated full stack developer and a DevOps Enthusiast, with a passion for developing innovative solutions and solving complex problems.",
+    "intro-text": "Tanmay is a student of",
+    "intro-terms": {
+        "first": "Full Stack Development",
+        "second": "DevOps"
+    },
+    "quote": {
+        "author": "Albert Einstein",
+        "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+    },
+    "footer-description": "I am a dedicated full stack developer and a DevOps Enthusiast, with a passion for developing innovative solutions solving complex problems. Full Stack with JavaScript and DevOps with Go, is my life in this vast tech industry.",
+    "funfacts": [
+        "I like winter more than summer",
+        "I often motorbike with my friends",
+        "I like momos",
+        "My current favourite show is The Witcher",
+        "And current anime is Naruto",
+        "I intend to give the world new view from my camera lenses"
+    ],
+    "funfact-highlights": [
+        "momos",
+        "winter",
+        "summer",
+        "The Witcher",
+        "Naruto"
+    ],
+    "projects": [
+        {
+            "title": "Yatra Sahayak",
+            "image": "https://github.com/sarkartanmay393/RoomReservation-Go/raw/main/static/readme/logo.png",
+            "url": "https://github.com/sarkartanmay393/RoomReservation-Go",
+            "workType": "big",
+            "description": "Check room availability in desired dates, make reservation and get your reservation summary in Email. Technically a Golang based Web Application with Database Interaction",
+            "madeby": "Go, Docker, Bootstrap, PostgreSQL",
+            "demo": "http://192.46.213.243/"
+        },
+        {
+            "title": "Blogosphere",
+            "demo": "http://192.46.213.243:8081",
+            "description": "Contains Javascript code of a blogging website using ReactJS, MongoDB, Express and Node",
+            "url": "https://github.com/sarkartanmay393/Blogosphere-JS",
+            "image": "https://github.com/sarkartanmay393/Blog-Platform-Web3/raw/master/public/blogosphere-logo.png",
+            "madeby": "ReactJS, MongoDB, Express, Node",
+            "workType": "big"
+        },
+        {
+            "title": "Food Truck",
+            "madeby": "JavaScript, React",
+            "description": "Contains a frontend only React project, I built it for a Internship assignment.",
+            "url": "https://github.com/sarkartanmay393/FoodTruck-React",
+            "demo": "https://foodtruckif.vercel.app/",
+            "workType": "big",
+            "image": "https://github.com/sarkartanmay393/FoodTruck-React/blob/master/src/assets/food-truck.png?raw=true"
+        },
+        {
+            "title": "Portfolio V1",
+            "description": "This repo contains my own portfolio website made using Flutter, Firebase, and Github.",
+            "workType": "big",
+            "url": "https://github.com/sarkartanmay393/Portfolio-V1/",
+            "madeby": "Flutter, Firebase",
+            "image": "https://github.com/sarkartanmay393/Portfolio-V1/blob/main/build/web/icons/Icon-maskable-512.png?raw=true",
+            "demo": "https://portfolio-web-1ad94.web.app/"
+        },
+        {
+            "title": "Gaze Weather",
+            "madeby": "React, Firebase",
+            "description": "Contains a weather interface with main stream informations about your location.",
+            "demo": "http://gazeweather.web.app/",
+            "workType": "big",
+            "url": "https://github.com/sarkartanmay393/Gaze-Weather-JS",
+            "image": "https://img.icons8.com/clouds/100/null/landslide.png"
+        },
+        {
+            "title": "Text Lead Tracker",
+            "demo": "https://textlead-tracker-393.netlify.com",
+            "url": "https://github.com/sarkartanmay393/TextLead-Tracker",
+            "description": "Contains raw HTML, CSS and JS code of a Chrome Extension to save quickies.",
+            "madeby": "HTML, CSS, JS",
+            "workType": "small"
+        },
+        {
+            "title": "URL Shortener",
+            "image": "https://img.icons8.com/clouds/100/null/domain.png",
+            "madeby": "Golang, Redis, Docker, Compose",
+            "description": "This is a simple URL shortener service that uses Redis as a database. It is built using Golang and Docker. It is also deployed on somewhere.",
+            "demo": "https://github.com/sarkartanmay393/URL-Shortener-Go#test-screenshots-",
+            "workType": "big",
+            "url": "https://github.com/sarkartanmay393/URL-Shortener-Go"
+        },
+        {
+            "title": "Backstage Talks",
+            "description": "Contains a clone of Backstage Magazines Collections overview. It is made using Typescript, React and Firebase.",
+            "demo": "http://backstageclone.web.app",
+            "madeby": "TypeScript, React",
+            "workType": "small",
+            "url": "https://github.com/sarkartanmay393/BackstageTalks"
+        }
+    ],
+    "skills": {
+        "databases": [
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB"
+        ],
+        "languages": [
+            "JavaScript",
+            "Go",
+            "TypeScript",
+            "Dart"
+        ],
+        "tools": [
+            "Docker",
+            "Kubernetes",
+            "Jenkins",
+            "Terraform",
+            "Git"
+        ],
+        "cloud": [
+            "Linode",
+            "Firebase",
+            "Azure"
+        ],
+        "others": [
+            "Linux"
+        ],
+        "frameworks": [
+            "React",
+            "Express",
+            "Flutter"
+        ]
+    }
+}

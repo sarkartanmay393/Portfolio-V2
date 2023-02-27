@@ -1,4 +1,4 @@
-import './FollowLine.css';
+import '../styles/FollowLine.css';
 
 const GithubSVG = require('../assets/github.svg').default;
 const TwitterSVG = require('../assets/twitter.svg').default;
