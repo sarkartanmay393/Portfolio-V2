@@ -1,0 +1,36 @@
+.hamburger {
+  cursor: pointer;
+
+  height: fit-content;
+  width: fit-content;
+  transition: all 0.25s;
+}
+
+.hamburger_topbun,
+.hamburger_bottombun {
+  content: "";
+  display: block;
+
+  width: 22px;
+  height: 1px;
+  background: #fff;
+
+  transform: rotate(0);
+  transition: all 0.25s;
+}
+
+.hamburger_bottombun {
+  transform: translateY(5px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger_topbun {
+  transform: rotate(45deg) translateY(0px);
+}
+
+.open .hamburger_bottombun {
+  transform: rotate(-45deg) translateY(0px);
+}
