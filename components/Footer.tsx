@@ -9,23 +9,20 @@ import LinkedinSVG from "../public/assets/linkedin.svg";
 function FooterCard({ desc = "", email = "" }) {
   return (
     <>
-      <section
-        id="footer-section"
-        className="w-[100%] p-[1rem] pb-0 lg:p-[2rem] lg:py-0 flex justify-between bg-none text-white text-center"
-      >
+      <section className="w-[100%] p-[1rem] pb-0 lg:p-[2rem] lg:py-0 flex justify-between bg-none text-white text-center">
         <div className="w-[80%] text-start mx-[12px]">
           <div className="grid lg:flex items-center justify-between font-[600]">
-            <Link className="" href={"/"}>
-              <h2 className="font-sans text-[14px] mb-[1px]">
-                <Image width={22} src={KakashiSVG} alt="kakashi-face" />
-                Tanmay
-              </h2>
+            <Link className="flex" href={"/"}>
+              <Image width={22} src={KakashiSVG} alt="kakashi-face" />
+              <h2 className="ml-[2px] font-sans text-[14px] mb-[1px]">Tanmay</h2>
             </Link>
             <a href="mailto:hello@tanmaysarkar.tech">
               <p className="hover:text-green">{email}</p>
             </a>
           </div>
-          <p className="my-[12px] text-[12px] lg:text-[14px] font-[500] ">{desc}</p>
+          <p className="my-[12px] text-[12px] lg:text-[14px] font-[500] ">
+            {desc}
+          </p>
         </div>
         <div className="w-fit flex flex-col items-center">
           <h2>Socials</h2>

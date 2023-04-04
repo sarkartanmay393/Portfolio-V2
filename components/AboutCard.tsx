@@ -12,8 +12,8 @@ function AboutCard({
   p3: string;
 }) {
   return (
-    <section className="flex flex-col px-[1rem] lg:px-[10rem] text-white hover:text-green">
-      <header>
+    <section className="flex flex-col px-[1rem] lg:px-[10rem] text-white">
+      <header className="text-[2rem]">
         <h2>
           <span className="text-orange">#</span>
           about-me

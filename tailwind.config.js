@@ -27,8 +27,8 @@ module.exports = {
       sans: ["Kalam", "sans-serif"],
       serif: ["Merriweather", "serif"],
       firacode: ["Fira Code", ""],
-      kalam: ["Kalam"],
-      lato: ["Lato"],
+      kalam: "Kalam",
+      lato: "Lato",
     },
     extend: {
       spacing: {
@@ -48,6 +48,8 @@ module.exports = {
         normalButton:
           "0px 0px 4px 2px rgba(245, 245, 245, 0.1), 0px 0px 4px 2px transparent inset",
         clickedButton: "0px 0px 5px 1px lightgreen",
+        blogCard: "0px 0px 12px 1px rgba(0, 0, 0, 0.4)",
+        focuedBlogCard: "0px 0px 10px 1px lightgreen",
       },
     },
   },

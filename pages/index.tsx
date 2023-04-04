@@ -4,9 +4,12 @@ import Layout from "../components/Layout";
 import IntroCard from "../components/IntroCard";
 import QuoteCard from "../components/QuoteCard";
 import ContactCard from "../components/ContactCard";
+import BlogCard from "../components/BlogCard";
+import AboutCard from "../components/AboutCard";
+import ProjectSection from "../components/ProjectsCard";
 
 import Data from "../public/assets/WebsiteData.json";
-import AboutCard from "../components/AboutCard";
+import SkillSection from "../components/SkillsCard";
 
 export default function Home() {
   const [websiteData, setWebsiteData] = useState({
@@ -39,17 +42,10 @@ export default function Home() {
         quote={websiteData.quote.text}
         author={websiteData.quote.author}
       />
-      {/*
-      <BlogSection />
-      <ProjectSection projects={websiteData.projects} />
-      <SkillSection
-        languages={websiteData.skills.languages}
-        frameworks={websiteData.skills.frameworks}
-        cloud={websiteData.skills.cloud}
-        others={websiteData.skills.others}
-        tools={websiteData.skills.tools}
-        databases={websiteData.skills.databases}
-      />*/}
+      <BlogCard />
+      <ProjectSection />
+      <SkillSection />
+
       <AboutCard {...websiteData.about_me} />
       <ContactCard
         contacts={{ twitter: "sarkartanmay393", linkedin: "tanmaysrkr" }}
