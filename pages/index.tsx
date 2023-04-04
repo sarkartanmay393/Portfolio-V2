@@ -30,14 +30,7 @@ export default function Home() {
 
   return (
     <Layout title="Portfolio V2">
-      <IntroCard
-        intro_text={websiteData.intro_text}
-        term_first={websiteData.intro_terms.first}
-        term_second={websiteData.intro_terms.second}
-        ps_ref={websiteData.ps.ref}
-        ps_status={websiteData.ps.status}
-        description={websiteData.intro_desc}
-      />
+      <IntroCard />
       <QuoteCard
         quote={websiteData.quote.text}
         author={websiteData.quote.author}

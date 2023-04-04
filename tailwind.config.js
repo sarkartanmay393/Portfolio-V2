@@ -23,13 +23,6 @@ module.exports = {
       "gray-mid": "#282c338e",
       "gray-light": "#282c3366",
     },
-    fontFamily: {
-      sans: ["Kalam", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-      firacode: ["Fira Code", ""],
-      kalam: "Kalam",
-      lato: "Lato",
-    },
     extend: {
       spacing: {
         0: "0px",
@@ -40,9 +33,6 @@ module.exports = {
         5: "32px",
         6: "48px",
         7: "56px",
-      },
-      borderRadius: {
-        "4xl": "2rem",
       },
       boxShadow: {
         normalButton:

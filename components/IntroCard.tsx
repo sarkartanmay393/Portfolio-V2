@@ -1,23 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+import { kalam } from "../pages/_app";
 import HomeImage from "../public/assets/home-img.svg";
+import webInfo from "../public/assets/WebsiteData.json";
 
-function IntroCard({
-  intro_text,
-  term_first,
-  term_second,
-  ps_ref,
-  ps_status,
-  description,
-}: {
-  intro_text: string;
-  term_first: string;
-  term_second: string;
-  ps_ref: string;
-  ps_status: string;
-  description: string;
-}) {
+function IntroCard() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -25,17 +13,16 @@ function IntroCard({
   }, []);
 
   return (
-    <section
-      role="banner"
-      className="flex flex-col lg:flex-row items-center justify-center px-[2rem] py-[2rem] lg:px-[10rem] lg:py-[2rem] text-white bg-gray-mid"
-    >
+    <section className="flex flex-col lg:flex-row items-center justify-center px-[2rem] py-[2rem] lg:px-[10rem] lg:py-[2rem] text-white">
       <div className="text-start">
-        <h3 className="font-bold text-[1.4rem] lg:text-[1.7rem] leading-[26px] p-0">
-          {intro_text}
-          <span className="">{term_first}</span> &{" "}
-          <span className="">{term_second}</span>
+        <h3
+          className={`font-bold text-[1.4rem] lg:text-[1.7rem] leading-[26px] p-0 ${kalam.className}`}
+        >
+          {webInfo["intro-text"]}{" "}
+          <span className="">{webInfo["intro-terms"].first}</span> &{" "}
+          <span className="">{webInfo["intro-terms"].second}</span>
         </h3>
-        <p className="font-[500] py-[12px]">{description}</p>
+        <p className="font-[500] py-[12px]">{webInfo["intro-description"]}</p>
         {isMobile ? (
           <></>
         ) : (
@@ -50,9 +37,9 @@ function IntroCard({
         <Image className="h-[280px] m-0" src={HomeImage} alt="home" />
         <p className="w-max text-[12px] font-[600] outline outline-offset-[4px] outline-whitesmoke rounded-[0px] mt-[4.5px] mx-0">
           ✅ Currently working on{" "}
-          <a href={ps_ref}>
+          <a href={webInfo.ps.ref}>
             <span className="border-b-[0.1px] hover:border-b-[1px] hover:border-green ">
-              {ps_status}
+              {webInfo.ps.status}
             </span>
           </a>
         </p>
