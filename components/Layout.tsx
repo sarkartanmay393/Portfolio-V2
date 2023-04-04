@@ -6,24 +6,17 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import ScrollToTop from "./ScrollToTop";
 
-import bgImage from "../public/assets/bg.svg";
-
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
 const Layout = ({ children, title = "Portfolio V2" }: Props) => {
-  const [isMobile, setIsMobile] = useState(true);
-
   useEffect(() => {
-    setIsMobile(window.screen.width < 600);
     document.body.style.setProperty(
       "--screenWidth",
       String(window.screen.width)
     );
-
-    // window.document.body.style.backgroundColor = "red";
 
     // For setting current screen scroll position in global css variable
     window.onscroll = () => {
@@ -45,7 +38,7 @@ const Layout = ({ children, title = "Portfolio V2" }: Props) => {
           />
         </Head>
 
-        {isMobile ? <></> : <Socials />}
+        <Socials />
 
         <header className="flex">
           <Navigation />
@@ -54,11 +47,7 @@ const Layout = ({ children, title = "Portfolio V2" }: Props) => {
         <main className="mt-7 flex flex-col">{children}</main>
 
         <footer className="flex flex-col justify-center items-center text-center border-t-[1px] p-2 lg:px-[10rem] lg:pt-[1.4rem]">
-          <Footer
-            desc={`I am a dedicated full stack developer and a DevOps Enthusiast, with a passion for developing innovative solutions solving complex problems. Full Stack with JavaScript and DevOps with Go, is my life in this vast tech industry.`}
-            // contacts={websiteData.contacts}
-            email={"hello@tanmaysarkar.tech"}
-          />
+          <Footer />
           <p className="text-center text-white p-0 text-[12px] font-[500] opacity-[50%] mt-[-12px] mb-[12px]">
             © Copyright 2023. Redesigned by Tanmay
           </p>

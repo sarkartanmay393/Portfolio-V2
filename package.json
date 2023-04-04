@@ -1,6 +1,6 @@
 {
   "name": "portfolio-web-v2",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "private": true,
   "dependencies": {
     "@next/font": "^13.2.4",

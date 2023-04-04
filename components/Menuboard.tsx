@@ -24,7 +24,10 @@ export function MenuBoardChild() {
   const pathname = usePathname();
   const SVGWIDTH = 32;
   return (
-    <div className="z-[1000] h-full	w-screen top-6 right-0 fixed bg-gray">
+    <div
+      id="menuboard"
+      className="hidden lg:hidden z-[1000] h-full	w-screen top-6 right-0 fixed bg-gray"
+    >
       <div className="text-white px-2 flex flex-col items-center justify-center h-[80%]">
         <ul className="list-none p-0">
           {Object.entries(Tabs).map(([path, { name }]) => {
@@ -67,7 +70,7 @@ export function MenuBoardChild() {
 export function NavBarItems() {
   const pathname = usePathname();
   return (
-    <ul className="list-none flex m-0">
+    <ul className="list-none m-0 hidden lg:flex">
       {Object.entries(Tabs).map(([path, { name }]) => {
         if (pathname === path) {
           useEffect(() => {

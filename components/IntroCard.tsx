@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import { kalam } from "../pages/_app";
 import HomeImage from "../public/assets/home-img.svg";
 import webInfo from "../public/assets/WebsiteData.json";
+
+import { kalam } from "../pages/_app";
 
 function IntroCard() {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,7 +17,7 @@ function IntroCard() {
     <section className="flex flex-col lg:flex-row items-center justify-center px-[2rem] py-[2rem] lg:px-[10rem] lg:py-[2rem] text-white">
       <div className="text-start">
         <h3
-          className={`font-bold text-[1.4rem] lg:text-[1.7rem] leading-[26px] p-0 ${kalam.className}`}
+          className={`font-bold text-[1.4rem] lg:text-[1.7rem] leading-[26px] p-0 ${""}`}
         >
           {webInfo["intro-text"]}{" "}
           <span className="">{webInfo["intro-terms"].first}</span> &{" "}

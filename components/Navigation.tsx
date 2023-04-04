@@ -3,61 +3,106 @@ import { MenuBoardChild, NavBarItems } from "./Menuboard";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
 
-import styles from "../styles/Navigation.module.css";
 import KakashiSVG from "../public/assets/kakashi.svg";
 
 function Navigation() {
-  const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     window.onload = () => {
       document
-        .getElementById("kakashi-face-nav")
+        .getElementById("face-nav")
         ?.animate([{ transform: "rotate(360deg)" }], 1000);
     };
   }, []);
 
-  useEffect(() => {
-    window.screen.width >= 600 ? setIsMobile(false) : setIsMobile(true);
-
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
-    }
-  }, [isMenuOpen]);
-
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.getElementById("hamburger")?.classList.toggle("open");
+    document.getElementById("menuboard")?.classList.toggle("hidden");
   };
 
   return (
     <>
-      {isMenuOpen ? <MenuBoardChild /> : <></>}
+      <MenuBoardChild />
       <section
+        id="navbar"
         className={"w-[100%] flex flex-col fixed z-999 top-0 bg-gray py-3".concat(
           isMenuOpen ? " bg-gray" : ""
         )}
       >
-        <nav className="flex justify-between items-center py-1 px-12 text-white">
+        <nav className="flex justify-between items-center py-[1rem] px-[1.6rem] lg:px-[10rem] text-white">
           <a className="flex" href="/">
             <Image
-              id="kakashi-face-nav"
-              className={styles.kakashi_face}
+              id="face-nav"
+              className="animate-[spin 1s linear]"
               src={KakashiSVG}
               alt="kakashi-face"
               width={22}
             />
-            <span className="ml-1 text-md font-bold hover:text-green">
+            <span className="ml-1 text-[12px] lg:text-md font-bold hover:text-green">
               Tanmay
             </span>
           </a>
-          {isMobile ? <Hamburger openMenu={openMenu} /> : <NavBarItems />}
+          <Hamburger openMenu={openMenu} />
+          <NavBarItems />
         </nav>
-        <div className={styles.progress_bar}></div>
+        <div
+          id="scrollbar"
+          className="progress_bar h-[1px] w-[0%] bg-white"
+        ></div>
       </section>
+      <style jsx>{`
+        #scrollbar {
+          animation: scroll 1s linear;
+        }
+        @keyframes scroll {
+          0% {
+            width: 0%;
+            height: 1px;
+            background-color: white;
+          }
+
+          25% {
+            width: 25%;
+            height: 1.05px;
+            background-color: white;
+          }
+
+          50% {
+            width: 50%;
+            height: 1.1px;
+            background-color: orange;
+          }
+
+          75% {
+            width: 75%;
+            height: 1.15px;
+            background-color: orange;
+          }
+
+          100% {
+            width: 100%;
+            height: 1.2px;
+            background-color: #ff6d37;
+          }
+        }
+
+        /* For scroll animation */
+        #navbar * {
+          animation-play-state: paused;
+          animation-delay: calc(var(--scroll) * -1s);
+          animation-fill-mode: both;
+          animation-iteration-count: 1;
+        }
+
+        #face-nav {
+          animation-play-state: paused;
+          animation-delay: calc(var(--scroll) * -1s);
+          animation-iteration-count: 1;
+          animation-fill-mode: both;
+        }
+      `}</style>
     </>
   );
 }

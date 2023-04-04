@@ -1,4 +1,6 @@
-function QuoteCard({ quote, author }: { quote: string; author: string }) {
+import webInfo from "../public/assets/WebsiteData.json";
+
+function QuoteCard() {
   return (
     <>
       <section
@@ -20,7 +22,7 @@ function QuoteCard({ quote, author }: { quote: string; author: string }) {
         </svg>
 
         <h3 className="border-[1px] border-whitesmoke p-[15px] text-center w-[90%] lg:w-[80%] font-[500]">
-          {quote}
+          {webInfo.quote.text}
         </h3>
 
         <svg
@@ -40,7 +42,7 @@ function QuoteCard({ quote, author }: { quote: string; author: string }) {
         <div className="flex justify-around items-center border-[1px] border-t-0 relative top-[-9px] lg:top-[-10px] left-[26%] h-[30px] lg:h-[48px] w-[28%] lg:w-[20%]">
           <span className="text-white">-</span>
           <p className="flex flex-col text-[8px] lg:text-[14px] font-[400] border-0 m-0 p-0">
-            {author}
+            {webInfo.quote.author}
           </p>
         </div>
       </section>

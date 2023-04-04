@@ -4,24 +4,20 @@ import Image from "next/image";
 import ChevronDoubleUp from "../public/assets/chevron-double-up.svg";
 
 const ScrollToTop = () => {
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
-
-  // Add event listener to window on mount
+  
   useEffect(() => {
     window.addEventListener("scroll", showScrollToTopHandler);
   }, []);
 
-  // Check if window is scrolled down more than 300px
-  // If yes, show the scroll to top button
   const showScrollToTopHandler = () => {
+    const scrollbutton = document.getElementById("scrollbutton");
     if (window.scrollY > 300) {
-      setShowScrollToTop(true);
+      scrollbutton?.classList.remove("hidden");
     } else {
-      setShowScrollToTop(false);
+      scrollbutton?.classList.add("hidden");
     }
   };
 
-  // Scroll to top of the page
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,8 +25,11 @@ const ScrollToTop = () => {
     });
   };
 
-  return showScrollToTop ? (
-    <div className="fixed bottom-0 right-3 pl-[1rem] pb-[1rem]">
+  return (
+    <div
+      id="scrollbutton"
+      className="hidden fixed bottom-0 right-3 pl-[1rem] pb-[1rem]"
+    >
       <button
         className="flex justify-center items-center h-[35px] w-[35px] lg:h-[50px] lg:w-[50px] bg-[#bbb] rounded-[100%]"
         onClick={scrollToTop}
@@ -39,8 +38,6 @@ const ScrollToTop = () => {
         <Image className="" src={ChevronDoubleUp} alt="Scroll-To-Top" />
       </button>
     </div>
-  ) : (
-    <></>
   );
 };
 

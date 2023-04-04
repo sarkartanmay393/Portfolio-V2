@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Layout from "../components/Layout";
-
 import { useEffect } from "react";
-import { Project } from "../utils/types";
+
+import Layout from "../components/Layout";
 import { DemoButton, CodeButton } from "../components/Buttons";
+import { Project } from "../utils/types";
+
 import webInfo from "../public/assets/WebsiteData.json";
 
 function ProjectsPage() {

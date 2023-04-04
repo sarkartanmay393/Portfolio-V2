@@ -2,15 +2,10 @@ import Image from "next/image";
 import LinkedinSVG from "../public/assets/linkedin.svg";
 import MailSVG from "../public/assets/mail.svg";
 import TwitterSVG from "../public/assets/twitter.svg";
-import { Contacts } from "../utils/types";
 
-function ContactCard({
-  contacts,
-  email,
-}: {
-  contacts: Contacts;
-  email: string;
-}) {
+import webInfo from "../public/assets/WebsiteData.json";
+
+function ContactCard() {
   return (
     <section className="text-white flex flex-col px-[1rem] lg:px-[10rem] my-[1rem]">
       <header>
@@ -30,14 +25,18 @@ function ContactCard({
           <p className="pb-[4px] border-b-[0.1px] mb-[8px] text-[16px] lg:text-[18px] font-[700] lg:font-[600]">
             Text me
           </p>
-          {SocialRow({ username: email, title: "@hello", src: MailSVG })}
           {SocialRow({
-            username: contacts.twitter,
+            username: webInfo.email,
+            title: "@hello",
+            src: MailSVG,
+          })}
+          {SocialRow({
+            username: webInfo.contacts.twitter,
             title: "Twitter",
             src: TwitterSVG,
           })}
           {SocialRow({
-            username: contacts.linkedin,
+            username: webInfo.contacts.linkedin,
             title: "LinkedIn",
             src: LinkedinSVG,
           })}

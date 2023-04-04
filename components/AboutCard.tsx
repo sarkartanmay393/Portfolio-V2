@@ -1,16 +1,6 @@
-// @ts-check
+import webInfo from "../public/assets/WebsiteData.json";
 
-function AboutCard({
-  intro,
-  p1,
-  p2,
-  p3,
-}: {
-  intro: string;
-  p1: string;
-  p2: string;
-  p3: string;
-}) {
+function AboutCard() {
   return (
     <section className="flex flex-col px-[1rem] lg:px-[10rem] text-white">
       <header className="text-[2rem]">
@@ -21,8 +11,12 @@ function AboutCard({
       </header>
       <main className="flex justify-eventy py-[1rem] px-[1rem] lg:px-[2rem] ">
         <section className="w-[100%] lg:w-[60%] flex flex-col text-start text-[13px] lg:text-[14px] text-white">
-          <p className="my-[6px] font-[600]">{intro}</p>
-          {[p1, p2, p3].map((val) => (
+          <p className="my-[6px] font-[600]">{webInfo["about-me"].intro}</p>
+          {[
+            webInfo["about-me"].p1,
+            webInfo["about-me"].p2,
+            webInfo["about-me"].p3,
+          ].map((val) => (
             <p
               key={val.slice(0, 6)}
               className="my-[6px] max-w-[90%] lg:max-w-[80%] font-[500]"
