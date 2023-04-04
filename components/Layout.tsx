@@ -1,10 +1,11 @@
 import Head from "next/head";
 
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect } from "react";
 import Socials from "./Socials";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 import ScrollToTop from "./ScrollToTop";
+import { firacode, lato, vt323 } from "../pages/_app";
 
 type Props = {
   children?: ReactNode;
@@ -40,7 +41,7 @@ const Layout = ({ children, title = "Portfolio V2" }: Props) => {
 
         <Socials />
 
-        <header className="flex">
+        <header className={`flex flex-col ${firacode.className}`}>
           <Navigation />
         </header>
 

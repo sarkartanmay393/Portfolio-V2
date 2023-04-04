@@ -3,6 +3,14 @@ import { MenuBoardChild, NavBarItems } from "./Menuboard";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
 
+import {
+  firacode,
+  inconsolata,
+  kalam,
+  lato,
+  poppins,
+  vt323,
+} from "../pages/_app";
 import KakashiSVG from "../public/assets/kakashi.svg";
 
 function Navigation() {
@@ -27,9 +35,9 @@ function Navigation() {
       <MenuBoardChild />
       <section
         id="navbar"
-        className={"w-[100%] flex flex-col fixed z-999 top-0 bg-gray py-3".concat(
-          isMenuOpen ? " bg-gray" : ""
-        )}
+        className={`w-[100%] flex flex-col fixed z-[999] top-0 bg-gray ${
+          isMenuOpen ? "bg-gray" : ""
+        }`}
       >
         <nav className="flex justify-between items-center py-[1rem] px-[1.6rem] lg:px-[10rem] text-white">
           <a className="flex" href="/">
@@ -40,17 +48,16 @@ function Navigation() {
               alt="kakashi-face"
               width={22}
             />
-            <span className="ml-1 text-[12px] lg:text-md font-bold hover:text-green">
+            <span
+              className={`ml-1 translate-y-[1px] text-white text-[0.9rem] lg:text-[1.1rem] hover:text-green ${lato.className} uppercase`}
+            >
               Tanmay
             </span>
           </a>
           <Hamburger openMenu={openMenu} />
           <NavBarItems />
         </nav>
-        <div
-          id="scrollbar"
-          className="progress_bar h-[1px] w-[0%] bg-white"
-        ></div>
+        <div id="scrollbar" className="h-[1px] w-[0%] bg-white"></div>
       </section>
       <style jsx>{`
         #scrollbar {

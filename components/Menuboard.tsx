@@ -23,43 +23,63 @@ const Tabs = {
 export function MenuBoardChild() {
   const pathname = usePathname();
   const SVGWIDTH = 32;
+
+  useEffect((): any => {
+    // document.body.style.overflow = "hidden";
+    // window.onabort = () => {
+    //   document.body.style.overflow = "scroll";
+    // };
+  });
+
   return (
     <div
       id="menuboard"
-      className="hidden lg:hidden z-[1000] h-full	w-screen top-6 right-0 fixed bg-gray"
+      className="z-[999] hidden lg:hidden z-[1000] h-[calc(100vh-54px)]	w-screen top-[54px] right-0 fixed bg-gray"
     >
       <div className="text-white px-2 flex flex-col items-center justify-center h-[80%]">
         <ul className="list-none p-0">
           {Object.entries(Tabs).map(([path, { name }]) => {
-            if (pathname === path) {
-              useEffect(() => {
-                document.getElementById(path)!.style.fontWeight = "bold";
-              }, []);
-            }
             return (
-              <li key={path} className="mt-2">
+              <li key={path} className="mt-[12px]">
                 <Link
                   id={path}
-                  className="no-underline	text-md text-bold hover:text-green md:text-[1.6rem]"
+                  className="flex text-[1.8rem] lg:text-[1rem] hover:text-green"
                   href={path}
                   tabIndex={0}
                 >
-                  <span className="text-orange">/</span>
-                  {name}
+                  <span className="">/</span>
+                  <p className={pathname.includes(path) ? "font-[600]" : ""}>
+                    {name}
+                  </p>
                 </Link>
               </li>
             );
           })}
         </ul>
-        <div className="w-[30%] h-fit flex justify-between items-center absolute bottom-[15%]">
+        <div className="w-[40%] md:w-[25%] h-fit flex justify-between items-center absolute bottom-[15%]">
           <a href="https://twitter.com/sarkartanmay393">
-            <Image width={SVGWIDTH + 1} src={TwitterSVG} alt="twitter-ref" />
+            <Image
+              className="w-[36px] md:w-[48px]"
+              width={SVGWIDTH}
+              src={TwitterSVG}
+              alt="twitter-ref"
+            />
           </a>
           <a href="https://github.com/sarkartanmay393">
-            <Image width={SVGWIDTH} src={GithubSVG} alt="github-ref" />
+            <Image
+              className="w-[36px] md:w-[48px]"
+              width={SVGWIDTH}
+              src={GithubSVG}
+              alt="github-ref"
+            />
           </a>
           <a href="https://linkedin.com/in/tanmaysrkr">
-            <Image width={SVGWIDTH} src={LinkedinSVG} alt="linkedin-ref" />
+            <Image
+              className="w-[36px] md:w-[48px]"
+              width={SVGWIDTH}
+              src={LinkedinSVG}
+              alt="linkedin-ref"
+            />
           </a>
         </div>
       </div>
@@ -69,24 +89,27 @@ export function MenuBoardChild() {
 
 export function NavBarItems() {
   const pathname = usePathname();
+
   return (
-    <ul className="list-none m-0 hidden lg:flex">
+    <ul className="list-none m-0 hidden lg:flex gap-[22px]">
       {Object.entries(Tabs).map(([path, { name }]) => {
-        if (pathname === path) {
+        if (pathname == path) {
           useEffect(() => {
-            document.getElementById(path)!.style.fontWeight = "bold";
+            document.getElementById(path)!.style.fontWeight = "400";
           }, []);
         }
         return (
-          <li key={path} className="px-1">
+          <li key={path} className="">
             <Link
               id={path}
-              className="no-underline	text-md text-bold hover:text-green"
+              className="flex lg:text-[1rem] hover:text-green"
               href={path}
               tabIndex={0}
             >
-              <span className="text-orange">/</span>
-              {name}
+              <span className="">/</span>
+              <p className={pathname.includes(path) ? "font-[600]" : ""}>
+                {name}
+              </p>
             </Link>
           </li>
         );

@@ -8,7 +8,7 @@ function QuoteCard() {
         className="flex flex-col items-center py-[1rem] px-0 lg:px-[10rem] lg:py-[2rem] text-green"
       >
         <svg
-          className="h-[12px] relative top-[8px] left-[-35%] bg-gray px=[6px] w-fit"
+          className="z-[0] h-[12px] relative top-[8px] left-[-35%] bg-gray px=[6px] w-fit"
           width="26"
           height="21"
           viewBox="0 0 26 21"
