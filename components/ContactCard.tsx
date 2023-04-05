@@ -5,40 +5,52 @@ import TwitterSVG from "../public/assets/twitter.svg";
 
 import webInfo from "../public/assets/WebsiteData.json";
 
+const SocialLinks = [
+  {
+    username: webInfo.email,
+    title: "@hello",
+    src: MailSVG,
+  },
+  {
+    username: webInfo.contacts.twitter,
+    title: "Twitter",
+    src: TwitterSVG,
+  },
+  {
+    username: webInfo.contacts.linkedin,
+    title: "LinkedIn",
+    src: LinkedinSVG,
+  },
+];
+
 function ContactCard() {
   return (
-    <section className="text-white flex flex-col px-[1rem] lg:px-[10rem] my-[1rem]">
-      <header>
-        <h2 className="text-[2rem]">
-          <span className="text-orange">#</span>
+    <section className="flex flex-col pb-[12px] px-[1.8rem] md:px-[4rem] lg:px-[11rem] text-white">
+      <header className="flex items-center justify-between w-[100%]">
+        <h2 className="text-[2rem] font-bold">
+          <span>#</span>
           contacts
         </h2>
       </header>
-      <main className="flex justify-eventy py-[1rem] px-[2rem]">
-        <section className="w-[60%] lg:w-[88%] flex flex-col justify-start lg:justify-center text-start text-[14px]">
-          <p className="text-lg my-[6px] text-[13px] font-[500] max-w-[90%] lg:max-w-[60%]">
+      <main
+        className={`flex justify-between lg:justify-start lg:gap-[30%] 
+      px-[8px] md:px-[1.2rem] py-[1rem] md:py-[1.2rem] `}
+      >
+        <section className="w-[50%]">
+          <p className="text-[15px] md:text-[18px] font-[500]">
             I’m interested in any opportunities. However, if you have other
             request or question, don’t hesitate to contact me.
           </p>
         </section>
-        <section className="w-[40%] lg:w-[12%] border-[1px] flex flex-col items-center py-[8px] px-0 lg:py-[12px]">
-          <p className="pb-[4px] border-b-[0.1px] mb-[8px] text-[16px] lg:text-[18px] font-[700] lg:font-[600]">
-            Text me
+        <section
+          className={`w-[40%] md:w-[24%] lg:w-[14%] h-fit flex flex-col items-center
+          border-[1px] py-[6px] backdrop-blur-[4px] `}
+        >
+          <p className="border-b-[0.1px] text-[16px] lg:text-[18px] font-bold">
+            Connect (at)
           </p>
-          {SocialRow({
-            username: webInfo.email,
-            title: "@hello",
-            src: MailSVG,
-          })}
-          {SocialRow({
-            username: webInfo.contacts.twitter,
-            title: "Twitter",
-            src: TwitterSVG,
-          })}
-          {SocialRow({
-            username: webInfo.contacts.linkedin,
-            title: "LinkedIn",
-            src: LinkedinSVG,
+          {SocialLinks.map((val) => {
+            return SocialRow({ ...val });
           })}
         </section>
       </main>
@@ -71,10 +83,13 @@ function SocialRow({
   }
   return (
     <>
-      <div className="w-fit flex justify-center py-[4px] mt-[4px] text-[12px] hover:text-green hover:font-bold">
-        <a className="flex" href={baseUrl}>
-          <Image className="h-[16px]" src={src} alt="social-handles" />
-          <span className="text-white ml-[8px]">{title}</span>
+      <div
+        className={`w-fit flex justify-center py-[4px] mt-[4px] text-[12px] 
+      md:text-[15px] hover:text-green hover:font-bold `}
+      >
+        <a className="flex gap-[8px]" href={baseUrl}>
+          <Image className="h-[16px] md:h-[20px]" src={src} alt={title} />
+          <span className="text-white">{title}</span>
         </a>
       </div>
     </>

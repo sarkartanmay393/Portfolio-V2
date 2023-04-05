@@ -118,6 +118,7 @@
   "blogs": [
     {
       "link": "https://blog.tanmaysarkar.tech/build-sudoku-solver-engine-using-go",
+      "tags": ["Go", "Sudoku", "Algorithm", "WeMakeDevs"],
       "colorCode": "lightgreen",
       "views": "281",
       "title": "Build Sudoku Solver Engine using Go",
@@ -128,6 +129,7 @@
     },
     {
       "link": "https://blog.tanmaysarkar.tech/deploy-your-containerized-go-web-application",
+      "tags": ["Go", "Docker", "Heroku", "Container", "WeMakeDevs"],
       "colorCode": "lightpurple",
       "views": "134",
       "title": "Deploy your containerized Go Web Application",
@@ -138,6 +140,7 @@
     },
     {
       "link": "https://blog.tanmaysarkar.tech/building-a-imdb-web-scraper-using-go",
+      "tags": ["Go", "Web Scraping", "WeMakeDevs"],
       "colorCode": "yellow",
       "views": "438",
       "title": "Building a IMDB Web Scraper using Go",

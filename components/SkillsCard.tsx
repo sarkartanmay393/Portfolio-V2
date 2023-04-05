@@ -18,14 +18,17 @@ function SkillSection() {
   }, [webInfo]);
 
   return (
-    <section className="flex flex-col px-[1rem] py-0 lg:px-[10rem] lg:py-[1rem] text-white">
+    <section className="flex flex-col px-[1.8rem] md:px-[4rem] lg:px-[11rem] text-white">
       <header className="">
-        <h2 className="flex text-[2rem]">
+        <h2 className="text-[2rem] font-bold">
           <span className="">#</span>
           skills
         </h2>
       </header>
-      <main className="grid grid-cols-2 items-center m-auto gap-[12px] lg:flex justify-eventy lg:py-[2rem] lg:px-[1rem]">
+      <main
+        className={`md:space-x-[8px] grid lg:flex grid-cols-2 items-center m-auto 
+        gap-[12px] lg:items-baseline px-[8px] md:px-[1.2rem] py-[1rem] md:py-[2rem]`}
+      >
         {skills.map((valueArray, indexArray) => {
           valueArray.sort((a, b) => {
             if (a.length > b.length) {
@@ -38,13 +41,14 @@ function SkillSection() {
 
           return (
             <section
-              className="flex flex-col w-[140px] h-min border-[1px] lg:py-[8px] lg:px-[12px] m-0 hover:border-green"
+              className={`flex flex-col w-[140px] h-min border-[1px] lg:py-[8px] 
+              lg:px-[12px] m-0 hover:border-green backdrop-blur-[4px] hover:backdrop-blur-[8px]`}
               key={`${indexArray}-skills`}
             >
               <p className="text-[13px] font-[500] h-fit pb-[4px] m-0 text-center max-w-[100%] overflow-clip text-ellipsis border-b-[0.1px]">
                 {swForHeader(indexArray)}
               </p>
-              <p className="text-[14px] max-w-[100%] overflow-clip text-ellipsis mt-[8px] mb-1 lg:mb-0 p-0 flex flex-col items-center">
+              <p className="text-[14px] max-w-[100%] overflow-clip text-ellipsis flex flex-col items-center py-[8px] lg:py-[6px]">
                 {valueArray.map((value, index) => {
                   return (
                     <a

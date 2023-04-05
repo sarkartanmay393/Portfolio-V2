@@ -3,12 +3,9 @@ import webInfo from "../public/assets/WebsiteData.json";
 function QuoteCard() {
   return (
     <>
-      <section
-        id="quote-card"
-        className="flex flex-col items-center py-[1rem] px-0 lg:px-[10rem] lg:py-[2rem] text-green"
-      >
+      <section className=" flex flex-col items-center pb-[18px] py-0 lg:py-[1rem] px-[1rem] md:px-[4rem] lg:px-[10rem] text-green">
         <svg
-          className="z-[0] h-[12px] relative top-[8px] left-[-35%] bg-gray px=[6px] w-fit"
+          className="z-[1] h-[12px] relative top-[8px] left-[-35%] bg-gray px=[6px] w-fit"
           width="26"
           height="21"
           viewBox="0 0 26 21"
@@ -21,12 +18,15 @@ function QuoteCard() {
           />
         </svg>
 
-        <h3 className="border-[1px] border-whitesmoke p-[15px] text-center w-[90%] lg:w-[80%] font-[500]">
+        <h3
+          className={`border-[1px] border-whitesmoke p-[15px] text-center 
+        w-[90%] lg:w-[80%] font-[500] backdrop-blur-[4px]`}
+        >
           {webInfo.quote.text}
         </h3>
 
         <svg
-          className="h-[8px] lg:h-[10px] relative top-[-5px] left-[22%] bg-gray mx-[8px] px-[4px] w-fit"
+          className="z-[1] h-[8px] lg:h-[10px] relative top-[-5px] left-[22%] bg-gray mx-[8px] px-[4px] w-fit"
           width="26"
           height="21"
           viewBox="0 0 26 21"
@@ -39,9 +39,9 @@ function QuoteCard() {
           />
         </svg>
 
-        <div className="flex justify-around items-center border-[1px] border-t-0 relative top-[-9px] lg:top-[-10px] left-[26%] h-[30px] lg:h-[48px] w-[28%] lg:w-[20%]">
+        <div className="backdrop-blur-[0px] gap-[8px] md:gap-[12px] lg:gap-[16px] flex justify-center items-center border-white border-[1px] border-t-0 relative top-[-9px] lg:top-[-10px] left-[26%] h-[30px] lg:h-[48px] w-[28%] lg:w-[20%]">
           <span className="text-white">-</span>
-          <p className="flex flex-col text-[8px] lg:text-[14px] font-[400] border-0 m-0 p-0">
+          <p className="text-[8px] lg:text-[14px] font-[400] m-0 p-0">
             {webInfo.quote.author}
           </p>
         </div>

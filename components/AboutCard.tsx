@@ -1,16 +1,16 @@
 import webInfo from "../public/assets/WebsiteData.json";
+import { CustomButtonShadowed } from "./Buttons";
 
 function AboutCard() {
   return (
-    <section className="flex flex-col px-[1rem] lg:px-[10rem] text-white">
-      <header className="text-[2rem]">
-        <h2>
-          <span className="text-orange">#</span>
-          about-me
+    <section className="flex flex-col px-[1.8rem] md:px-[4rem] lg:px-[11rem] text-white">
+      <header className="flex items-center justify-between w-[100%]">
+        <h2 className="text-[2rem] font-bold">
+          <span>#</span>about-me
         </h2>
       </header>
       <main className="flex justify-eventy py-[1rem] px-[1rem] lg:px-[2rem] ">
-        <section className="w-[100%] lg:w-[60%] flex flex-col text-start text-[13px] lg:text-[14px] text-white">
+        <section className="w-[100%] lg:w-[60%] flex flex-col text-start text-[15px] lg:text-[18px] text-white">
           <p className="my-[6px] font-[600]">{webInfo["about-me"].intro}</p>
           {[
             webInfo["about-me"].p1,
@@ -24,11 +24,7 @@ function AboutCard() {
               {val}
             </p>
           ))}
-          <a className="w-fit" href="/about">
-            <button className="hover:text-green hover:border-green font-[700] w-fit bg-none py-[5px] px-[10px] border-[1px] border-orange text-white my-[12px]">
-              Read More
-            </button>
-          </a>
+          <CustomButtonShadowed className="mt-[8px]" name="READ MORE" url="/about" />
         </section>
         <section className="w-0 lg:w-[40%]"></section>
       </main>

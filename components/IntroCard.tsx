@@ -4,17 +4,12 @@ import { useEffect, useState } from "react";
 import HomeImage from "../public/assets/home-img.svg";
 import webInfo from "../public/assets/WebsiteData.json";
 
-import { kalam } from "../pages/_app";
+import { kalam, vt323 } from "../pages/_app";
+import { CustomButtonShadowed } from "./Buttons";
 
 function IntroCard() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.screen.width >= 600 ? setIsMobile(false) : setIsMobile(true);
-  }, []);
-
   return (
-    <section className="gap-y-[1rem] flex flex-col lg:flex-row items-center justify-center px-[2.4rem] py-[3.6rem] md:py-[3.8rem] lg:py-[2.6rem] md:px-[5rem] lg:px-[12rem] text-white">
+    <section className="gap-y-[1rem] flex flex-col lg:flex-row items-center justify-center px-[2.4rem] md:px-[5rem] lg:px-[12rem] py-[3.6rem] md:py-[3.8rem] lg:py-[2.6rem] text-white">
       <div className="text-start lg:w-[80%]">
         <h3
           className={`font-bold text-[1.4rem] lg:text-[1.7rem] leading-[26px] p-0 ${""}`}
@@ -24,26 +19,30 @@ function IntroCard() {
           <span className="">{webInfo["intro-terms"].second}</span>
         </h3>
         <p className="font-[500] py-[12px]">{webInfo["intro-description"]}</p>
-        {isMobile ? (
-          <></>
-        ) : (
-          <a href="#contact">
-            <button className="py-[5px] px-[12px] font-[600] bg-none border-[1px] border-orange shadow-button rounded-[4px] hover:text-green hover:border-green hover:shadow-clickedButton">
-              Contact Me
-            </button>
-          </a>
-        )}
+        <CustomButtonShadowed
+          className="hidden md:block mt-[2px] uppercase"
+          name="Contact Me"
+          url="#contacts"
+        />
       </div>
       <div className="flex flex-col justify-center items-center ">
-        <Image className="h-[280px] md:h-[420px]  m-0" src={HomeImage} alt="home" />
-        <p className="w-max text-[13px] md:text-[17px] font-[600] outline outline-offset-[4px] outline-whitesmoke rounded-[0px] mt-[4.5px] md:mt-[-10px] lg:mt-[-2.6rem] mx-0">
-          ✅ Currently working on{" "}
-          <a href={webInfo.ps.ref}>
-            <span className="border-b-[0.1px] hover:border-b-[1px] hover:border-green ">
-              {webInfo.ps.status}
-            </span>
-          </a>
-        </p>
+        <Image
+          className="h-[280px] md:h-[420px] m-0"
+          src={HomeImage}
+          alt="home"
+        />
+        <div className="w-max border-[1px] px-[6px] mx-0 mt-0 md:mt-[-15px] lg:mt-[-2.7rem] backdrop-blur-[12px]">
+          <p className={`text-[13px] md:text-[16px] font-[600] `}>
+            ✅ Currently working on{" "}
+            <a href={webInfo.ps.ref}>
+              <span
+                className={`text-[15px] md:text-[18px] border-b-[0.1px] hover:border-b-[1px] hover:border-green hover:text-green ${vt323.className}`}
+              >
+                {`JWOC as Contributor`}
+              </span>
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );

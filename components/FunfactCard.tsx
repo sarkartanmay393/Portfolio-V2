@@ -3,8 +3,8 @@ import webInfo from "../public/assets/WebsiteData.json";
 function FunfactSection() {
   return (
     <section className="flex flex-col w-[100%] text-white">
-      <header className="text-[20px]">
-        <h3 className="">
+      <header className="">
+        <h3 className="text-[1.6rem] font-bold">
           <span>#</span>my-fun-facts
         </h3>
       </header>

@@ -1,65 +1,58 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import { Blog } from "../utils/types";
 import webInfo from "../public/assets/WebsiteData.json";
 
 function BlogCard() {
   const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-  const viewAll = `View All ⇢`;
-
-  useEffect(() => {
-    if (window.screen.width > 600) {
-      setIsMobile(true);
-    }
-  }, []);
 
   return (
-    <section className="flex flex-col px-[1rem] lg:px-[10rem] text-white">
+    <section className="flex flex-col px-[1.8rem] md:px-[4rem] lg:px-[11rem] text-white">
       <header className="flex items-center justify-between w-[100%]">
-        <h2 className="text-[2rem]">
+        <h2 className="text-[2rem] font-bold">
           <span>#</span>blogs
         </h2>
-        <a
+        <Link
+          className="p-0 m-0 translate-y-[4px]"
           href="https://blog.tanmaysarkar.tech/"
-          rel="noreferrer"
-          target="_blank"
         >
-          <button className="border-0 bg-transparent ">{viewAll}</button>
-        </a>
+          <button className="underline decoration-[1px] underline-offset-[4px] font-bold text-[1rem] md:text-[1.2rem] hover:text-green">
+            VIEW ALL
+          </button>
+        </Link>
       </header>
-      <main className="flex flex-col items-center py-[2rem] gap-[16px]">
+      <main className="flex flex-col items-center px-[8px] md:px-[1.2rem] py-[1rem] md:py-[2rem] gap-[16px]">
         {webInfo.blogs.map((value, index) => {
           return (
             <section
               key={`0-${index}-blog`}
               onClick={() => router.push(value.link)}
-              className="flex justify-between cursor-pointer w-[100%] lg:w-[95%] h-[115px] lg:h-[160px] border-[1px] px-[12px] lg:px-[1rem] rounded-[18px] m-0 text-white bg-transparent shadow-blogCard rounded-[8px] hover:border-green hover:bg-gray hover:shadow-focuedBlogCard"
+              className="flex justify-between cursor-pointer h-[80px] md:h-[100px] lg:h-[130px] w-[100%] lg:w-[90%] border-[1px] px-[12px] lg:px-[1rem] rounded-[4px] text-white bg-transparent backdrop-blur-[4px] shadow-blogCard hover:border-green hover:backdrop-blur-[10px] hover:shadow-focuedBlogCard"
             >
-              <section className="w-[70%] flex flex-col items-start justify-center text-start">
+              <section className="gap-[2px] w-[100%] md:w-[70%] flex flex-col items-start justify-center text-start">
                 <a href={value.link}>
-                  <h2 className="font-bold text-[15px] lg:text-[1.9rem] ">
+                  <h2 className="font-bold text-[16px] md:text-[1.1rem] lg:text-[1.8rem] text-clip leading-[20px] md:leading-[32px]">
                     {value.title}
                   </h2>
                 </a>
-                <div className="flex gap-[8px] lg:gap-[16px] mb-[2px] text-[10px] lg:text-[13px] font-[700] lg:font-[600] text-orange ">
-                  <p id="published-on">{value.published_on}</p>
-                  <p id="read-time">{value.time}</p>
-                  <p id="views">{value.views} views</p>
+                <div className="flex gap-[10px] lg:gap-[20px] mb-[2px] text-[10px] lg:text-[14px] font-[500] text-green">
+                  <p className="">{value.published_on}</p>
+                  <p className="">{value.time}</p>
+                  <p className="">{value.views} views</p>
                 </div>
-                <p className="text-start max-h-[48px] max-w-[98%] overflow-hidden text-clip text-[12px] lg:text-[14px]">
-                  {value.subtitle.length <= 130
-                    ? value.subtitle
-                    : isMobile
-                    ? value.subtitle.slice(0, 120).trim().concat("...")
-                    : value.subtitle.slice(0, 160).trim().concat("...")}
-                </p>
+                <code className="gap-[12px] text-[10px] lg:text-[14px] hidden md:flex">
+                  {value.tags.map((val) => (
+                    <span className="text-white bg-green bg-opacity-[20%] rounded-[2px]">
+                      #{val}
+                    </span>
+                  ))}
+                </code>
               </section>
-              <section className="w-[35%] lg:w-[30%] flex">
+              <section className="w-0 md:w-[30%] flex">
                 <Image
-                  className="w-[100%] lg:w-[85%] m-auto rounded-[2px] lg:rounded-[8px]"
+                  className="w-[70%] m-auto rounded-[2px] lg:rounded-[8px]"
                   src={value.image}
                   alt={value.title}
                   width={1000}
@@ -72,44 +65,6 @@ function BlogCard() {
       </main>
     </section>
   );
-}
-
-export async function getStaticProps() {
-  const blogs: Blog[] = [
-    {
-      link: `https://blog.tanmaysarkar.tech/build-sudoku-solver-engine-using-go`,
-      colorCode: "lightgreen",
-      views: "281",
-      title: "Build Sudoku Solver Engine using Go",
-      subtitle: `Solve your unsolved Sudoku patterns just in command. It takes a your pattern, solves it and writes in to a file.`,
-      published_on: `Nov 9, 2022`,
-      time: `7min read`,
-      image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1667654155553/H-nukWZ2r.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
-    },
-    {
-      link: `https://blog.tanmaysarkar.tech/deploy-your-containerized-go-web-application`,
-      colorCode: "lightpurple",
-      views: "134",
-      title: "Deploy your containerized Go Web Application",
-      subtitle: `Today I am back with a new article on Go, but this is slightly in production side. Today we are going to deploy a simple containerized Go web app on Heroku.`,
-      published_on: `Oct 27, 2022`,
-      time: `6min read`,
-      image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1666810316079/8b-KW6oLp.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
-    },
-    {
-      link: `https://blog.tanmaysarkar.tech/building-a-imdb-web-scraper-using-go`,
-      colorCode: "yellow",
-      views: "438",
-      title: "Building a IMDB Web Scraper using Go",
-      subtitle: `I thought about let's build a simple cli tool which will take birthday as input and crawl a tiny part of the website IMDB to look for celebrities who born on that date and stores various data into a file outputs/mm-dd.json inside output directory.`,
-      published_on: `Oct 21, 2022`,
-      time: `9min read`,
-      image: `https://cdn.hashnode.com/res/hashnode/image/upload/v1666263676327/ouczJNN0b.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp`,
-    },
-  ];
-  return {
-    props: { blogs },
-  };
 }
 
 export default BlogCard;

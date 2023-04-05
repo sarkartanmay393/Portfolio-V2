@@ -27,7 +27,7 @@ const poppins = Poppins({
 });
 const firacode = Fira_Code({
   subsets: ["latin"],
-  weight: ["300", "400","500","600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 const inconsolata = Inconsolata({
   subsets: ["latin"],
