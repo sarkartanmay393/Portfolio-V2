@@ -12,6 +12,7 @@ import {
   vt323,
 } from "../pages/_app";
 import KakashiSVG from "../public/assets/kakashi.svg";
+import Link from "next/link";
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ function Navigation() {
         }`}
       >
         <nav className="flex justify-between items-center py-[1rem] px-[1.6rem] lg:px-[10rem] text-white">
-          <a className="flex" href="/">
+          <Link className="flex" href="/">
             <Image
               id="face-nav"
               className="animate-[spin 1s linear]"
@@ -53,7 +54,7 @@ function Navigation() {
             >
               Tanmay
             </span>
-          </a>
+          </Link>
           <Hamburger openMenu={openMenu} />
           <NavBarItems />
         </nav>

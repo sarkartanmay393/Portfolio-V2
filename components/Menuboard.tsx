@@ -24,13 +24,6 @@ export function MenuBoardChild() {
   const pathname = usePathname();
   const SVGWIDTH = 32;
 
-  useEffect((): any => {
-    // document.body.style.overflow = "hidden";
-    // window.onabort = () => {
-    //   document.body.style.overflow = "scroll";
-    // };
-  });
-
   return (
     <div
       id="menuboard"
@@ -93,11 +86,6 @@ export function NavBarItems() {
   return (
     <ul className="list-none m-0 hidden lg:flex gap-[22px]">
       {Object.entries(Tabs).map(([path, { name }]) => {
-        if (pathname == path) {
-          useEffect(() => {
-            document.getElementById(path)!.style.fontWeight = "400";
-          }, []);
-        }
         return (
           <li key={path} className="">
             <Link
@@ -107,7 +95,11 @@ export function NavBarItems() {
               tabIndex={0}
             >
               <span className="">/</span>
-              <p className={pathname.includes(path) ? "font-[600]" : ""}>
+              <p
+                className={
+                  pathname.includes(path) ? "font-[600]" : "font-[100]"
+                }
+              >
                 {name}
               </p>
             </Link>

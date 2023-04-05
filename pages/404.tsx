@@ -1,4 +1,4 @@
-import styles from "../styles/404.module.css";
+import Link from "next/link";
 
 export default function NotFoundPage() {
   return (
@@ -8,11 +8,11 @@ export default function NotFoundPage() {
           404: Page not found!
         </h1>
         <h3 className="mt-[8px] text-[1.4rem] font-[600]">Get back to</h3>
-        <a className="" href="/">
+        <Link className="" href="/">
           <code className="cursor-pointer text-[1.4rem] mt-[12px] text-green underline underline-offset-[8px] decoration-[1px] hover:text-orange">
             /homepage
           </code>
-        </a>
+        </Link>
       </main>
     </section>
   );

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import webInfo from "../public/assets/WebsiteData.json";
 import Image from "next/image";
+import Link from "next/link";
 
 function SkillSection() {
   const [skills, setSkills] = useState<string[][]>([]);
@@ -15,7 +16,7 @@ function SkillSection() {
       webInfo.skills.databases,
       webInfo.skills.tools,
     ]);
-  }, [webInfo]);
+  }, []);
 
   return (
     <section className="flex flex-col px-[1.8rem] md:px-[4rem] lg:px-[11rem] text-white">
@@ -51,7 +52,7 @@ function SkillSection() {
               <p className="text-[14px] max-w-[100%] overflow-clip text-ellipsis flex flex-col items-center py-[8px] lg:py-[6px]">
                 {valueArray.map((value, index) => {
                   return (
-                    <a
+                    <Link
                       key={`${index}-skillNames`}
                       className="m-auto rounded-0 border-gray-light py-[1px]"
                       onClick={(e) => {
@@ -67,10 +68,9 @@ function SkillSection() {
                         width={-1}
                         height={24}
                         alt={`skill-in-${value}`}
-                        src={`https://img.shields.io/badge/
-                                                    ${value}-white?style=for-the-badge&logo=${value}&logoColor=black`}
+                        src={`https://img.shields.io/badge/${value}-white?style=for-the-badge&logo=${value}&logoColor=black`}
                       />
-                    </a>
+                    </Link>
                   );
                 })}
               </p>
@@ -110,11 +110,11 @@ const swForHeader = (index: number) => {
   return res;
 };
 
-const swForLinks = (skillName: string) => {
+const swForLinks = (skillName: string): string => {
   let res = "";
   switch (skillName) {
     default:
-      return;
+      return "";
     case "Linode":
       res = "https://linode.com/";
       break;

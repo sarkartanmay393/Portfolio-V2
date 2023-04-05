@@ -25,7 +25,7 @@ function ProjectSection() {
           if (index >= 4) {
             return;
           }
-          return <ProjectCard value={value} hideImage={false} small={false} />;
+          return <ProjectCard key={value.title} value={value} hideImage={false} small={false} />;
         })}
       </main>
     </section>

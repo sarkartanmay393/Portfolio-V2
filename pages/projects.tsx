@@ -53,7 +53,14 @@ const wowSection = (weeksOfWork: Project[]) => {
       </header>
       <section className="flex flex-wrap gap-[12px] justify-center lg:justify-start">
         {weeksOfWork.map((value) => {
-          return <ProjectCard value={value} hideImage={false} small={false} />;
+          return (
+            <ProjectCard
+              key={value.title}
+              value={value}
+              hideImage={false}
+              small={false}
+            />
+          );
         })}
       </section>
     </>
@@ -69,7 +76,14 @@ const dowSection = (daysOfWork: Project[]) => {
       </header>
       <section className="flex flex-wrap gap-[12px] justify-center lg:justify-start">
         {daysOfWork.map((value) => {
-          return <ProjectCard value={value} hideImage={true} small />;
+          return (
+            <ProjectCard
+              key={value.title}
+              value={value}
+              hideImage={true}
+              small
+            />
+          );
         })}
       </section>
     </>

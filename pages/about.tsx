@@ -28,7 +28,9 @@ function AboutPage() {
               <h3 className="text-[22px] italic ">Who am I?</h3>
               <p className="text-[18px] font-bold">{intro}</p>
               {[p1, p2, p3].map((val) => (
-                <p className="max-w-[90%] text-[18px]">{val}</p>
+                <p key={val.slice(0, 4)} className="max-w-[90%] text-[18px]">
+                  {val}
+                </p>
               ))}
             </section>
             <div className="w-0 lg:w-[40%]">

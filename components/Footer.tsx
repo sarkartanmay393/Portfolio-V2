@@ -19,7 +19,7 @@ function FooterCard() {
         <div className="w-[80%] text-start grid lg:gap-[12px]">
           <div className="grid lg:flex items-center justify-between gap-[8px] font-[600]">
             {/* LOGO */}
-            <a className="flex" href="/">
+            <Link className="flex" href="/">
               <Image src={KakashiSVG} alt="kakashi-face" width={26} />
               <span
                 className={`ml-1 translate-y-[1px] text-white text-[1.1rem]
@@ -27,7 +27,7 @@ function FooterCard() {
               >
                 Tanmay
               </span>
-            </a>
+            </Link>
             <Link href="mailto:hello@tanmaysarkar.tech">
               <p className="hover:text-green">{webInfo.email}</p>
             </Link>

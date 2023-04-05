@@ -44,7 +44,7 @@ function BlogCard() {
                 </div>
                 <code className="gap-[12px] text-[10px] lg:text-[14px] hidden md:flex">
                   {value.tags.map((val) => (
-                    <span className="text-white bg-green bg-opacity-[20%] rounded-[2px]">
+                    <span key={val} className="text-white bg-green bg-opacity-[20%] rounded-[2px]">
                       #{val}
                     </span>
                   ))}
