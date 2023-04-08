@@ -75,8 +75,6 @@ function SocialRow({
 }): JSX.Element {
   let baseUrl = "https://www.";
   switch (title) {
-    default:
-      return;
     case "@hello":
       baseUrl = `mailto:${username}`;
       break;

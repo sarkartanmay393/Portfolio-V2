@@ -94,7 +94,7 @@ export function NavBarItems() {
             <Link
               id={path}
               className={`flex lg:text-[1rem] hover:text-green ${
-                pathname === path ? "font-[600]" : "font-[400]"
+                pathname === path ? "font-[600]" : "font-[400] opacity-[0.8]"
               }`}
               href={path}
               tabIndex={0}

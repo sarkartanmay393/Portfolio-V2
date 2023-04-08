@@ -40,7 +40,7 @@ function IntroCard() {
               <span
                 className={`text-[15px] md:text-[18px] border-b-[0.1px] hover:border-b-[1px] hover:border-green hover:text-green ${vt323.className}`}
               >
-                {`JWOC as Contributor`}
+                {webInfo.ps.status}
               </span>
             </a>
           </p>

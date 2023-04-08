@@ -32,3 +32,4 @@ yarn-error.log*
 # parcel
 /.parcel-cache
 /dist
+components/SkillsCard.tsx
