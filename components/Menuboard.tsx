@@ -12,11 +12,14 @@ const Tabs = {
   "/": {
     name: "home",
   },
-  "/about": {
-    name: "about",
+  "/blogs": {
+    name: "blogs",
   },
   "/projects": {
     name: "projects",
+  },
+  "/about": {
+    name: "about",
   },
 };
 
@@ -90,18 +93,14 @@ export function NavBarItems() {
           <li key={path} className="">
             <Link
               id={path}
-              className="flex lg:text-[1rem] hover:text-green"
+              className={`flex lg:text-[1rem] hover:text-green ${
+                pathname === path ? "font-[600]" : "font-[400] opacity-[0.8]"
+              }`}
               href={path}
               tabIndex={0}
             >
               <span className="">/</span>
-              <p
-                className={
-                  pathname.includes(path) ? "font-[600]" : "font-[100]"
-                }
-              >
-                {name}
-              </p>
+              <p>{name}</p>
             </Link>
           </li>
         );

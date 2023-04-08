@@ -112,8 +112,8 @@
     "languages": ["JavaScript", "Go", "TypeScript", "Dart"],
     "tools": ["Docker", "Kubernetes", "Jenkins", "Terraform", "Git"],
     "cloud": ["Linode", "Firebase", "Azure"],
-    "others": ["Linux"],
-    "frameworks": ["React", "Express", "Flutter"]
+    "others": ["Linux", "TailwindCSS"],
+    "frameworks": ["React", "Express", "Flutter", "NextJS"]
   },
   "blogs": [
     {
