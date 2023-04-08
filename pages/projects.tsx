@@ -30,7 +30,9 @@ function ProjectsPage() {
               <span>/</span>projects
             </h2>
           </Link>
-          <p className="text-[1.2rem]">List of my projects</p>
+          <p className="text-[1.2rem]">
+            List of my projects [{webInfo.projects.length}]
+          </p>
         </header>
         <main className="flex gap-[6px] ">
           <section className="flex flex-col gap-[22px] px-[1rem]">

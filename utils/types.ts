@@ -4,14 +4,15 @@ type Contacts = {
 }
 
 type Blog = {
-      link: string,
-      colorCode: string,
-      views: string,
-      title: string,
-      subtitle: string,
-      published_on: string,
-      time: string,
-      image: string,
+    _id: string,
+    title: string,
+    slug: string,
+    brief: string,
+    dateAdded: string,
+    coverImage: string,
+    time: string,
+    totalReactions: string,
+    tags: string[],
 }
     
 type Project = {
