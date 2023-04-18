@@ -3,14 +3,7 @@ import { MenuBoardChild, NavBarItems } from "./Menuboard";
 import Hamburger from "./Hamburger";
 import Image from "next/image";
 
-import {
-  firacode,
-  inconsolata,
-  kalam,
-  lato,
-  poppins,
-  vt323,
-} from "../pages/_app";
+import { lato } from "../pages/_app";
 import KakashiSVG from "../public/assets/kakashi.svg";
 import Link from "next/link";
 

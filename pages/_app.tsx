@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import { store } from "../src/state/store";
 import {
   Kalam,
   Fira_Code,
@@ -46,7 +48,9 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }

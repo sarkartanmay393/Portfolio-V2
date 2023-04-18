@@ -32,7 +32,7 @@ function FooterCard() {
               <p className="hover:text-green">{webInfo.email}</p>
             </Link>
           </div>
-          <p className="text-[13px] md:text-[15px] font-[500] ">
+          <p className="text-[14px] md:text-[16px] font-[500] ">
             {webInfo["footer-description"]}
           </p>
         </div>

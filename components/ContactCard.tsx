@@ -1,7 +1,8 @@
 import Image from "next/image";
-import LinkedinSVG from "../public/assets/linkedin.svg";
+
 import MailSVG from "../public/assets/mail.svg";
 import TwitterSVG from "../public/assets/twitter.svg";
+import LinkedinSVG from "../public/assets/linkedin.svg";
 
 import webInfo from "../public/assets/WebsiteData.json";
 
@@ -49,9 +50,14 @@ function ContactCard() {
           <p className="border-b-[0.1px] text-[16px] lg:text-[18px] font-bold">
             Connect (at)
           </p>
-          {SocialLinks.map((val) => {
-            return SocialRow({ ...val });
-          })}
+          {SocialLinks.map((val) => (
+            <SocialRow
+              key={val.title + "-key"}
+              username={val.username}
+              title={val.title}
+              src={val.src}
+            />
+          ))}
         </section>
       </main>
     </section>
@@ -65,12 +71,10 @@ function SocialRow({
 }: {
   username: string;
   title: string;
-  src: any;
-}) {
+  src: string;
+}): JSX.Element {
   let baseUrl = "https://www.";
   switch (title) {
-    default:
-      return;
     case "@hello":
       baseUrl = `mailto:${username}`;
       break;
@@ -81,6 +85,7 @@ function SocialRow({
       baseUrl += `linkedin.com/in/${username}`;
       break;
   }
+
   return (
     <>
       <div
