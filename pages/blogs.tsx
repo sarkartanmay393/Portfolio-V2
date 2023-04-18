@@ -1,21 +1,33 @@
-import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
 import router from "next/router";
-import { useSelector } from "react-redux";
 
 import Layout from "../components/Layout";
 import type { Blog } from "../utils/types";
 import { useEffect, useState } from "react";
+import { RootState } from "../src/state/store";
+import { useAppDispatch, useAppSelector } from "../src/state/hooks";
+import { Getblogs } from ".";
+import { set } from "../src/slices/blogSlice";
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  const state = useAppSelector((state) => state);
+  const dispath = useAppDispatch();
 
   useEffect(() => {
-    getBlogProps().then((blogs) => {
-      setBlogs(blogs);
-    });
-  }, []);
+    if (state.blogs.length < 2) {
+      // console.log("bypass check");
+      Getblogs().then((blogs) => {
+        dispath(set(blogs));
+      });
+    }
+    // console.log(state.blogs);
+    setBlogs(state.blogs);
+    // getBlogProps().then((blogs) => {
+    //   setBlogs(blogs);
+    // });
+  }, [dispath, state]);
 
   return (
     <Layout title="Blogs">
@@ -86,63 +98,3 @@ export default function BlogsPage() {
     </Layout>
   );
 }
-
-export async function getBlogProps() {
-  const resp = await axios.post("https://api.hashnode.com/", {
-    query: query,
-  });
-  let blogs: Blog[] = resp.data.data.user.publication.posts;
-  let sequencialBlogTags: string[][] = [];
-
-  const fetchTagsForBlog = async (slug: string) => {
-    const resp = await axios.post("https://api.hashnode.com/", {
-      query: postSpecificQuery.replace("_slug_", slug),
-    });
-    let tags: string[] = [];
-    resp.data.data.post.tags.forEach((value: { slug: string }) => {
-      tags.push(value.slug);
-    });
-
-    return tags;
-  };
-
-  for (let i = 0; i < blogs.length; i++) {
-    let tags = await fetchTagsForBlog(blogs[i].slug);
-    sequencialBlogTags.push(tags);
-  }
-
-  blogs.map((val) => {
-    val.time = "9min Read" || "7min Read" || "5min Read";
-    val.tags = sequencialBlogTags.shift() || [];
-  });
-
-  return blogs;
-}
-
-const postSpecificQuery = `query {
-    post(
-    slug: "_slug_",
-    hostname: "blog.tanmaysarkar.tech",
-    ) {
-      tags {
-        name
-        slug
-      }
-    }
-  }`;
-
-const query = `query {
-    user(username: "tanmaysarkar") {
-      publication {
-        posts(page: 0) {
-          _id
-         slug
-         title
-         brief
-         totalReactions
-         dateAdded
-         coverImage
-        }
-      }
-    }
-  }`;

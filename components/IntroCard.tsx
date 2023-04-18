@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 import HomeImage from "../public/assets/home-img.svg";
 import webInfo from "../public/assets/WebsiteData.json";
 
-import { kalam, vt323 } from "../pages/_app";
+import { vt323 } from "../pages/_app";
 import { CustomButtonShadowed } from "./Buttons";
 
 function IntroCard() {
+
   return (
     <section className="gap-y-[1rem] flex flex-col lg:flex-row items-center justify-center px-[2.4rem] md:px-[5rem] lg:px-[12rem] py-[3.6rem] md:py-[3.8rem] lg:py-[2.6rem] text-white">
       <div className="text-start lg:w-[80%]">
@@ -21,11 +21,12 @@ function IntroCard() {
         <p className="font-[500] py-[12px] text-[15px] lg:text-[18px]">
           {webInfo["intro-description"]}
         </p>
-        <CustomButtonShadowed
-          className="hidden md:block mt-[2px] uppercase"
-          name="Contact Me"
-          url="#contacts"
-        />
+        
+          <CustomButtonShadowed
+            className="hidden md:block mt-[2px] uppercase"
+            name="Contact Me"
+            url="#contacts"
+          />
       </div>
       <div className="flex flex-col justify-center items-center ">
         <Image

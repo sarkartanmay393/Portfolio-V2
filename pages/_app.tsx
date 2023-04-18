@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-import { store } from "../utils/redux";
 import { Provider } from "react-redux";
+import { store } from "../src/state/store";
 import {
   Kalam,
   Fira_Code,

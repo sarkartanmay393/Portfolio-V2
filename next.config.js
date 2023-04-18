@@ -3,9 +3,10 @@ module.exports = {
   // devIndicators: {
   //   autoPrerender: false,
   // },
-  // experimental: {
-  //   fontLoaders: [{ loader: "@next/font" }],
-  // },
+  experimental: {
+    // appDir: true,
+    // fontLoaders: [{ loader: "@next/font" }],
+  },
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
