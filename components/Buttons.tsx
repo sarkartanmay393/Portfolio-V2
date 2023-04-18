@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 export const CustomButton = ({ name, url }: { name: string; url: string }) => {
   return (
     <a className="w-min" href={url}>
@@ -17,13 +19,19 @@ export const CustomButtonShadowed = ({
   className,
   name,
   url,
+  _onClick,
 }: {
   className: string;
   name: string;
   url: string;
+  _onClick?: () => void;
 }) => {
+  const router = useRouter();
+  const _url = () => {
+    router.push(url);
+  };
   return (
-    <a href={url}>
+    <a onClick={_onClick || _url}>
       <button
         className={`${className} py-[5px] px-[12px] font-[600] bg-none border-[1px]
          border-orange shadow-button rounded-[2px]
